@@ -218,8 +218,8 @@ export default {
               to: LINKS.hipaaCompliance,
             },
             {
-              text: 'Neon’s Sub Contractors',
-              to: LINKS.hipaaContractors,
+              text: 'Sub-processors',
+              to: LINKS.subprocessors,
             },
           ],
         },

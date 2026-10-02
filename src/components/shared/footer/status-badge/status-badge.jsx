@@ -39,13 +39,7 @@ const StatusBadge = () => {
   }, [inView]);
 
   return (
-    <Link
-      className="flex items-center justify-center gap-x-1.5 rounded-sm"
-      to="https://neonstatus.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      ref={ref}
-    >
+    <Link className="flex items-center justify-center gap-x-1.5 rounded-sm" to="#status" ref={ref}>
       <span
         className={cn(
           'h-1.5 w-1.5 rounded-full',

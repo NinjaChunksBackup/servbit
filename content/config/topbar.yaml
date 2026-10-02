@@ -1,4 +1,4 @@
-text: 'Lakebase Search is GA: vector and full-text search in Postgres, with top price-performance'
+text: 'Servbit is live: Full-stack App, Web, Cloud, Automation & Custom AI execution'
 link:
-  url: 'https://neon.com/blog/lakebase-search-retrieval-agents'
-  target: '_blank'
+  url: '/#services'
+  target: '_self'
