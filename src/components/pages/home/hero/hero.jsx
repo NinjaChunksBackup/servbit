@@ -2,70 +2,31 @@ import Image from 'next/image';
 
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
-import Link from 'components/shared/link';
-import Logos from 'components/shared/logos';
 import PauseableVideo from 'components/shared/pauseable-video';
 import SectionLabel from 'components/shared/section-label';
 import LINKS from 'constants/links';
 import mobileBgIllustration from 'images/pages/home/hero/bg-illustration.jpg';
-import lakebaseUnderline from 'images/pages/home/hero/lakebase-underline.svg';
 import { cn } from 'utils/cn';
-
-const logos = [
-  'replit',
-  'outfront',
-  'doordash',
-  'bcg',
-  'pepsi',
-  'retool',
-  'meta',
-  'bitso',
-  'framer',
-];
-
-const LAKEBASE_UNDERLINE_STYLE = {
-  backgroundColor: 'currentColor',
-  maskImage: `url(${lakebaseUnderline.src})`,
-  maskRepeat: 'no-repeat',
-  maskSize: '100% 100%',
-  WebkitMaskImage: `url(${lakebaseUnderline.src})`,
-  WebkitMaskRepeat: 'no-repeat',
-  WebkitMaskSize: '100% 100%',
-};
 
 const Hero = () => (
   <section className="hero relative mt-16 safe-paddings lg:mt-14">
     <Container className="relative z-30 pt-96 pb-2 xl:pt-54 lg:pt-52 md:px-5! md:pt-53" size="1600">
-      <Link href="#backed-by-giants">
-        <SectionLabel theme="white" icon="databricks">
-          NEON IS PART OF THE DATABRICKS PLATFORM
-        </SectionLabel>
-      </Link>
+      <SectionLabel theme="white" icon="arrow">
+        APP &middot; WEB &middot; CLOUD &middot; AUTOMATION &middot; AI
+      </SectionLabel>
 
       <h1 className="mt-5 max-w-288 text-[4rem] leading-dense tracking-tighter text-balance 2xl:text-[3.5rem] xl:max-w-244 xl:text-[3.25rem]/dense lg:max-w-200 lg:text-[2.5rem]/dense md:mt-4 md:text-[2.625rem]/dense sm:text-[2rem]/dense">
-        The backend for apps and agents, built to scale on{' '}
-        <Link className="group relative inline-block text-inherit" to="#architecture" smoothScroll>
-          Lakebase
-          <span
-            className="absolute bottom-px left-0 h-0.5 w-full opacity-40 transition-opacity duration-150 group-hover:opacity-80 group-focus-visible:opacity-80 motion-reduce:transition-none"
-            style={LAKEBASE_UNDERLINE_STYLE}
-            aria-hidden="true"
-          />
-        </Link>{' '}
-        Postgres.
+        Every requirement in app, web, cloud, automation, and AI &mdash; we serve it. No fluff, just
+        engineering that works.
       </h1>
 
       <div className="mt-8 flex gap-x-5 lg:mt-7 lg:gap-x-4">
-        <Button data-test="home-signup" theme="white-filled" size="new" to={LINKS.signup}>
-          Get started
+        <Button data-test="home-cta" theme="white-filled" size="new" to="#contact">
+          Take Your Business Online
         </Button>
-        <Button data-test="home-docs" theme="outlined" size="new" to={LINKS.docsHome}>
-          Read the docs
+        <Button data-test="home-services" theme="outlined" size="new" to="#services">
+          See Our Services
         </Button>
-      </div>
-
-      <div className="relative mt-11 border-t border-gray-new-20 pt-10 select-none lg:mt-10 md:mt-9 sm:mt-8 sm:pt-8">
-        <Logos className="max-w-full p-0!" logos={logos} size="md" />
       </div>
     </Container>
 
