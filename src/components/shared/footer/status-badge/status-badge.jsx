@@ -53,7 +53,7 @@ const StatusBadge = () => {
         )}
       />
       <span className="text-sm leading-none tracking-extra-tight whitespace-nowrap text-black-pure dark:text-white">
-        {currentStatus ? statusData[currentStatus].text : 'Neon status loading...'}
+        {currentStatus ? statusData[currentStatus].text : 'Servbit status loading...'}
       </span>
     </Link>
   );

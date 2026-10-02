@@ -121,7 +121,7 @@ CheckSquare.propTypes = {
 const CreateProject = ({ isPressed }) => (
   <div className="absolute inset-0 border-2 border-[#61646b] bg-black-pure p-[3px]">
     <div className="relative flex h-[37px] items-center bg-[#303236] px-3 text-base font-semibold text-white md:h-8 md:text-sm">
-      Neon project
+      Servbit project
       <Image
         className="absolute top-1/2 right-2 size-[18px] -translate-y-1/2"
         src={`${ASSET_ROOT}/startup-window-control.svg`}
@@ -319,7 +319,7 @@ const StartupAnimation = ({ onStart, timelineElapsed }) => {
           y: shouldReduceMotion ? 0 : rightCardY,
         }}
         role="img"
-        aria-label="A Neon project initializes and reaches 100 percent"
+        aria-label="A Servbit project initializes and reaches 100 percent"
       >
         {frame.screen === 'create' ? (
           <CreateProject isPressed={frame.isCreatePressed} />
@@ -344,7 +344,8 @@ const StartupAnimation = ({ onStart, timelineElapsed }) => {
           100K+
         </strong>
         <p className="mt-[29px] max-w-[320px] text-xl leading-tight tracking-extra-tight text-gray-new-80 sm:mt-5 sm:max-w-[290px] sm:text-base">
-          Projects built and launched with Neon, from early-stage products to growing applications.
+          Projects built and launched with Servbit, from early-stage products to growing
+          applications.
         </p>
       </div>
     </div>

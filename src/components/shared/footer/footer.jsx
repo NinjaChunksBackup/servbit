@@ -174,7 +174,7 @@ const Footer = ({ hasThemesSupport = false }) => (
               className="leading-none text-gray-new-40 hover:text-black-pure dark:text-gray-new-70 dark:hover:text-white"
               to={LINKS.platformTerms}
             >
-              Neon Platform Terms
+              Servbit Platform Terms
             </Link>
             <Link
               className="leading-none text-gray-new-40 hover:text-black-pure dark:text-gray-new-70 dark:hover:text-white"

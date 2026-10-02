@@ -46,7 +46,7 @@ const data = [
   },
   {
     name: 'Download logo pack',
-    url: '/brand/neon-brand-assets.zip',
+    url: '/brand/servbit-brand-assets.zip',
   },
   {
     name: 'View brand guidelines',
