@@ -3,65 +3,44 @@ import LINKS from './links';
 export default {
   header: [
     {
-      text: 'Product',
+      text: 'Services',
       sections: [
         {
-          title: 'Core Primitives',
+          title: 'Software & Web Engineering',
           items: [
             {
-              title: 'Lakebase Postgres',
-              to: LINKS.lakebase,
-              description: 'Serverless Postgres database',
+              title: 'App Development',
+              to: '#services',
+              description: 'Native iOS, Android & desktop apps built for speed and user retention.',
             },
             {
-              title: 'Object Storage',
-              to: LINKS.objectStorage,
-              description: 'S3-compatible storage that branches',
+              title: 'Web Engineering',
+              to: '#services',
+              description:
+                'High-conversion web platforms, web apps, and modern digital storefronts.',
             },
             {
-              title: 'Functions',
-              to: LINKS.functions,
-              description: 'Serverless compute next to your data',
-            },
-            {
-              title: 'Managed Better Auth',
-              to: LINKS.authPage,
-              description: 'Authentication built into your database',
-            },
-            {
-              title: 'AI Gateway',
-              to: LINKS.aiGateway,
-              description: 'One API for frontier and open-source models',
+              title: 'Cloud & DevOps',
+              to: '#services',
+              description:
+                'Bulletproof cloud infrastructure, automated CI/CD, and cost optimization.',
             },
           ],
         },
         {
-          title: 'Features',
+          title: 'Automation & AI',
           items: [
             {
-              title: 'Lakebase Architecture',
-              to: LINKS.architecture,
-              description: 'Storage-compute separation',
+              title: 'Workflow Automation',
+              to: '#services',
+              description:
+                'System integrations and automated pipelines that eliminate manual tasks.',
             },
             {
-              title: 'Autoscaling',
-              to: LINKS.autoscaling,
-              description: 'Automatic instance sizing',
-            },
-            {
-              title: 'Branching',
-              to: LINKS.branching,
-              description: 'Faster Postgres workflows',
-            },
-            {
-              title: 'Search',
-              to: LINKS.lakebaseSearch,
-              description: 'Vector, keyword, and hybrid search',
-            },
-            {
-              title: 'Instant Restore',
-              to: LINKS.instantRestore,
-              description: 'Instant recovery when mistakes happen',
+              title: 'Custom AI & Agents',
+              to: '#services',
+              description:
+                'Autonomous agents and practical AI engineered for measurable business utility.',
             },
           ],
         },
@@ -71,122 +50,37 @@ export default {
       text: 'Solutions',
       sections: [
         {
-          title: 'Use cases',
+          title: 'Business Transformations',
           items: [
             {
-              title: 'Full-stack apps',
-              to: `${LINKS.useCases}/full-stack-apps`,
-              description: 'Deploy backends via your agent',
+              title: 'Take Your Business Online',
+              to: '#solutions',
+              description:
+                'Complete digital transition from traditional operations to online market dominance.',
             },
             {
-              title: 'Branching workflows',
-              to: `${LINKS.useCases}/branching-workflows`,
-              description: 'Simplify DB ops to ship faster & safer',
+              title: 'Scale Reach & Profits',
+              to: '#solutions',
+              description:
+                'Conversion-engineered digital presence designed to maximize commercial margins.',
             },
             {
-              title: 'Bursty workloads',
-              to: `${LINKS.useCases}/bursty-workloads`,
-              description: 'Avoid overprovisioning & optimize performance',
-            },
-            {
-              title: 'Large databases',
-              to: `${LINKS.useCases}/large-databases`,
-              description: 'Restore & replicate your DB in seconds',
-            },
-          ],
-        },
-        {
-          title: 'Deploy at scale',
-          variant: 'cards',
-          items: [
-            {
-              title: 'Agents',
-              to: `${LINKS.useCases}/ai-agents`,
-              description: 'Infra for app-generation agents like Replit & v0',
-              graphic: 'agents',
-            },
-            {
-              title: 'Platforms',
-              to: LINKS.platforms,
-              description: 'Deploy isolated backends for your end users',
-              graphic: 'platforms',
+              title: 'Legacy Modernization',
+              to: '#solutions',
+              description:
+                'Replace obsolete, fragile software with high-velocity cloud architecture.',
             },
           ],
         },
       ],
     },
     {
-      text: 'Docs',
-      to: LINKS.docs,
+      text: 'About',
+      to: '#about',
     },
     {
-      text: 'Pricing',
-      to: LINKS.pricing,
-    },
-    {
-      text: 'Resources',
-      sections: [
-        {
-          title: 'Learn',
-          items: [
-            {
-              title: 'Blog',
-              to: LINKS.blog,
-              description: 'Technical posts & product updates',
-            },
-            {
-              title: 'Case studies',
-              to: LINKS.caseStudies,
-              description: 'Explore customer stories',
-            },
-            {
-              title: 'Changelog',
-              to: LINKS.changelog,
-              description: 'Product updates',
-            },
-            {
-              title: 'Community',
-              to: LINKS.discord,
-              description: 'Connect on Discord',
-            },
-            {
-              title: 'Startups',
-              to: LINKS.startups,
-              description: 'Build with Neon',
-            },
-          ],
-        },
-        {
-          title: 'Company',
-          items: [
-            {
-              title: 'About us',
-              to: LINKS.aboutUs,
-              description: 'The company and the mission',
-            },
-            {
-              title: 'Careers',
-              to: LINKS.careers,
-              description: 'Join the team',
-            },
-            {
-              title: 'Contact sales',
-              to: LINKS.contactSales,
-              description: 'Contact sales team',
-            },
-            {
-              title: 'Security',
-              to: LINKS.security,
-              description: 'Compliance & privacy',
-            },
-            {
-              title: 'Status',
-              to: LINKS.status,
-              description: 'Service status',
-            },
-          ],
-        },
-      ],
+      text: 'Contact',
+      to: '#contact',
     },
   ],
   footer: [
@@ -249,27 +143,17 @@ export default {
       ],
     },
     {
-      heading: 'Community',
+      heading: 'Connect',
       items: [
         {
-          text: 'Discord',
-          to: LINKS.discord,
-          icon: 'discord-icon',
-        },
-        {
-          text: 'GitHub',
-          to: LINKS.github,
-          icon: 'github-icon',
+          text: 'LinkedIn',
+          to: LINKS.linkedin,
+          icon: 'linkedin-icon',
         },
         {
           text: 'X.com',
           to: LINKS.twitter,
           icon: 'x-icon',
-        },
-        {
-          text: 'LinkedIn',
-          to: LINKS.linkedin,
-          icon: 'linkedin-icon',
         },
         {
           text: 'YouTube',

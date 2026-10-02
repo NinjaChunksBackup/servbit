@@ -7,7 +7,6 @@ import { useContext, useState } from 'react';
 import Button from 'components/shared/button';
 import InkeepTrigger from 'components/shared/inkeep-trigger';
 import Link from 'components/shared/link';
-import LINKS from 'constants/links';
 import MENUS from 'constants/menus';
 import { TopbarContext } from 'contexts/topbar-context';
 import useMobileMenu from 'hooks/use-mobile-menu';
@@ -127,15 +126,7 @@ MobileMenuItem.propTypes = {
   ),
 };
 
-const mobileMenuItems = [
-  ...MENUS.header,
-  {
-    text: 'Discord',
-    to: LINKS.discord,
-    target: '_blank',
-    rel: 'noopener noreferrer',
-  },
-];
+const mobileMenuItems = MENUS.header;
 
 const MobileMenu = ({ isDocPage = false, docPageType = null }) => {
   const { isMobileMenuOpen, toggleMobileMenu } = useMobileMenu();
@@ -168,29 +159,20 @@ const MobileMenu = ({ isDocPage = false, docPageType = null }) => {
             </ul>
             <div
               className={cn(
-                'absolute inset-x-0 bottom-0 grid grid-cols-2 gap-x-6 gap-y-3 border-t border-gray-new-94 bg-white p-8 dark:border-gray-new-20 dark:bg-black-pure sm:grid-cols-1 sm:p-5',
+                'absolute inset-x-0 bottom-0 border-t border-gray-new-94 bg-white p-8 dark:border-gray-new-20 dark:bg-black-pure sm:p-5',
                 { 'pb-20 sm:pb-[68px]': isDocPage }
               )}
             >
               <Button
-                className="h-9 border border-gray-new-40 px-[18px]"
-                data-test="mobile-login"
-                to={LINKS.login}
-                theme="transparent"
-                size="xxs"
-                tagName="MobileMenu"
-              >
-                Log in
-              </Button>
-              <Button
-                className="h-9 px-[18px]"
-                data-test="mobile-signup"
-                to={LINKS.signup}
+                className="h-11 w-full px-5 text-center text-[15px] font-semibold"
+                data-test="mobile-cta"
+                to="#contact"
                 theme="white-filled-multi"
-                size="xxs"
+                size="xs"
                 tagName="MobileMenu"
+                handleClick={toggleMobileMenu}
               >
-                Sign up
+                Take Your Business Online
               </Button>
             </div>
           </div>
