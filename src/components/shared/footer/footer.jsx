@@ -9,8 +9,8 @@ import MENUS from 'constants/menus.js';
 import ChevronIcon from 'icons/chevron-down.inline.svg';
 import { cn } from 'utils/cn';
 
-import databricksLogoDark from './images/databricks-logo-dark.svg';
-import databricksLogoLight from './images/databricks-logo-light.svg';
+import servbitLogoDark from './images/servbit-logo-dark.svg';
+import servbitLogoLight from './images/servbit-logo-light.svg';
 import StatusBadge from './status-badge';
 
 const Footer = ({ hasThemesSupport = false }) => (
@@ -21,43 +21,34 @@ const Footer = ({ hasThemesSupport = false }) => (
           <div className="mb-auto lg:mb-11">
             <Image
               className="dark:hidden sm:h-6 sm:w-auto"
-              src={databricksLogoLight}
-              width={177}
+              src={servbitLogoLight}
+              width={102}
               height={28}
-              alt="Databricks"
+              alt="Servbit"
             />
             <Image
               className="hidden dark:block sm:h-6 sm:w-auto"
-              src={databricksLogoDark}
-              width={177}
+              src={servbitLogoDark}
+              width={102}
               height={28}
-              alt="Databricks"
+              alt="Servbit"
             />
             <span
               className={cn(
-                'mt-3.5 block text-[13px] leading-none tracking-extra-tight',
+                'mt-3.5 block max-w-sm text-[13px] leading-snug tracking-extra-tight',
                 'text-gray-new-40 dark:text-gray-new-60',
                 'xl:mt-3'
               )}
             >
-              Neon is part of the Databricks Platform
+              Any requirement in app, web, cloud, automation, and AI — we serve it. Factual,
+              professional digital engineering.
             </span>
           </div>
 
           {hasThemesSupport && <ThemeSelect className="mb-8 lg:mb-6" />}
 
           <p className="max-w-146 text-[0.8125rem]/snug tracking-extra-tight text-gray-new-40">
-            © Neon 2026. All rights reserved. Apache, Apache Spark, Spark, the Spark Logo, Apache
-            Iceberg, Iceberg, and the Apache Iceberg logo are trademarks of the{' '}
-            <a
-              href="https://www.apache.org"
-              rel="nofollow noopener noreferrer"
-              target="_blank"
-              className="underline hover:text-gray-new-20 dark:hover:text-gray-new-80"
-            >
-              Apache Software Foundation
-            </a>
-            .
+            © Servbit 2026. All rights reserved.
           </p>
         </div>
 

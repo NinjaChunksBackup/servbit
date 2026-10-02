@@ -44,7 +44,7 @@ export default function getMetadata({
   const metaTitle = title || DEFAULT_TITLE;
   const metaDescription = description || DEFAULT_DESCRIPTION;
 
-  const siteName = 'Neon';
+  const siteName = 'Servbit';
   const robots = robotsNoindex === 'noindex' ? { index: false } : null;
 
   let alternateCanonical = isPostgres
@@ -98,7 +98,7 @@ export default function getMetadata({
     category,
     twitter: {
       card: 'summary_large_image',
-      site: '@neondatabase',
+      site: '@servbit',
     },
   };
 }

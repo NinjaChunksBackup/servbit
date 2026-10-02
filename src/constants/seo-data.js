@@ -4,9 +4,9 @@ export const DEFAULT_IMAGE_PATH = '/images/social-previews/index.jpg?updated=202
 
 export default {
   index: {
-    title: 'Neon — Postgres backends for apps and agents',
+    title: 'Servbit — App, Web, Cloud, Automation & AI Execution',
     description:
-      'The backend for apps and agents. Build with Lakebase Postgres, Auth, Functions, Storage, and an AI Gateway: instant, branchable, serverless.',
+      'Any requirements related to app, web, cloud, automation, and AI — we serve it! We completely take businesses online, increase their reach and profits factually, brutally honestly, and professionally.',
     pathname: '',
   },
   about: {
