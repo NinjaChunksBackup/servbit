@@ -130,7 +130,7 @@
     "@commitlint/cli": "^21.2.3",
     "@commitlint/config-conventional": "^21.2.3",
     "@eslint/compat": "^2.1.1",
-    "@eslint/js": "^9.39.5",
+    "@eslint/js": "^10.0.1",
     "@neon/sdk": "^7.0.0",
     "@next/eslint-plugin-next": "16.3.8",
     "@playwright/test": "1.63.0",
