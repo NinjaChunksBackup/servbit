@@ -35,7 +35,7 @@ const Submenu = ({
       {MENUS.header.map((menu, index) => {
         const isActive = activeMenuIndex === index;
         const sections = menu.sections || [];
-        const isProduct = menu.text === 'Product';
+        const isServices = menu.text === 'Services';
 
         return (
           <div
@@ -117,7 +117,7 @@ const Submenu = ({
                     </li>
                   ))}
                 </ul>
-                {isProduct && (
+                {isServices && (
                   <MenuBanner
                     linkProps={{
                       className: submenuLinkClassName,

@@ -72,6 +72,24 @@ export default {
             },
           ],
         },
+        {
+          title: 'Work with us',
+          variant: 'cards',
+          items: [
+            {
+              title: 'End-to-End Projects',
+              to: '#contact',
+              description: 'From concept to production, we own the full delivery.',
+              graphic: 'agents',
+            },
+            {
+              title: 'Ongoing Partnership',
+              to: '#contact',
+              description: 'Continuous engineering, optimization, and support.',
+              graphic: 'platforms',
+            },
+          ],
+        },
       ],
     },
     {

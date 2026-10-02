@@ -23,7 +23,7 @@ const MobileMenuItem = ({ text, to, sections, ...otherProps }) => {
   const [isMenuItemOpen, setIsMenuItemOpen] = useState();
   const Tag = sections ? Button : Link;
   const hasSubmenu = sections?.length > 0;
-  const isProduct = text === 'Product';
+  const isServices = text === 'Services';
 
   const handleMenuItemClick = () => {
     if (sections) {
@@ -99,7 +99,7 @@ const MobileMenuItem = ({ text, to, sections, ...otherProps }) => {
                     </li>
                   ))}
                 </ul>
-                {isProduct && <MenuBanner />}
+                {isServices && <MenuBanner />}
               </m.div>
             )}
           </AnimatePresence>
