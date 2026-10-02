@@ -56,7 +56,7 @@ jobs:
       # Mirrors neondatabase/neon-pkgs and neondatabase/neonctl.
       - name: Setup JFrog CLI with OIDC
         id: setup-jfrog
-        uses: jfrog/setup-jfrog-cli@v4
+        uses: jfrog/setup-jfrog-cli@v5
         env:
           JF_URL: https://databricks.jfrog.io
         with:

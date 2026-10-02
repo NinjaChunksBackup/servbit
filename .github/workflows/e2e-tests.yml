@@ -55,7 +55,7 @@ jobs:
       # OIDC and point npm at the mirror before anything fetches packages.
       - name: Setup JFrog CLI with OIDC
         id: setup-jfrog
-        uses: jfrog/setup-jfrog-cli@v4
+        uses: jfrog/setup-jfrog-cli@v5
         env:
           JF_URL: https://databricks.jfrog.io
         with:
