@@ -5,34 +5,34 @@ import Animation from './animation';
 
 const BENEFITS = [
   {
-    title: 'Instant operations',
+    title: 'Complete Transition',
     description:
-      "Infrastructure that responds instantly. Agents don't wait for servers, tickets, or manual provisioning.",
+      'We rebuild traditional, offline operations into seamless, automated web and mobile platforms.',
   },
   {
-    title: 'Branch everything',
+    title: 'Reach & Authority',
     description:
-      'Give every idea its own environment. Agents can work in isolated copies of your entire backend.',
+      'Engineered digital presence that captures high-intent customers across all modern channels.',
   },
   {
-    title: 'Safe automation',
+    title: 'Measurable Profits',
     description:
-      'Fast development requires fast recovery. Every change can be isolated, tested, and rolled back.',
+      'Brutally honest conversion engineering and system optimization that directly drives commercial margins.',
   },
 ];
 
 const OperateWithAgents = () => (
   <section
     className="operate-with-agents relative mt-40 overflow-hidden bg-black-pure safe-paddings text-white 2xl:mt-32 md:mt-28 sm:mt-24"
-    id="operate-with-agents"
-    aria-labelledby="operate-with-agents-heading"
+    id="solutions"
+    aria-labelledby="solutions-heading"
   >
     <Container
       className="grid grid-cols-[22rem_minmax(0,1fr)] gap-y-[70px] xl:grid-cols-[16rem_minmax(0,1fr)] xl:items-center xl:gap-y-14 lg:grid-cols-1 lg:items-start lg:gap-y-10 md:gap-y-8"
       size="1600"
     >
       <div className="pt-3.25 lg:pt-0">
-        <SectionLabel theme="white">OPERATE IT WITH AGENTS</SectionLabel>
+        <SectionLabel theme="white">BUSINESS TRANSFORMATION</SectionLabel>
         <span
           className="mt-4.25 block font-mono text-[8rem] leading-none tracking-tighter text-gray-new-10 xl:text-[6rem] md:mt-2 md:text-[5rem]"
           aria-hidden="true"
@@ -44,10 +44,11 @@ const OperateWithAgents = () => (
       <header className="min-w-0">
         <h2
           className="ml-px max-w-[1182px] indent-24 text-5xl leading-dense font-normal tracking-tighter text-pretty text-gray-new-50 2xl:text-[2.75rem] xl:ml-0 xl:indent-16 xl:text-[2.25rem] lg:indent-0 md:text-[1.75rem]"
-          id="operate-with-agents-heading"
+          id="solutions-heading"
         >
-          <span className="text-white">Ready for coding agents.</span> Create and branch
-          environments the way you work with PRs, with full access via MCP, CLI, and SDK.
+          <span className="text-white">From offline to market dominance.</span> We transition your
+          business operations, customer touchpoints, and sales channels into high-velocity digital
+          systems.
         </h2>
       </header>
 

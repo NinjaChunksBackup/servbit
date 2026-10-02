@@ -16,7 +16,7 @@ const ScaleYourApp = () => (
       size="1600"
     >
       <div>
-        <SectionLabel theme="white">SCALE YOUR APP AND AGENT</SectionLabel>
+        <SectionLabel theme="white">ENGINEERED TO SCALE</SectionLabel>
         <span
           className="mt-4.25 block font-mono text-[8rem] leading-none tracking-tighter text-gray-new-10 xl:text-[6rem] md:mt-2 md:text-[5rem]"
           aria-hidden="true"
@@ -30,8 +30,9 @@ const ScaleYourApp = () => (
           className="relative left-px max-w-296 indent-24 text-5xl leading-dense font-normal tracking-tighter text-gray-new-50 2xl:text-[2.75rem] xl:left-0 xl:indent-16 xl:text-[2.25rem] lg:mt-10 lg:indent-0 md:mt-8 md:text-[1.75rem]"
           id="scale-your-app-heading"
         >
-          <span className="text-white">Scale from your first users to the Fortune 500. </span>
-          Startups ship on the same Neon primitives that enterprise teams run in production.
+          <span className="text-white">Scale from first launch to market leadership. </span>
+          From fast-moving startups to high-volume enterprises, Servbit engineers production
+          architectures that endure.
         </h2>
       </header>
     </Container>

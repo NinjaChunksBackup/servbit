@@ -5,8 +5,9 @@ import BackendServices from './services';
 
 const SERVICE_ITEMS = [
   {
-    title: 'Lakebase Postgres',
-    description: 'Serverless postgres database that scales and branches with your app.',
+    title: 'App Development',
+    description:
+      'Native iOS, Android & cross-platform apps built for speed, responsiveness, and maximum user retention.',
     videoBase: 'postgres-database',
     version: '20260813-3',
     aspectRatio: 'aspect-588/580',
@@ -14,8 +15,9 @@ const SERVICE_ITEMS = [
     height: 580,
   },
   {
-    title: 'Authentication',
-    description: 'Fully-managed user auth in every database for free, built on Better Auth.',
+    title: 'Web Engineering',
+    description:
+      'High-conversion web platforms, SaaS applications, and modern digital storefronts engineered to scale.',
     videoBase: 'authentication',
     version: '20260821',
     aspectRatio: 'aspect-590/440',
@@ -23,8 +25,9 @@ const SERVICE_ITEMS = [
     height: 440,
   },
   {
-    title: 'Compute',
-    description: 'Functions without timeouts running close to your database.',
+    title: 'Cloud & DevOps',
+    description:
+      'High-availability infrastructure, automated CI/CD pipelines, and active cloud cost optimization.',
     videoBase: 'compute',
     version: '20260821',
     aspectRatio: 'aspect-590/300',
@@ -32,8 +35,9 @@ const SERVICE_ITEMS = [
     height: 300,
   },
   {
-    title: 'Storage',
-    description: 'S3-compatible object storage that branches with your projects.',
+    title: 'Workflow Automation',
+    description:
+      'System integrations and intelligent pipelines that eliminate manual operations and operational drag.',
     videoBase: 'storage',
     version: '20260827',
     aspectRatio: 'aspect-590/680',
@@ -41,8 +45,9 @@ const SERVICE_ITEMS = [
     height: 680,
   },
   {
-    title: 'AI Gateway',
-    description: 'One API for all frontier & open-source models, powered by Databricks.',
+    title: 'Custom AI & Agents',
+    description:
+      'Autonomous business agents and practical AI solutions engineered for measurable commercial impact.',
     videoBase: 'ai-gateway',
     version: '20260814',
     aspectRatio: 'aspect-592/220',
@@ -54,13 +59,13 @@ const SERVICE_ITEMS = [
 const BuildYourBackend = () => (
   <section
     className="build-your-backend mt-53 overflow-hidden bg-black-pure safe-paddings 2xl:mt-32 lg:mt-24 md:mt-20 sm:mt-18"
-    id="build-your-backend"
-    aria-labelledby="build-your-backend-heading"
+    id="services"
+    aria-labelledby="services-heading"
   >
     <Container className="lg:pt-10 md:pt-8 sm:pt-6" size="1600">
       <div className="grid grid-cols-[22rem_minmax(0,1fr)] xl:grid-cols-[16rem_minmax(0,1fr)] lg:block">
         <div className="pt-3.25 lg:pt-0">
-          <SectionLabel theme="white">BUILD YOUR BACKEND</SectionLabel>
+          <SectionLabel theme="white">CORE CAPABILITIES</SectionLabel>
           <span
             className="mt-4.25 block font-mono text-[8rem] leading-none tracking-tighter text-gray-new-10 xl:items-center xl:text-[6rem] lg:items-start md:mt-2 md:text-[5rem]"
             aria-hidden="true"
@@ -70,12 +75,12 @@ const BuildYourBackend = () => (
         </div>
         <h2
           className="max-w-296 min-w-0 indent-24 text-5xl leading-dense font-normal tracking-tighter text-pretty text-white 2xl:text-[2.75rem] xl:indent-16 xl:text-[2.25rem] lg:mt-10 lg:indent-0 md:mt-8 md:text-[1.75rem]"
-          id="build-your-backend-heading"
+          id="services-heading"
         >
-          <span>Not just a Database. </span>
+          <span>Not just developers. </span>
           <span className="text-gray-new-50">
-            Neon is a complete backend platform with Authentication, Object Storage, Functions and
-            an AI Gateway.
+            Servbit is your complete digital execution partner across App, Web, Cloud, Automation,
+            and AI.
           </span>
         </h2>
       </div>

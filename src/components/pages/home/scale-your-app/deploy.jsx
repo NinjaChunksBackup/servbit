@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import Container from 'components/shared/container';
 
 import DeploymentCards from './deployment-cards';
@@ -8,23 +6,17 @@ import FeatureHeading from './feature-heading';
 const EncoreTestimonial = () => (
   <figure className="absolute top-[72px] left-1/2 z-10 flex min-h-[257px] w-[36.6667%] max-w-[704px] min-w-140 flex-col justify-between border border-[#242628] bg-black-pure px-8 py-8 2xl:top-0 2xl:right-24 2xl:left-auto 2xl:w-1/4 xl:right-18 xl:w-1/5 xl:min-w-128 xl:px-6 xl:py-6 lg:right-auto lg:left-1/4 lg:min-h-[230px] lg:min-w-124 md:inset-x-10 md:min-h-[240px] md:w-auto md:min-w-80 md:translate-x-0 sm:inset-x-5 sm:min-h-[260px] sm:px-5">
     <blockquote className="max-w-[620px] text-2xl leading-normal tracking-extra-tight text-white xl:text-xl sm:text-lg">
-      “Our users were asking for preview environments that already had their data in place. Neon’s
-      branching was exactly what we needed”
+      &ldquo;We do not write throwaway code. Every architecture is built as if it will run
+      mission-critical production from day one.&rdquo;
     </blockquote>
 
     <figcaption className="mt-7 flex items-center gap-4">
-      <span className="flex size-14 shrink-0 items-center justify-center overflow-hidden bg-[#18191b]">
-        <Image
-          className="size-10 object-contain brightness-0 invert"
-          src="/images/technology-logos/encore.svg"
-          width={40}
-          height={40}
-          alt=""
-        />
+      <span className="flex size-14 shrink-0 items-center justify-center overflow-hidden bg-[#18191b] font-mono text-xl font-bold text-white">
+        SB
       </span>
       <span className="flex flex-col text-xl leading-tight tracking-extra-tight text-white xl:text-lg">
-        <span>Marcus Kohlberg</span>
-        <span className="text-gray-new-70">Founder at Encore</span>
+        <span>Servbit Engineering Standard</span>
+        <span className="text-gray-new-70">Production Principle #1</span>
       </span>
     </figcaption>
   </figure>
@@ -39,10 +31,10 @@ const Deploy = () => (
       <FeatureHeading
         className="col-start-2"
         lines={[
-          { text: 'WHERE AGENT', width: 576 },
-          { text: 'PLATFORMS DEPLOY', width: 832 },
+          { text: 'ENGINEERED', width: 576 },
+          { text: 'WITHOUT COMPROMISE', width: 832 },
         ]}
-        description="The backend behind every app they generate."
+        description="Robust, modern codebases designed for maintainability, velocity, and zero technical debt."
       />
     </Container>
 

@@ -12,10 +12,10 @@ const Startups = () => (
       <div className="relative col-start-2 h-full min-w-0">
         <FeatureHeading
           lines={[
-            { text: 'WHERE STARTUPS', width: 608 },
-            { text: 'START', width: 384 },
+            { text: 'WHERE BUSINESSES', width: 608 },
+            { text: 'GROW', width: 384 },
           ]}
-          description="From Bootstrapped to VC Funded, Startups Ship Faster on Neon."
+          description="From first online presence to multi-channel market dominance, we build the engine of your growth."
           descriptionClassName="max-w-[440px] lg:max-w-[400px] md:max-w-[360px] sm:max-w-[290px]"
         />
 
