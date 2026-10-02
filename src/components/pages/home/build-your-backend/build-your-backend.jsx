@@ -9,7 +9,7 @@ const SERVICE_ITEMS = [
     description:
       'Native iOS, Android & cross-platform apps built for speed, responsiveness, and maximum user retention.',
     videoBase: 'postgres-database',
-    version: '20260813-3',
+    version: '20261002',
     aspectRatio: 'aspect-588/580',
     width: 588,
     height: 580,
