@@ -1,8 +1,0 @@
-<svg width="249" height="64" viewBox="0 0 249 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(6, 16)">
-    <g transform="translate(0, 0)">
-      <path d="M4 16H9L12 7L16 25L20 12L23 16H28" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    </g>
-    <text x="44" y="22" fill="#E4E5E7" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">DATA PIPELINES</text>
-  </g>
-</svg>

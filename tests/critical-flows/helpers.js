@@ -1,8 +1,7 @@
 const { expect } = require('@playwright/test');
 
-const ANALYTICS_EVENTS_KEY = '__NEON_CRITICAL_FLOW_ANALYTICS_EVENTS__';
-const ANALYTICS_FAILURE_RELEASE_KEY = '__NEON_CRITICAL_FLOW_ANALYTICS_FAILURE_RELEASE__';
-const CLIPBOARD_TEXT_KEY = '__NEON_CRITICAL_FLOW_CLIPBOARD_TEXT__';
+const ANALYTICS_EVENTS_KEY = '__SERVBIT_CRITICAL_FLOW_ANALYTICS_EVENTS__';
+const ANALYTICS_FAILURE_RELEASE_KEY = '__SERVBIT_CRITICAL_FLOW_ANALYTICS_FAILURE_RELEASE__';
 const NON_BLOCKING_PAGE_ERRORS = [
   /\/unpkg\.com\/@rive-app\/canvas@.+\/rive\.wasm due to access control checks\.$/,
 ];
@@ -114,23 +113,6 @@ async function releaseDeferredAnalyticsFailure(page) {
   }, ANALYTICS_FAILURE_RELEASE_KEY);
 }
 
-async function installClipboardMock(page) {
-  await page.addInitScript(
-    ({ clipboardKey }) => {
-      window[clipboardKey] = '';
-      Object.defineProperty(navigator, 'clipboard', {
-        configurable: true,
-        value: {
-          writeText: async (text) => {
-            window[clipboardKey] = text;
-          },
-        },
-      });
-    },
-    { clipboardKey: CLIPBOARD_TEXT_KEY }
-  );
-}
-
 async function expectAnalyticsEvents(page, expectedEvents) {
   await expect
     .poll(() => page.evaluate((eventsKey) => window[eventsKey] || [], ANALYTICS_EVENTS_KEY))
@@ -141,12 +123,6 @@ async function expectNoAnalyticsEvents(page) {
   const events = await page.evaluate((eventsKey) => window[eventsKey] || [], ANALYTICS_EVENTS_KEY);
 
   expect(events).toEqual([]);
-}
-
-async function expectClipboardText(page, expectedText) {
-  await expect
-    .poll(() => page.evaluate((clipboardKey) => window[clipboardKey], CLIPBOARD_TEXT_KEY))
-    .toBe(expectedText);
 }
 
 async function mockExternalFormSubmissions(page) {
@@ -169,13 +145,11 @@ async function mockExternalFormSubmissions(page) {
 
 module.exports = {
   expectAnalyticsEvents,
-  expectClipboardText,
   expectHealthyPage,
   expectManagedFormReady,
   expectNoAnalyticsEvents,
   expectReactHandlerReady,
   installAnalyticsMock,
-  installClipboardMock,
   mockExternalFormSubmissions,
   openCriticalPage,
   releaseDeferredAnalyticsFailure,

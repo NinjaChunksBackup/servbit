@@ -8,51 +8,26 @@ const SERVICE_ITEMS = [
     title: 'App Development',
     description:
       'Native iOS, Android & cross-platform apps built for speed, responsiveness, and maximum user retention.',
-    videoBase: 'postgres-database',
-    version: '20261002',
-    aspectRatio: 'aspect-588/580',
-    width: 588,
-    height: 580,
   },
   {
     title: 'Web Engineering',
     description:
       'High-conversion web platforms, SaaS applications, and modern digital storefronts engineered to scale.',
-    videoBase: 'authentication',
-    version: '20260821',
-    aspectRatio: 'aspect-590/440',
-    width: 590,
-    height: 440,
   },
   {
     title: 'Cloud & DevOps',
     description:
       'High-availability infrastructure, automated CI/CD pipelines, and active cloud cost optimization.',
-    videoBase: 'compute',
-    version: '20260821',
-    aspectRatio: 'aspect-590/300',
-    width: 590,
-    height: 300,
   },
   {
     title: 'Workflow Automation',
     description:
       'System integrations and intelligent pipelines that eliminate manual operations and operational drag.',
-    videoBase: 'storage',
-    version: '20260827',
-    aspectRatio: 'aspect-590/680',
-    width: 590,
-    height: 680,
   },
   {
     title: 'Custom AI & Agents',
     description:
       'Autonomous business agents and practical AI solutions engineered for measurable commercial impact.',
-    videoBase: 'ai-gateway',
-    version: '20260814',
-    aspectRatio: 'aspect-592/220',
-    width: 592,
-    height: 220,
   },
 ];
 

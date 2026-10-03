@@ -2,8 +2,6 @@ import Image from 'next/image';
 
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
-import PauseableVideo from 'components/shared/pauseable-video';
-import LINKS from 'constants/links';
 
 import mobileBackground from './images/mobile-bg.jpg';
 
@@ -38,28 +36,7 @@ const CTA = () => (
     </div>
 
     <div className="pointer-events-none relative overflow-hidden">
-      {/* Footer: 3840×1888, 30 FPS, 14 seconds, no audio. AV1 CRF 40 / HEVC CRF 30 / VP9 CRF 34. */}
-      <PauseableVideo
-        className="aspect-[1920/944] max-h-[944px] w-full lg:left-1/2 lg:w-[1024px] lg:-translate-x-1/2 md:hidden"
-        videoClassName="size-full object-cover"
-        width={1920}
-        height={944}
-      >
-        <source
-          src={`${LINKS.cdn}/public/images/pages/home/cta/cta-new-av1.mp4?updated=20260918`}
-          type='video/mp4; codecs="av01.0.12M.08"'
-        />
-        <source
-          src={`${LINKS.cdn}/public/images/pages/home/cta/cta-new.mp4?updated=20260918`}
-          type='video/mp4; codecs="hvc1"'
-        />
-        <source
-          src={`${LINKS.cdn}/public/images/pages/home/cta/cta-new.webm?updated=20260918`}
-          type="video/webm"
-        />
-      </PauseableVideo>
-
-      <div className="relative hidden h-170 w-full bg-[#484848] md:block">
+      <div className="relative h-170 w-full bg-[#484848]">
         <Image
           className="absolute top-[52%] left-1/2 h-auto w-80 -translate-x-1/2 -translate-y-1/2"
           src={mobileBackground}

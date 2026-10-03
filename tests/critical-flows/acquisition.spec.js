@@ -1,10 +1,6 @@
 const { expect, test } = require('@playwright/test');
 
-const {
-  HEADER_LINK_CONTRACTS,
-  HOME_LINK_CONTRACTS,
-  PRICING_LINK_CONTRACTS,
-} = require('./contracts');
+const { CTA_LINK_CONTRACTS, HOMEPAGE_ANCHORS } = require('./contracts');
 const { expectHealthyPage, openCriticalPage } = require('./helpers');
 
 async function expectContractLink(page, contract) {
@@ -15,21 +11,13 @@ async function expectContractLink(page, contract) {
 }
 
 test.describe('critical acquisition journeys', () => {
-  test('[TC-ACQ-001..005] homepage entry points preserve their destinations', async ({
-    baseURL,
+  test('[TC-CTA-001..004] every call to action keeps its destination', async ({
     isMobile,
     page,
   }) => {
     const applicationErrors = await openCriticalPage(page, '/');
 
-    for (const contract of HOME_LINK_CONTRACTS) {
-      await test.step(`${contract.id}: ${contract.name}`, async () => {
-        await expectContractLink(page, contract);
-      });
-    }
-
-    const headerContracts = isMobile ? HEADER_LINK_CONTRACTS.mobile : HEADER_LINK_CONTRACTS.desktop;
-
+    // The mobile CTA only exists once the menu is open; desktop renders it inline.
     if (isMobile) {
       const menuToggle = page.getByTestId('mobile-menu-toggle');
       await expect(menuToggle).toBeVisible();
@@ -37,8 +25,15 @@ test.describe('critical acquisition journeys', () => {
       await expect(menuToggle).toHaveAttribute('aria-label', 'Close menu');
     }
 
-    for (const contract of headerContracts) {
+    for (const contract of CTA_LINK_CONTRACTS) {
       await test.step(`${contract.id}: ${contract.name}`, async () => {
+        // header-cta is desktop-only, mobile-cta is mobile-only.
+        const isWrongViewport =
+          (contract.testId === 'header-cta' && isMobile) ||
+          (contract.testId === 'mobile-cta' && !isMobile);
+
+        if (isWrongViewport) return;
+
         await expectContractLink(page, contract);
       });
     }
@@ -49,25 +44,26 @@ test.describe('critical acquisition journeys', () => {
       await expect(menuToggle).toHaveAttribute('aria-label', 'Open menu');
     }
 
-    const docsLink = page.getByTestId('home-docs');
-    await docsLink.click();
-    await expect(page).toHaveURL(new URL('/docs/introduction', baseURL).toString());
-    await expect(page.getByRole('heading', { level: 1, name: 'Neon documentation' })).toBeVisible();
     await expectHealthyPage(applicationErrors);
   });
 
-  test('[TC-ACQ-006..008] pricing plans preserve signup and billing destinations', async ({
-    page,
-  }) => {
-    const applicationErrors = await openCriticalPage(page, '/pricing');
+  test('[TC-CTA-005] every CTA anchor exists on the homepage', async ({ page }) => {
+    const applicationErrors = await openCriticalPage(page, '/');
 
-    await expect(page.getByRole('heading', { level: 1, name: 'Neon pricing' })).toBeVisible();
-
-    for (const contract of PRICING_LINK_CONTRACTS) {
-      await test.step(`${contract.id}: ${contract.name}`, async () => {
-        await expectContractLink(page, contract);
+    for (const anchor of HOMEPAGE_ANCHORS) {
+      await test.step(`#${anchor}`, async () => {
+        await expect(page.locator(`#${anchor}`)).toHaveCount(1);
       });
     }
+
+    await expectHealthyPage(applicationErrors);
+  });
+
+  test('[TC-CTA-006] the contact page renders its form and contact address', async ({ page }) => {
+    const applicationErrors = await openCriticalPage(page, '/contact-sales');
+
+    await expect(page.getByTestId('contact-sales-form')).toBeVisible();
+    await expect(page.getByRole('link', { name: 'servbit.in@gmail.com' }).first()).toBeVisible();
 
     await expectHealthyPage(applicationErrors);
   });

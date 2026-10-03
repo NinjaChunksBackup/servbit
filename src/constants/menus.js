@@ -10,18 +10,18 @@ export default {
           items: [
             {
               title: 'App Development',
-              to: '#services',
+              to: '/#services',
               description: 'Native iOS, Android & desktop apps built for speed and user retention.',
             },
             {
               title: 'Web Engineering',
-              to: '#services',
+              to: '/#services',
               description:
                 'High-conversion web platforms, web apps, and modern digital storefronts.',
             },
             {
               title: 'Cloud & DevOps',
-              to: '#services',
+              to: '/#services',
               description:
                 'Bulletproof cloud infrastructure, automated CI/CD, and cost optimization.',
             },
@@ -32,13 +32,13 @@ export default {
           items: [
             {
               title: 'Workflow Automation',
-              to: '#services',
+              to: '/#services',
               description:
                 'System integrations and automated pipelines that eliminate manual tasks.',
             },
             {
               title: 'Custom AI & Agents',
-              to: '#services',
+              to: '/#services',
               description:
                 'Autonomous agents and practical AI engineered for measurable business utility.',
             },
@@ -54,19 +54,19 @@ export default {
           items: [
             {
               title: 'Take Your Business Online',
-              to: '#solutions',
+              to: '/#solutions',
               description:
                 'Complete digital transition from traditional operations to online market dominance.',
             },
             {
               title: 'Scale Reach & Profits',
-              to: '#solutions',
+              to: '/#solutions',
               description:
                 'Conversion-engineered digital presence designed to maximize commercial margins.',
             },
             {
               title: 'Legacy Modernization',
-              to: '#solutions',
+              to: '/#solutions',
               description:
                 'Replace obsolete, fragile software with high-velocity cloud architecture.',
             },
@@ -78,13 +78,13 @@ export default {
           items: [
             {
               title: 'End-to-End Projects',
-              to: '#contact',
+              to: '/#contact',
               description: 'From concept to production, we own the full delivery.',
               graphic: 'agents',
             },
             {
               title: 'Ongoing Partnership',
-              to: '#contact',
+              to: '/#contact',
               description: 'Continuous engineering, optimization, and support.',
               graphic: 'platforms',
             },
@@ -94,140 +94,44 @@ export default {
     },
     {
       text: 'About',
-      to: '#about',
+      to: LINKS.aboutUs,
     },
     {
       text: 'Contact',
-      to: '#contact',
+      to: '/#contact',
     },
   ],
   footer: [
     {
       heading: 'Company',
       items: [
-        {
-          text: 'About',
-          to: LINKS.aboutUs,
-        },
-        {
-          text: 'Blog',
-          to: LINKS.blog,
-        },
-        {
-          text: 'Careers',
-          to: LINKS.careers,
-        },
-        {
-          text: 'Contact Sales',
-          to: LINKS.contactSales,
-        },
-        {
-          text: 'Security',
-          to: LINKS.security,
-        },
+        { text: 'About', to: LINKS.aboutUs },
+        { text: 'Careers', to: LINKS.careers },
+        { text: 'Contact Sales', to: LINKS.contactSales },
       ],
     },
     {
-      heading: 'Resources',
+      heading: 'Services',
       items: [
-        {
-          text: 'Docs',
-          to: LINKS.docs,
-        },
-        {
-          text: 'Changelog',
-          to: LINKS.changelog,
-        },
-        {
-          text: 'Support',
-          to: LINKS.support,
-        },
-        {
-          text: 'Community Guides',
-          to: LINKS.guides,
-        },
-        {
-          text: 'FAQs',
-          to: LINKS.faqs,
-        },
-        {
-          text: 'PostgreSQL Tutorial',
-          to: LINKS.postgresqltutorial,
-        },
-        {
-          text: 'Startups',
-          to: LINKS.startups,
-        },
+        { text: 'App Development', to: '/#services' },
+        { text: 'Web Engineering', to: '/#services' },
+        { text: 'Cloud & DevOps', to: '/#services' },
+        { text: 'Workflow Automation', to: '/#services' },
+        { text: 'Custom AI & Agents', to: '/#services' },
       ],
     },
     {
       heading: 'Connect',
       items: [
-        {
-          text: 'LinkedIn',
-          to: LINKS.linkedin,
-          icon: 'linkedin-icon',
-        },
-        {
-          text: 'X.com',
-          to: LINKS.twitter,
-          icon: 'x-icon',
-        },
-        {
-          text: 'YouTube',
-          to: LINKS.youtube,
-          icon: 'youtube-icon',
-        },
+        { text: 'LinkedIn', to: LINKS.linkedin, icon: 'linkedin-icon' },
+        { text: 'X.com', to: LINKS.twitter, icon: 'x-icon' },
+        { text: 'YouTube', to: LINKS.youtube, icon: 'youtube-icon' },
+        { text: 'GitHub', to: LINKS.github, icon: 'github-icon' },
       ],
     },
     {
-      heading: 'Compliance',
-      items: [
-        {
-          text: 'CCPA',
-          description: 'Compliant',
-          to: LINKS.certCCPA,
-        },
-        {
-          text: 'GDPR',
-          description: 'Compliant',
-          to: LINKS.certGDPR,
-        },
-        {
-          text: 'ISO 27001',
-          description: 'Certified',
-          to: LINKS.certISO27001,
-        },
-        {
-          text: 'ISO 27701',
-          description: 'Certified',
-          to: LINKS.certISO27701,
-        },
-        {
-          text: 'SOC 2',
-          description: 'Certified',
-          to: LINKS.certSOC2,
-        },
-        {
-          text: 'HIPAA',
-          description: 'Compliant',
-          to: LINKS.certHIPAA,
-          links: [
-            {
-              text: 'Compliance Guide',
-              to: LINKS.hipaaCompliance,
-            },
-            {
-              text: 'Sub-processors',
-              to: LINKS.subprocessors,
-            },
-          ],
-        },
-        {
-          text: 'Trust Center',
-          to: LINKS.trust,
-        },
-      ],
+      heading: 'Brand',
+      items: [{ text: 'Brand Guidelines', to: LINKS.brand }],
     },
   ],
 };

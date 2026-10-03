@@ -1,8 +1,0 @@
-<svg width="174" height="64" viewBox="0 0 174 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(6, 16)">
-    <g transform="translate(0, 0)">
-      <path d="M16 4C16 10.6 21.4 16 28 16C21.4 16 16 21.4 16 28C16 21.4 10.6 16 4 16C10.6 16 16 10.6 16 4Z" stroke="#FFFFFF" stroke-width="2" fill="#FFFFFF" fill-opacity="0.2"/>
-    </g>
-    <text x="44" y="22" fill="#E4E5E7" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5">AI ENGINE</text>
-  </g>
-</svg>

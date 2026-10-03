@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 
 // The generated bundle targets modern browsers and contains class static blocks.
-// eslint-disable-next-line import/namespace
 import { createNeonGlobe } from './neon-globe.mjs';
 
 const GlobeAnimation = () => {

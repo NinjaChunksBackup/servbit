@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import Link from 'components/shared/link';
+import LINKS from 'constants/links';
 import ArrowTopRightIcon from 'icons/arrow-right.inline.svg';
 import { cn } from 'utils/cn';
 
@@ -13,7 +14,7 @@ const MenuBanner = ({ linkProps: { className, ...linkProps } = {} }) => (
       'group relative flex h-[340px] w-[320px] items-end! overflow-hidden border border-gray-new-10 bg-black-pure p-6 lg:w-auto md:h-[240px] md:w-[320px]',
       className
     )}
-    to="#about"
+    to={LINKS.aboutUs}
     tagName="Menu Banner"
     tagText="How We Work"
     {...linkProps}

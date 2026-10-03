@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { useContext, useState } from 'react';
 
 import Button from 'components/shared/button';
-import InkeepTrigger from 'components/shared/inkeep-trigger';
 import Link from 'components/shared/link';
 import MENUS from 'constants/menus';
 import { TopbarContext } from 'contexts/topbar-context';
@@ -128,14 +127,13 @@ MobileMenuItem.propTypes = {
 
 const mobileMenuItems = MENUS.header;
 
-const MobileMenu = ({ isDocPage = false, docPageType = null }) => {
+const MobileMenu = () => {
   const { isMobileMenuOpen, toggleMobileMenu } = useMobileMenu();
   const { hasTopbar } = useContext(TopbarContext);
 
   return (
     <>
       <div className="absolute top-3 right-7 z-50 hidden gap-5 lg:flex lg:items-center lg:gap-x-4 sm:right-4">
-        {isDocPage && <InkeepTrigger className="mobile-search" docPageType={docPageType} />}
         <Burger
           className="relative flex text-black dark:text-white"
           dataTest="mobile-menu-toggle"
@@ -149,7 +147,6 @@ const MobileMenu = ({ isDocPage = false, docPageType = null }) => {
           <div
             className={cn('relative h-full pt-14 pb-[101px] sm:pb-[125px]', {
               'pt-[96px]': hasTopbar,
-              'pb-[148px] sm:pb-[172px]': isDocPage,
             })}
           >
             <ul className="no-scrollbars flex h-full flex-col overflow-y-auto px-8 pt-1 sm:px-5 sm:pt-3">
@@ -157,16 +154,11 @@ const MobileMenu = ({ isDocPage = false, docPageType = null }) => {
                 <MobileMenuItem key={index} {...item} />
               ))}
             </ul>
-            <div
-              className={cn(
-                'absolute inset-x-0 bottom-0 border-t border-gray-new-94 bg-white p-8 dark:border-gray-new-20 dark:bg-black-pure sm:p-5',
-                { 'pb-20 sm:pb-[68px]': isDocPage }
-              )}
-            >
+            <div className="absolute inset-x-0 bottom-0 border-t border-gray-new-94 bg-white p-8 dark:border-gray-new-20 dark:bg-black-pure sm:p-5">
               <Button
                 className="h-11 w-full px-5 text-center text-[15px] font-semibold"
                 data-test="mobile-cta"
-                to="#contact"
+                to="/#contact"
                 theme="white-filled-multi"
                 size="xs"
                 tagName="MobileMenu"
@@ -180,11 +172,6 @@ const MobileMenu = ({ isDocPage = false, docPageType = null }) => {
       )}
     </>
   );
-};
-
-MobileMenu.propTypes = {
-  isDocPage: PropTypes.bool,
-  docPageType: PropTypes.string,
 };
 
 export default MobileMenu;

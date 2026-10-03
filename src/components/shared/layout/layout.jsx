@@ -14,11 +14,6 @@ const Layout = ({
   isHeaderSticky = false,
   isHeaderStickyOverlay = false,
   hasThemesSupport = false,
-  isDocPage = false,
-  docPageType = null,
-  docsNavigation = null,
-  docsBasePath = null,
-  customType = null,
   isClient = false,
 }) => (
   <>
@@ -26,8 +21,7 @@ const Layout = ({
     <div
       className={cn(
         'relative flex flex-col pt-safe',
-        isClient ? 'min-h-screen' : 'min-h-[calc(100vh-36px)]',
-        isDocPage && 'lg:pb-12!'
+        isClient ? 'min-h-screen' : 'min-h-[calc(100vh-36px)]'
       )}
     >
       <Header
@@ -35,11 +29,6 @@ const Layout = ({
         isSticky={isHeaderSticky}
         isStickyOverlay={isHeaderStickyOverlay}
         hasThemesSupport={hasThemesSupport}
-        isDocPage={isDocPage}
-        docPageType={docPageType}
-        docsNavigation={docsNavigation}
-        docsBasePath={docsBasePath}
-        customType={customType}
         isClient={isClient}
       />
       <main
@@ -48,7 +37,7 @@ const Layout = ({
         {children}
       </main>
       <Footer hasThemesSupport={hasThemesSupport} />
-      <CookieConsent isDocPage={isDocPage} />
+      <CookieConsent />
     </div>
   </>
 );
@@ -60,15 +49,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   isHeaderSticky: PropTypes.bool,
   isHeaderStickyOverlay: PropTypes.bool,
-  isDocPage: PropTypes.bool,
-  docPageType: PropTypes.string,
-  docsNavigation: PropTypes.array,
-  docsBasePath: PropTypes.string,
   hasThemesSupport: PropTypes.bool,
-  customType: PropTypes.shape({
-    title: PropTypes.string,
-    link: PropTypes.string,
-  }),
   isClient: PropTypes.bool,
 };
 

@@ -4,14 +4,12 @@ import PropTypes from 'prop-types';
 import Container from 'components/shared/container';
 import ThemeSelect from 'components/shared/footer/theme-select';
 import Link from 'components/shared/link';
-import LINKS from 'constants/links';
 import MENUS from 'constants/menus.js';
 import ChevronIcon from 'icons/chevron-down.inline.svg';
 import { cn } from 'utils/cn';
 
 import servbitLogoDark from './images/servbit-logo-dark.svg';
 import servbitLogoLight from './images/servbit-logo-light.svg';
-import StatusBadge from './status-badge';
 
 const Footer = ({ hasThemesSupport = false }) => (
   <footer className="relative z-30 mt-auto border-t border-gray-new-90 bg-white safe-paddings font-sans dark:border-gray-new-20 dark:bg-black-pure">
@@ -150,44 +148,18 @@ const Footer = ({ hasThemesSupport = false }) => (
         className="flex flex-row justify-between gap-5 lg:w-full lg:flex-col-reverse lg:items-start"
         size="1920"
       >
-        <StatusBadge />
-        <div
-          className={cn(
-            'flex w-full max-w-214 flex-col gap-y-2 font-sans text-[0.9375rem] leading-normal tracking-extra-tight text-gray-new-70 xl:max-w-180 lg:max-w-md',
-            'dark:text-gray-new-60'
-          )}
-        >
+        <div className="flex w-full max-w-214 flex-col gap-y-2 font-sans text-[0.9375rem] leading-normal tracking-extra-tight text-gray-new-70 dark:text-gray-new-60 xl:max-w-180 lg:max-w-md">
           <p className="flex w-full flex-wrap justify-between gap-3 leading-none lg:justify-start">
-            <Link
-              className="text-gray-new-40 hover:text-black-pure dark:text-gray-new-70 dark:hover:text-white"
-              to={LINKS.privacy}
-            >
-              Privacy Notice
-            </Link>
-            <Link
-              className="leading-none text-gray-new-40 hover:text-black-pure dark:text-gray-new-70 dark:hover:text-white"
-              to={LINKS.websiteTerms}
-            >
-              Terms of Use
-            </Link>
-            <Link
-              className="leading-none text-gray-new-40 hover:text-black-pure dark:text-gray-new-70 dark:hover:text-white"
-              to={LINKS.platformTerms}
-            >
-              Servbit Platform Terms
-            </Link>
-            <Link
-              className="leading-none text-gray-new-40 hover:text-black-pure dark:text-gray-new-70 dark:hover:text-white"
-              to={LINKS.modernSlaveryStatement}
-            >
-              Modern Slavery Statement
-            </Link>
-            <Link
-              className="leading-none text-gray-new-40 hover:text-black-pure dark:text-gray-new-70 dark:hover:text-white"
-              to={LINKS.californiaPolicy}
-            >
-              California Privacy
-            </Link>
+            <span className="text-gray-new-40 dark:text-gray-new-70">
+              Our Privacy Notice and Terms of Use are available on request at{' '}
+              <a
+                className="text-gray-new-70 underline decoration-dashed underline-offset-4 hover:text-black-pure dark:text-gray-new-60 dark:hover:text-white"
+                href="mailto:servbit.in@gmail.com"
+              >
+                servbit.in@gmail.com
+              </a>
+              .
+            </span>
           </p>
         </div>
       </Container>

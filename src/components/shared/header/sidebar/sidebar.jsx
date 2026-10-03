@@ -8,7 +8,7 @@ const Sidebar = ({ className }) => (
     <Button
       className="h-10 px-5 text-[14px] font-semibold tracking-snug transition-transform duration-150 hover:scale-[1.02]"
       data-test="header-cta"
-      to="#contact"
+      to="/#contact"
       theme="white-filled-multi"
       size="xs"
       tagName="Header"

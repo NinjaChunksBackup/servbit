@@ -1,9 +1,7 @@
 import Container from 'components/shared/container';
 import SectionLabel from 'components/shared/section-label';
 
-import Deploy from './deploy';
 import Scale from './scale';
-import Startups from './startups';
 
 const ScaleYourApp = () => (
   <section
@@ -38,8 +36,6 @@ const ScaleYourApp = () => (
     </Container>
 
     <div className="mt-[120px] 2xl:mt-16">
-      <Startups />
-      <Deploy />
       <Scale />
     </div>
   </section>

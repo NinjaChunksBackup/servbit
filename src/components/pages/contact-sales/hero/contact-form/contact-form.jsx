@@ -11,7 +11,6 @@ import Button from 'components/shared/button';
 import Field from 'components/shared/field';
 import Link from 'components/shared/link';
 import { FORM_STATES } from 'constants/forms';
-import LINKS from 'constants/links';
 import CloseIcon from 'icons/close.inline.svg';
 import formPattern from 'images/pages/contact-sales/form-pattern.png';
 import { checkBlacklistEmails } from 'utils/check-blacklist-emails';
@@ -223,9 +222,9 @@ const ContactForm = () => {
         {...register('reasonForContact')}
       >
         <option value="hidden" disabled hidden />
-        <option value="Demo/POC">Demo/POC</option>
-        <option value="Enterprise Pricing">Enterprise Pricing</option>
-        <option value="HIPAA">HIPAA</option>
+        <option value="New project">New project</option>
+        <option value="Existing engagement">Existing engagement</option>
+        <option value="Partnership">Partnership</option>
       </Field>
       <Field
         className="gap-y-2"
@@ -265,13 +264,14 @@ const ContactForm = () => {
 
       <div className="relative z-0 col-span-full mt-1 flex items-end justify-between gap-6 sm:flex-col sm:items-start sm:gap-4">
         <p className="max-w-[300px] text-sm leading-[1.5] tracking-tight text-gray-new-60 sm:max-w-full">
-          By submitting you agree to the{' '}
-          <Link className="decoration-dashed" to={LINKS.websiteTerms} theme="grey-85-underlined">
-            Terms of Use
-          </Link>{' '}
-          and acknowledge the{' '}
-          <Link className="decoration-dashed" to={LINKS.privacyPolicy} theme="grey-85-underlined">
-            Privacy Notice
+          We use your details only to respond to this enquiry. Our Terms of Use and Privacy Notice
+          are available on request at{' '}
+          <Link
+            className="decoration-dashed"
+            to="mailto:servbit.in@gmail.com"
+            theme="grey-85-underlined"
+          >
+            servbit.in@gmail.com
           </Link>
           .
         </p>

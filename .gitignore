@@ -77,7 +77,7 @@ public/docs/llms-full.txt
 public/guides/**/llms.txt
 src/utils/data/github-stars.generated.json
 
-# API ref generator output (never commit — CI regenerates on every deploy)
+# API ref generator output (never commit â€” CI regenerates on every deploy)
 src/data/api-ref/
 src/data/api-ref.next/
 public/docs/reference/api/
@@ -112,3 +112,4 @@ package-lock.json
 .evals/
 
 scripts/docs-checks/neonctl/fragments/
+.playwright/

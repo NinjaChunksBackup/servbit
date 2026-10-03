@@ -2,7 +2,7 @@
 
 This suite monitors business-critical website journeys without blocking releases. A failing run
 should be investigated, but the GitHub check must not be configured as a required status check
-until the release policy is agreed with the client.
+until the release policy is agreed with the business owner.
 
 ## Contract model
 
@@ -17,17 +17,16 @@ and PR description together when a critical destination or outcome changes.
 
 ## Monitored flows
 
-| Test ID           | Priority | Journey                                 | Expected outcome                                                            |
-| ----------------- | -------- | --------------------------------------- | --------------------------------------------------------------------------- |
-| `TC-ACQ-001`      | P0       | Homepage signup                         | CTA targets Neon Console signup                                             |
-| `TC-ACQ-002..005` | P0       | Desktop and mobile authentication entry | Login and signup destinations remain correct                                |
-| `TC-ACQ-006..008` | P0       | Pricing plan selection                  | Free targets signup; Launch and Scale target billing                        |
-| `TC-DOC-001..002` | P0       | Documentation onboarding                | Docs load, quickstart is reachable, search opens, init command copies       |
-| `TC-LEAD-001*`    | P0       | Contact sales                           | Required fields, email, analytics payload, success, and failure states work |
-| `TC-LEAD-002`     | P1       | Startup application                     | Apply Now CTA targets the external Google Sites application form            |
-| `TC-LEAD-003*`    | P1       | AI agent application                    | Required email, analytics payload, success, and failure states work         |
-| `TC-SUB-001*`     | P1       | Changelog subscription                  | Email validation, subscription analytics, success, and failure states work  |
-| `TC-SUB-002`      | P1       | Blog article subscription               | Subscription analytics and the final success state are correct              |
+Servbit is a digital engineering services business. There is no console, no signup, no
+documentation site, no blog and no subscription programme, so those journeys no longer have a
+destination to monitor. The suite covers what actually exists:
+
+| Test ID            | Priority | Journey                        | Expected outcome                                                        |
+| ------------------ | -------- | ------------------------------ | ----------------------------------------------------------------------- |
+| `TC-CTA-001..004`  | P0       | Homepage and header calls to action | Each CTA keeps its anchor destination on the right viewport         |
+| `TC-CTA-005`       | P0       | Homepage section anchors       | `#services`, `#solutions` and `#contact` all resolve                   |
+| `TC-CTA-006`       | P0       | Contact page                   | The form renders and the business mailbox is reachable                 |
+| `TC-LEAD-001*`     | P0       | Contact sales                  | Required fields, email, analytics payload, success, and failure states work |
 
 Every browser test follows Arrange, Act, Assert:
 
@@ -35,25 +34,21 @@ Every browser test follows Arrange, Act, Assert:
 2. Act through the same controls a user uses.
 3. Assert the final business outcome, payload, destination, and page health.
 
-Tests must never create accounts, leads, or subscriptions. Use `@example.com` addresses and keep
-all external submission boundaries mocked.
+Tests must never create accounts or leads. Use `@example.com` addresses and keep all external
+submission boundaries mocked.
 
-## Cypress migration coverage
+## Retired coverage
 
-The former Cypress suite contained 21 scenarios. Before migration, only 11 still passed against the
-current site. Playwright retains every passing behavior and restores useful validation checks for
-the current contact sales and changelog forms.
+The following suites were removed because every flow they monitored pointed at a route that no
+longer exists. They are not replaced with `expect(page).toHaveURL(404)` assertions: a 404 is the
+intended behaviour of a retired route, not a regression.
 
-Five obsolete expectations were intentionally retired instead of copying broken selectors:
-
-- four `/blog` index subscription tests, because that route no longer contains the form; `TC-SUB-002`
-  monitors the current blog article form instead
-- one AI agent URL-format test, because the current product contract requires a non-empty value but
-  does not validate its URL format
-
-The old assertions and waits on HubSpot requests were not ported. These forms currently submit
-analytics events and do not call that endpoint. Playwright still mocks external form routes
-defensively so future changes cannot create real leads or subscriptions during tests.
+- `docs-onboarding.spec.js` - documentation quickstart, docs search and the init command
+- `subscriptions.spec.js` - changelog and blog article email subscriptions
+- `TC-ACQ-001..008` acquisition contracts - console login, console signup and console billing
+- `TC-DOC-001..002` docs contracts - docs entry point and docs onboarding
+- `TC-LEAD-002` startup application - the startup programme page
+- `TC-LEAD-003` AI agent application - the AI agents use-case page
 
 ## Local commands
 
@@ -96,7 +91,6 @@ Playwright is the project's E2E runner because it provides:
 - isolated browser contexts and native support for multiple pages, tabs, and popups
 - trace, screenshot, and video artifacts on failure
 - automatic local web server lifecycle
-- close alignment with the contract-driven form suite used by the RevenueCat website
 
 The tradeoffs are:
 
@@ -106,5 +100,4 @@ The tradeoffs are:
 - WebKit tests approximate Safari but do not execute the branded Safari browser
 
 The Cypress runner, configuration, workflow, and dependencies were removed after the active form
-coverage was migrated. Published Cypress integration guides remain part of the website content and
-are unrelated to this repository's test runner.
+coverage was migrated.

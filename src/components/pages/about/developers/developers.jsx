@@ -1,34 +1,35 @@
 import Container from 'components/shared/container';
 import { cn } from 'utils/cn';
 
+import IconArchitecture from './images/icon-architecture.inline.svg';
 import IconCost from './images/icon-cost.inline.svg';
 import IconEasy from './images/icon-easy.inline.svg';
-import IconPostgres from './images/icon-postgres.inline.svg';
 import IconReliable from './images/icon-reliable.inline.svg';
 
 const FEATURES_DATA = [
   {
-    icon: IconPostgres,
-    title: 'Familiar',
+    icon: IconReliable,
+    title: 'Built to last',
     description:
-      'Build with Postgres, the world’s most popular database, and a rich ecosystem of extensions and tools.',
+      'We do not write throwaway code. Every architecture is designed as if it runs mission-critical production from day one.',
   },
   {
-    icon: IconEasy,
-    title: 'Easy',
+    icon: IconArchitecture,
+    title: 'End to end',
     description:
-      'Simplify the life of developers by bringing the serverless model to application backends.',
+      'App, web, cloud, automation, and AI delivered by one accountable team, from first architecture to production release.',
   },
   {
     icon: IconCost,
-    title: 'Cost efficient',
-    description: 'Aim to deliver the best price-performance backend services in the world.',
+    title: 'Cost aware',
+    description:
+      'Right-sized infrastructure and honest usage modelling, so infrastructure spend is never a surprise on your invoice.',
   },
   {
-    icon: IconReliable,
-    title: 'Reliable',
+    icon: IconEasy,
+    title: 'Measurable',
     description:
-      'Use modern replication techniques to provide high availability and high durability guarantees.',
+      'Automated verification and continuous delivery on every change, so shipping becomes routine instead of risky.',
   },
 ];
 

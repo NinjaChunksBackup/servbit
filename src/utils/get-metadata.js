@@ -21,16 +21,8 @@ export default function getMetadata({
   description,
   keywords,
   robotsNoindex,
-  rssPathname = null,
   pathname,
-  category = null,
-  type = 'website',
-  publishedTime = null,
-  authors = [],
   imagePath = DEFAULT_IMAGE_PATH,
-  isPostgres = false,
-  currentSlug = null,
-  markdownPath = null,
   canonical,
 }) {
   const SITE_URL =
@@ -47,9 +39,7 @@ export default function getMetadata({
   const siteName = 'Servbit';
   const robots = robotsNoindex === 'noindex' ? { index: false } : null;
 
-  let alternateCanonical = isPostgres
-    ? `https://www.postgresql.org/docs/16/${currentSlug}.html`
-    : canonicalUrl;
+  let alternateCanonical = canonicalUrl;
 
   if (canonical !== undefined && canonical !== null) {
     assertAbsoluteHttpUrl(canonical, 'canonical');
@@ -62,10 +52,6 @@ export default function getMetadata({
     description: metaDescription,
     alternates: {
       canonical: alternateCanonical,
-      types: {
-        'application/rss+xml': rssPathname ? `${SITE_URL}${rssPathname}` : null,
-        'text/markdown': markdownPath ? `${SITE_URL}${markdownPath}` : null,
-      },
     },
     manifest: '/manifest.json',
     keywords: Array.from(new Set(keywords?.split(',').map((keyword) => keyword.trim()))).join(', '), // Remove duplicates
@@ -91,11 +77,8 @@ export default function getMetadata({
           url: metaImageUrl,
         },
       ],
-      type,
-      publishedTime,
-      authors,
+      type: 'website',
     },
-    category,
     twitter: {
       card: 'summary_large_image',
       site: '@servbit',

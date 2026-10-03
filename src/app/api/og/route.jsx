@@ -78,7 +78,7 @@ export async function GET(request) {
               whiteSpace: 'pre-wrap',
             }}
           >
-            neon.com
+            servbit.in
           </div>
         </div>
       </div>,

@@ -1,10 +1,6 @@
 const { expect, test } = require('@playwright/test');
 
-const {
-  AGENT_FORM_CONTRACT,
-  LEAD_FORM_CONTRACTS,
-  STARTUPS_APPLY_CONTRACT,
-} = require('./contracts');
+const { LEAD_FORM_CONTRACTS } = require('./contracts');
 const {
   expectAnalyticsEvents,
   expectHealthyPage,
@@ -120,121 +116,41 @@ for (const contract of LEAD_FORM_CONTRACTS) {
     await expectAnalyticsEvents(page, [contract.expectedEvents[0]]);
     await expectHealthyPage(applicationErrors);
   });
-}
 
-test(`[${LEAD_FORM_CONTRACTS[0].analyticsFailureId}] contact sales does not show success when analytics fails`, async ({
-  page,
-}) => {
-  const contract = LEAD_FORM_CONTRACTS[0];
-  const { applicationErrors, form } = await openLeadForm(page, contract, {
-    failureEventName: 'Contact Sales Form Submitted',
+  test(`[${contract.analyticsFailureId}] ${contract.name} does not show success when analytics fails`, async ({
+    page,
+  }) => {
+    const { applicationErrors, form } = await openLeadForm(page, contract, {
+      failureEventName: 'Contact Sales Form Submitted',
+    });
+
+    await fillLeadForm(form, contract);
+    await submitLeadForm(form, contract);
+
+    await expect(page.getByTestId('error-message')).toBeVisible();
+    await expect(form.getByRole('button', { name: contract.submitText })).not.toHaveText(
+      contract.successText
+    );
+    await expectAnalyticsEvents(page, contract.expectedEvents);
+    await expectHealthyPage(applicationErrors);
   });
 
-  await fillLeadForm(form, contract);
-  await submitLeadForm(form, contract);
+  test(`[${contract.identifyFailureId}-DEFERRED] ${contract.name} recovers when identification settles`, async ({
+    page,
+  }) => {
+    const { applicationErrors, form } = await openLeadForm(page, contract, {
+      deferFailure: true,
+      failureEventName: 'identify',
+    });
+    const submitButton = form.locator('button[type="submit"]');
 
-  await expect(page.getByTestId('error-message')).toBeVisible();
-  await expect(form.getByRole('button', { name: contract.submitText })).not.toHaveText(
-    contract.successText
-  );
-  await expectAnalyticsEvents(page, contract.expectedEvents);
-  await expectHealthyPage(applicationErrors);
-});
+    await fillLeadForm(form, contract);
+    await submitLeadForm(form, contract);
 
-test(`[${STARTUPS_APPLY_CONTRACT.id}] ${STARTUPS_APPLY_CONTRACT.name} points at the external application`, async ({
-  page,
-}) => {
-  const contract = STARTUPS_APPLY_CONTRACT;
-  const applicationErrors = await openCriticalPage(page, contract.pagePath);
-
-  const applyLink = page
-    .locator(contract.containerSelector)
-    .getByRole('link', { name: contract.linkText });
-
-  await expect(applyLink, `${contract.id}: ${contract.name} is missing`).toBeVisible();
-  await expect(applyLink).toHaveAttribute('href', contract.expectedHref);
-  await expect(applyLink).toHaveAttribute('target', contract.expectedTarget);
-  await expect(applyLink).toHaveAttribute('rel', contract.expectedRel);
-  await expectHealthyPage(applicationErrors);
-});
-
-async function openAgentForm(page, analyticsOptions = {}) {
-  const contract = AGENT_FORM_CONTRACT;
-  await installAnalyticsMock(page, analyticsOptions);
-  await mockExternalFormSubmissions(page);
-  const applicationErrors = await openCriticalPage(page, contract.pagePath);
-  const form = page.getByTestId(contract.testId);
-
-  await expect(form).toBeVisible();
-  await expectManagedFormReady(form.locator('form'));
-
-  return { applicationErrors, contract, form };
-}
-
-async function submitAgentForm(form, contract, email = contract.email) {
-  await form.locator('[name="url"]').fill(contract.url);
-  if (email !== null) {
-    await form.locator('[name="email"]').fill(email);
-  }
-  await form.getByRole('button', { name: 'Apply' }).click();
-}
-
-test(`[${AGENT_FORM_CONTRACT.id}] ${AGENT_FORM_CONTRACT.name} reaches the monitored success outcome`, async ({
-  page,
-}) => {
-  const { applicationErrors, contract, form } = await openAgentForm(page);
-
-  await submitAgentForm(form, contract);
-
-  await expect(form.getByTestId('success-message')).toBeVisible();
-  await expectAnalyticsEvents(page, contract.expectedEvents);
-  await expectHealthyPage(applicationErrors);
-});
-
-test(`[${AGENT_FORM_CONTRACT.validation.required.id}] ${AGENT_FORM_CONTRACT.name} reports a missing email`, async ({
-  page,
-}) => {
-  const { applicationErrors, contract, form } = await openAgentForm(page);
-
-  await submitAgentForm(form, contract, null);
-
-  const errors = form.getByTestId('error-field-message');
-  await expect(errors).toHaveCount(1);
-  await expect(errors).toHaveText(contract.validation.required.errorText);
-  await expectNoAnalyticsEvents(page);
-  await expectHealthyPage(applicationErrors);
-});
-
-test(`[${AGENT_FORM_CONTRACT.validation.invalidEmail.id}] ${AGENT_FORM_CONTRACT.name} rejects an invalid email`, async ({
-  page,
-}) => {
-  const { applicationErrors, contract, form } = await openAgentForm(page);
-
-  await submitAgentForm(form, contract, 'invalid-email');
-
-  const errors = form.getByTestId('error-field-message');
-  await expect(errors).toHaveCount(1);
-  await expect(errors).toHaveText(contract.validation.invalidEmail.errorText);
-  await expectNoAnalyticsEvents(page);
-  await expectHealthyPage(applicationErrors);
-});
-
-test(`[${AGENT_FORM_CONTRACT.identifyFailureId}] ${AGENT_FORM_CONTRACT.name} stops when identification fails`, async ({
-  page,
-}) => {
-  const { applicationErrors, contract, form } = await openAgentForm(page, {
-    deferFailure: true,
-    failureEventName: 'identify',
+    await expect(submitButton).toBeDisabled();
+    await releaseDeferredAnalyticsFailure(page);
+    await expect(submitButton).toHaveText(contract.submitText);
+    await expect(submitButton).toBeEnabled();
+    await expectHealthyPage(applicationErrors);
   });
-  const submitButton = form.locator('button[type="submit"]');
-
-  await submitAgentForm(form, contract);
-
-  await expect(submitButton).toBeDisabled();
-  await releaseDeferredAnalyticsFailure(page);
-  await expect(submitButton).toHaveText('Apply');
-  await expect(submitButton).toBeEnabled();
-  await expect(form.getByTestId('success-message')).toHaveCount(0);
-  await expectAnalyticsEvents(page, [contract.expectedEvents[0]]);
-  await expectHealthyPage(applicationErrors);
-});
+}

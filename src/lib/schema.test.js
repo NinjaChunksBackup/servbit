@@ -13,10 +13,11 @@ describe('generateOrganizationSchema', () => {
     expect(s['@type']).toBe('Organization');
     expect(s.name).toBe('Servbit');
     expect(s.alternateName).toBe('Servbit Digital Engineering');
-    expect(s.legalName).toBe('Servbit LLC');
+    // No legalName: the registered entity name is not asserted until confirmed.
+    expect(s.legalName).toBeUndefined();
     expect(s.url).toBe('https://servbit.in');
     expect(s.description).toBeTruthy();
-    expect(s.logo).toMatch(/^https?:\/\//);
+    expect(s.logo).toBe('https://servbit.in/brand/servbit-logo-light-color.svg');
     expect(Array.isArray(s.sameAs)).toBe(true);
     expect(s.sameAs.length).toBeGreaterThanOrEqual(3);
     expect(s.contactPoint?.['@type']).toBe('ContactPoint');

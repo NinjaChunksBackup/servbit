@@ -1,7 +1,6 @@
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import PauseableVideo from 'components/shared/pauseable-video';
 import LINKS from 'constants/links';
 
 const Hero = () => (
@@ -21,7 +20,8 @@ const Hero = () => (
       <div className="flex w-full items-center justify-between xl:items-end lg:flex-col lg:items-start lg:gap-y-6">
         <p className="max-w-[704px] font-sans text-xl leading-snug font-normal tracking-extra-tight text-gray-new-80 xl:max-w-md lg:max-w-[640px] lg:text-lg md:max-w-80 md:text-[15px]">
           App, Web, Cloud, Automation, and Custom AI engineered from concept to production with
-          architectural rigor, serverless scale, and measurable business performance.
+          architectural rigor, infrastructure that scales on demand, and measurable business
+          performance.
         </p>
         <div className="flex items-center justify-center gap-x-5 xl:gap-4 xl:pb-2 lg:pb-0 md:w-full md:flex-col">
           <Button
@@ -43,24 +43,6 @@ const Hero = () => (
         </div>
       </div>
     </Container>
-
-    {/*
-       Video optimization parameters:
-       mp4: ffmpeg -i input.mov -c:v libx265 -crf 28 -pix_fmt yuv420p10le -vf scale=2880:-2 -preset veryslow -x265-params tune=animation -tag:v hvc1 -movflags faststart -an hero.mp4
-       webm: ffmpeg -i input.mov -c:v libsvtav1 -pix_fmt yuv420p10le -b:v 3681k -vf scale=2880:-2 -svtav1-params preset=4:lookahead=120:keyint=80 -pass 1 -an -f null /dev/null && ffmpeg -i input.mov -c:v libsvtav1 -pix_fmt yuv420p10le -b:v 3681k -vf scale=2880:-2 -svtav1-params preset=4:lookahead=120:keyint=80 -pass 2 -an -y hero.webm
-    */}
-
-    <div className="absolute inset-0 -z-10 mx-auto max-w-[1920px]">
-      <PauseableVideo
-        className="h-full w-full"
-        videoClassName="h-full w-full object-cover top-0 xl:-top-6 lg:scale-[1.2] lg:-top-12 md:scale-100 md:-top-24"
-        width={2880}
-        height={1328}
-      >
-        <source src={`${LINKS.cdn}/public/pages/about/hero/hero-anim.mp4`} type="video/mp4" />
-        <source src={`${LINKS.cdn}/public/pages/about/hero/hero-anim.webm`} type="video/webm" />
-      </PauseableVideo>
-    </div>
   </section>
 );
 

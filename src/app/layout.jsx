@@ -4,7 +4,6 @@ import { GeistMono } from 'geist/font/mono';
 import Script from 'next/script';
 
 import RiveWasm from 'components/shared/rive-wasm';
-import LINKS from 'constants/links';
 import { CodeTabsProvider } from 'contexts/code-tabs-context';
 import { TabsProvider } from 'contexts/tabs-context';
 import { TopbarProvider } from 'contexts/topbar-context';
@@ -34,7 +33,6 @@ const RootLayout = ({ children }) => (
           {`(function c(){try{var s=new WebSocket('ws://localhost:3549');s.onmessage=function(e){if(e.data==='reload')location.reload()};s.onclose=function(){setTimeout(c,1000)};s.onerror=function(){s.close()}}catch(e){setTimeout(c,1000)}})()`}
         </Script>
       )}
-      <link rel="preconnect" href={LINKS.console} />
       <RiveWasm />
     </head>
     <body>

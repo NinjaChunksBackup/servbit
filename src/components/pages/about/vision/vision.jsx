@@ -1,57 +1,12 @@
-import Image from 'next/image';
-import PropTypes from 'prop-types';
-
 import SecondarySection from 'components/shared/secondary-section';
 import SectionLabel from 'components/shared/section-label';
-import databaseIcon from 'images/pages/about/vision/database.svg';
-import gearIcon from 'images/pages/about/vision/gear.svg';
 
 import BlobNoisy from './images/blob-horizontal-noise.inline.svg';
 import BlobLargeNoisy from './images/blob-large-horizontal-noise.inline.svg';
 import Blob from './images/blob.inline.svg';
 
-const STATS_DATA = [
-  {
-    icon: databaseIcon,
-    value: '10,000,000+',
-    description: 'Production requests powered daily.',
-  },
-  {
-    icon: gearIcon,
-    value: '85%',
-    description: 'Of workflows orchestrated by automated AI systems.',
-  },
-];
-
-const StatCard = ({ icon, value, description }) => (
-  <div className="flex w-[212px] flex-col gap-5 xl:w-48 xl:gap-4 lg:w-40 lg:gap-3.5 md:w-full">
-    <Image
-      src={icon}
-      alt=""
-      width={32}
-      height={32}
-      aria-hidden="true"
-      className="h-8 w-8 xl:h-7 xl:w-7 md:h-5 md:w-5"
-    />
-    <div className="flex flex-col gap-1.5 lg:gap-1">
-      <span className="text-4xl leading-dense font-normal tracking-tighter text-black-pure xl:text-[36px] lg:text-[28px] md:text-2xl">
-        {value}
-      </span>
-      <p className="text-base leading-normal font-normal tracking-extra-tight text-gray-new-40 xl:text-sm xl:leading-snug">
-        {description}
-      </p>
-    </div>
-  </div>
-);
-
-StatCard.propTypes = {
-  icon: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-};
-
 const Vision = () => (
-  <SecondarySection title="Company Statistics and Vision" className="md:pb-[26px]">
+  <SecondarySection title="Our Vision" className="md:pb-[26px]">
     <div className="flex gap-x-[140px] xl:gap-x-32 lg:gap-x-12 md:flex-col md:gap-y-20">
       <div className="relative flex-1 before:absolute before:top-0 before:-left-8 before:h-full before:w-px before:bg-gray-new-50 xl:ml-8 md:ml-0 md:before:hidden">
         <SectionLabel icon="arrow">Where we&apos;re headed</SectionLabel>
@@ -61,12 +16,6 @@ const Vision = () => (
           We engineer high-velocity App, Web, Cloud, Automation, and Custom AI architectures for
           modern businesses.
         </h3>
-
-        <div className="mt-[194px] flex gap-x-24 xl:mt-[136px] xl:gap-x-16 lg:gap-x-8 md:mt-9 md:flex-col md:gap-y-7 md:pr-24">
-          {STATS_DATA.map((stat, index) => (
-            <StatCard key={index} {...stat} />
-          ))}
-        </div>
       </div>
 
       <div className="relative grid w-[416px] content-between before:absolute before:top-0 before:-left-8 before:h-full before:w-px before:bg-gray-new-50 xl:w-[320px] lg:order-0 lg:w-[238px] md:w-full md:gap-y-4 md:before:hidden">
