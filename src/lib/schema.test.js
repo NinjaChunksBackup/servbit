@@ -17,7 +17,7 @@ describe('generateOrganizationSchema', () => {
     expect(s.legalName).toBeUndefined();
     expect(s.url).toBe('https://servbit.in');
     expect(s.description).toBeTruthy();
-    expect(s.logo).toBe('https://servbit.in/brand/servbit-logo-light-color.svg');
+    expect(s.logo).toBe('https://servbit.in/images/servbit-logo.svg');
     expect(Array.isArray(s.sameAs)).toBe(true);
     expect(s.sameAs.length).toBeGreaterThanOrEqual(3);
     expect(s.contactPoint?.['@type']).toBe('ContactPoint');

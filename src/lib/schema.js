@@ -10,7 +10,7 @@ export const generateOrganizationSchema = () => ({
   alternateName: 'Servbit Digital Engineering',
   url: SITE_URL,
   description: SEO_DATA.index.description,
-  logo: `${SITE_URL}/brand/servbit-logo-light-color.svg`,
+  logo: `${SITE_URL}/images/servbit-logo.svg`,
   sameAs: [LINKS.github, LINKS.twitter, LINKS.linkedin, LINKS.youtube, LINKS.discord],
   contactPoint: {
     '@type': 'ContactPoint',

@@ -126,12 +126,7 @@ export default {
         { text: 'LinkedIn', to: LINKS.linkedin, icon: 'linkedin-icon' },
         { text: 'X.com', to: LINKS.twitter, icon: 'x-icon' },
         { text: 'YouTube', to: LINKS.youtube, icon: 'youtube-icon' },
-        { text: 'GitHub', to: LINKS.github, icon: 'github-icon' },
       ],
-    },
-    {
-      heading: 'Brand',
-      items: [{ text: 'Brand Guidelines', to: LINKS.brand }],
     },
   ],
 };

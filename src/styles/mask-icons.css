@@ -27,12 +27,6 @@
     -webkit-mask-size: 14px 14px;
   }
 
-  /* Used in a /src/components/shared/footer/footer.jsx  */
-  .github-icon {
-    -webkit-mask-image: url('/images/footer/github.svg');
-    @apply mask-styles footer-icon-size;
-  }
-
   .discord-icon {
     -webkit-mask-image: url('/images/footer/discord.svg');
     @apply mask-styles footer-icon-size;

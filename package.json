@@ -17,7 +17,6 @@
     "format:all": "prettier --write --log-level warn --cache .",
     "lint": "npm run lint:js",
     "lint:js": "eslint .",
-    "generate:brand-assets": "node scripts/generate-brand-assets.js && node scripts/package-brand-assets.js",
     "check:broken-links": "linkinator --config linkinator.config.json",
     "check:deps-proxy": "node scripts/check-deps-proxy-allowlisted.mjs",
     "prepare": "husky",

@@ -3,7 +3,6 @@
 export default {
   // Pages
   aboutUs: '/about-us',
-  brand: '/brand',
   contactSales: '/contact-sales',
   home: '/',
 

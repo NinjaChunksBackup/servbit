@@ -21,11 +21,6 @@ export default {
       'Tell us what you are building. Servbit takes projects from concept to production across app, web, cloud, automation, and AI.',
     pathname: LINKS.contactSales,
   },
-  brand: {
-    title: 'Servbit Logo + Brand Guidelines',
-    description: 'Download the official Servbit logo and brand assets.',
-    pathname: LINKS.brand,
-  },
   error: {
     title: 'Page Is Broken — Servbit',
   },

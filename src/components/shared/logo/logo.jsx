@@ -5,7 +5,6 @@ import copyToClipboard from 'copy-to-clipboard';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-import LINKS from 'constants/links';
 import useContextMenu from 'hooks/use-context-menu';
 import LogoDarkIcon from 'icons/logo-dark.inline.svg';
 import LogoLightIcon from 'icons/logo-light.inline.svg';
@@ -40,19 +39,7 @@ const copySvgToClipboard = async () => {
   }
 };
 
-const data = [
-  {
-    name: 'Copy logo as SVG',
-  },
-  {
-    name: 'Download logo pack',
-    url: '/brand/servbit-brand-assets.zip',
-  },
-  {
-    name: 'View brand guidelines',
-    url: LINKS.brand,
-  },
-];
+const COPY_SVG_LABEL = 'Copy logo as SVG';
 
 const Logo = ({ className = null, width, height, isHeader = false }) => {
   const { clicked, setClicked } = useContextMenu();
@@ -95,25 +82,19 @@ const Logo = ({ className = null, width, height, isHeader = false }) => {
             'dark:shadow-[0_8px_20px_0_rgba(0,0,0,0.40)]'
           )}
         >
-          {data.map(({ name, url }) => {
-            const Tag = url ? 'a' : 'button';
-            return (
-              <Tag
-                className={cn(
-                  'group flex w-full items-center gap-x-2 p-3 whitespace-nowrap',
-                  'text-left text-[15px] leading-dense tracking-extra-tight text-gray-new-10',
-                  'transition-colors duration-200',
-                  'hover:bg-gray-new-90 hover:text-gray-new-10',
-                  'dark:text-gray-new-90 dark:hover:bg-gray-new-8'
-                )}
-                key={name}
-                href={url}
-                onClick={url ? undefined : handleCopySvg}
-              >
-                {name}
-              </Tag>
-            );
-          })}
+          <button
+            className={cn(
+              'group flex w-full items-center gap-x-2 p-3 whitespace-nowrap',
+              'text-left text-[15px] leading-dense tracking-extra-tight text-gray-new-10',
+              'transition-colors duration-200',
+              'hover:bg-gray-new-90 hover:text-gray-new-10',
+              'dark:hover:bg-gray-new-90 dark:hover:text-gray-new-8'
+            )}
+            type="button"
+            onClick={handleCopySvg}
+          >
+            {COPY_SVG_LABEL}
+          </button>
         </div>
       )}
       <Toast.Provider swipeDirection="right">
