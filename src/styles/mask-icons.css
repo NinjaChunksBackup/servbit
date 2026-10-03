@@ -37,6 +37,11 @@
     @apply mask-styles footer-icon-size;
   }
 
+  .instagram-icon {
+    -webkit-mask-image: url('/images/footer/instagram.svg');
+    @apply mask-styles footer-icon-size;
+  }
+
   .linkedin-icon {
     -webkit-mask-image: url('/images/footer/linkedin.svg');
     @apply mask-styles footer-icon-size;

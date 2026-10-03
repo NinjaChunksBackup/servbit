@@ -4,16 +4,15 @@ export default {
   // Pages
   aboutUs: '/about-us',
   contactSales: '/contact-sales',
-  home: '/',
 
   // Mailbox (the business has a single contact address)
   careers: 'mailto:servbit.in@gmail.com',
   signup: 'mailto:servbit.in@gmail.com',
 
   // External
-  github: 'https://github.com/NinjaChunksBackup/servbit',
+  instagram: 'https://www.instagram.com/servbit.in/',
   linkedin: 'https://www.linkedin.com/company/servbit/',
   twitter: 'https://x.com/servbit',
-  youtube: 'https://www.youtube.com/@servbit',
+  youtube: 'https://www.youtube.com/@servbit-in',
   discord: 'https://discord.gg/servbit',
 };

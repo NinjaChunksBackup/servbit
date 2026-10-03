@@ -124,6 +124,7 @@ export default {
       heading: 'Connect',
       items: [
         { text: 'LinkedIn', to: LINKS.linkedin, icon: 'linkedin-icon' },
+        { text: 'Instagram', to: LINKS.instagram, icon: 'instagram-icon' },
         { text: 'X.com', to: LINKS.twitter, icon: 'x-icon' },
         { text: 'YouTube', to: LINKS.youtube, icon: 'youtube-icon' },
       ],
