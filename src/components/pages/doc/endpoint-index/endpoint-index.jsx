@@ -303,7 +303,7 @@ const EndpointIndexPage = ({ tagGroups, total, breadcrumbs, navigationLinks, cur
         <>
           <div className="mt-3 flex items-center justify-between">
             <p className="text-sm text-gray-new-50 dark:text-gray-new-60">
-              All {total} Neon API endpoints
+              All {total} Servbit API endpoints
             </p>
             <button
               type="button"

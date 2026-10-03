@@ -8,15 +8,15 @@ const Hero = () => (
         Brand Guidelines
       </h1>
       <p className="mt-4 max-w-[544px] text-xl/normal tracking-extra-tight text-gray-new-60 xl:mt-3.5 xl:text-base lg:mt-3 md:mt-2">
-        Official assets and guidelines to help you reference the Neon brand, including our logo,
+        Official assets and guidelines to help you reference the Servbit brand, including our logo,
         content and trademarks.
       </p>
       <Button
         className="mt-8 xl:mt-7 lg:mt-6 md:mt-5"
         theme="white-filled"
         size="new"
-        to="/brand/neon-brand-assets.zip"
-        download="neon-brand-assets.zip"
+        to="/brand/servbit-brand-assets.zip"
+        download="servbit-brand-assets.zip"
         tagName="Brand Page Hero"
       >
         Download brand assets

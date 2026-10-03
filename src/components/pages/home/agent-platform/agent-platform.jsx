@@ -61,8 +61,8 @@ const AgentPlatform = () => (
           Pay for what you use, not for the infrastructure you might need.
         </h2>
         <p className="mt-6 max-w-184 text-lg leading-normal font-normal tracking-extra-tight text-pretty text-gray-new-40 lg:text-base lg:leading-snug md:mt-4.5 md:text-[0.9375rem]">
-          Neon is built for a world where developers create, test, and scale more than ever. Start
-          free, experiment freely, and pay only for the resources your applications actually use.
+          Servbit is built for ambitious businesses that need to build, iterate, and scale rapidly.
+          Clear deliverables, transparent engagement, and engineering that delivers compounding ROI.
         </p>
         <Button
           className="mt-9 bg-black-pure! font-medium hover:bg-gray-new-20! lg:mt-8 md:mt-7"

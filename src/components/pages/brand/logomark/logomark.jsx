@@ -54,7 +54,7 @@ const logos = [
 const Logomark = () => (
   <Section
     title="Logomark"
-    description="The Neon logomark should only be used in places where there is not enough room to display the full logo, or in cases where only brand symbols of multiple brands are displayed."
+    description="The Servbit logomark should only be used in places where there is not enough room to display the full logo, or in cases where only brand symbols of multiple brands are displayed."
   >
     <ul className="grid grid-cols-4 gap-4 md:grid-cols-2">
       {logos.map((logo, index) => (
@@ -69,7 +69,7 @@ const Logomark = () => (
             <Image
               className="md:w-[52px]"
               src={logo.svgSrc}
-              alt="Neon logomark"
+              alt="Servbit logomark"
               width={64}
               height={64}
               unoptimized

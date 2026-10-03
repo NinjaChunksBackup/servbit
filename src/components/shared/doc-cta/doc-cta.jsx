@@ -14,9 +14,9 @@ import CheckIcon from '../code-block-wrapper/images/check.inline.svg';
 import CopyIcon from '../code-block-wrapper/images/copy.inline.svg';
 
 const DEFAULT_DATA = {
-  title: 'Try it on Neon!',
+  title: 'Try it on Servbit!',
   description:
-    'Neon is Serverless Postgres built for the cloud. Explore Postgres features and functions in our user-friendly SQL editor. Sign up for a free account to get started.',
+    'Servbit is the full-stack platform for apps, web, cloud, automation, and AI. Explore features and capabilities in our platform. Sign up for an account to get started.',
   buttonText: 'Sign Up',
   buttonUrl: LINKS.signup,
 };

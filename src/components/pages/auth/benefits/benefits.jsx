@@ -2,16 +2,17 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 import Container from 'components/shared/container';
-import betterAuthIcon from 'icons/auth/benefits/better-auth.svg';
 import builtInAuthIcon from 'icons/auth/benefits/built-in-auth.svg';
 import clientServerIcon from 'icons/auth/benefits/client-server.svg';
 import familiarApisIcon from 'icons/auth/benefits/familiar-apis.svg';
 import noInfrastructureIcon from 'icons/auth/benefits/no-infrastructure.svg';
 import openSourceIcon from 'icons/auth/benefits/open-source.svg';
+import servbitAuthIcon from 'icons/auth/benefits/servbit-auth.svg';
 import signInSessionsIcon from 'icons/auth/benefits/sign-in-sessions.svg';
 
 const BADGE_ICONS = {
-  'better-auth': betterAuthIcon,
+  'servbit-auth': servbitAuthIcon,
+  'better-auth': servbitAuthIcon,
   'familiar-apis': familiarApisIcon,
   'open-source': openSourceIcon,
   'no-infrastructure': noInfrastructureIcon,

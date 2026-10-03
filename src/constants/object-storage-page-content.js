@@ -2,36 +2,36 @@ const objectStoragePageContent = {
   slug: 'object-storage',
   pageLabel: 'Object Storage',
   hero: {
-    label: 'Neon Object Storage',
-    title: 'Files that branch with your Neon database',
+    label: 'Servbit Object Storage',
+    title: 'Files that branch with your Servbit backend',
     illustrationDescription:
-      'Creating a Neon preview branch forks the Postgres database and its S3-compatible object storage together, including tables, data, files, and assets.',
+      'Creating a Servbit preview branch forks the backend and its S3-compatible object storage together, including data, files, and assets.',
     primaryAction: { label: 'Start building', linkKey: 'signup' },
     secondaryAction: { label: 'Read the docs', linkKey: 'objectStorageOverview' },
   },
   storageBenefits: {
-    title: 'In one step, branch both your database and your files.',
+    title: 'In one step, branch both your backend and your files.',
     highlightedTitle:
-      'Your buckets come with your Postgres data into isolated environments, without duplicating storage.',
+      'Your buckets come with your application data into isolated environments, without duplicating storage.',
     items: [
       {
         id: 's3-compatible',
         label: 'S3 compatible',
         title: 'Keep your stack',
         description:
-          'boto3, the AWS SDK, and the CLI work with Neon Object Storage out of the box. Swap the endpoint and keep your existing code.',
+          'boto3, the AWS SDK, and the CLI work with Servbit Object Storage out of the box. Swap the endpoint and keep your existing code.',
       },
       {
         id: 'one-credential',
         label: 'One credential',
         title: 'No separate cloud account',
         description:
-          'Authenticate with a Neon credential instead of a separate AWS account and IAM setup.',
+          'Authenticate with a Servbit credential instead of a separate AWS account and IAM setup.',
       },
       {
         id: 'branchable-storage',
         label: 'Branchable storage',
-        title: 'Buckets that branch with your database.',
+        title: 'Buckets that branch with your backend.',
         description:
           "No files are duplicated up front (it's copy-on-write). The bill only grows if the branch diverges.",
       },
@@ -40,7 +40,7 @@ const objectStoragePageContent = {
   isolatedEnvironments: {
     title: 'Test on real environments.',
     highlightedTitle:
-      'On Neon, a branch forks Postgres and your files together, with nothing duplicated upfront.',
+      'On Servbit, a branch forks your backend and your files together, with nothing duplicated upfront.',
     items: [
       {
         id: 'isolated-by-default',
@@ -64,9 +64,9 @@ const objectStoragePageContent = {
   },
   configuration: {
     label: 'Agent-first',
-    title: 'Ask your agent: deploy Postgres and files via the Neon backend',
-    filename: 'neon.ts',
-    code: `import { defineConfig } from "@neon/config/v1";
+    title: 'Ask your agent: deploy infrastructure and files via the Servbit backend',
+    filename: 'servbit.ts',
+    code: `import { defineConfig } from "@servbit/config/v1";
 
 export default defineConfig({
   preview: {
@@ -80,24 +80,25 @@ export default defineConfig({
       {
         title: 'One config',
         description:
-          'Define your bucket alongside Postgres and keep your database and files together in the same <code>neon.ts</code> configuration.',
+          'Define your bucket alongside backend services and keep your system and files together in the same <code>servbit.ts</code> configuration.',
       },
       {
         title: 'One deploy',
         description:
-          'Run <code>neon deploy</code> to provision the bucket and automatically pull the required S3 variables into your <code>.env.local</code>.',
+          'Run <code>servbit deploy</code> to provision the bucket and automatically pull the required S3 variables into your <code>.env.local</code>.',
       },
       {
         title: 'Agent tools',
-        description: 'Agents are a first-class interface through Neon’s API, CLI, and MCP server.',
+        description:
+          'Agents are a first-class interface through Servbit’s API, CLI, and MCP server.',
       },
     ],
   },
   faqItems: [
     {
-      question: 'What is Neon Object Storage?',
+      question: 'What is Servbit Object Storage?',
       answer:
-        '<p>S3-compatible blob storage for your files, built into the Neon backend. This is different from the object store Lakebase Postgres uses internally for database pages. You upload objects into buckets, point a standard S3 client at your branch endpoint, and authenticate with a Neon credential.</p>',
+        '<p>S3-compatible blob storage for your files, built into the Servbit backend platform. You upload objects into buckets, point a standard S3 client at your branch endpoint, and authenticate with a Servbit credential.</p>',
       initialState: 'open',
     },
     {
@@ -113,17 +114,17 @@ export default defineConfig({
     {
       question: 'Do I need an AWS account?',
       answer:
-        '<p>No. Use your Neon storage credential and branch endpoint with an S3-compatible client. There is no separate AWS account or IAM setup to manage.</p>',
+        '<p>No. Use your Servbit storage credential and branch endpoint with an S3-compatible client. There is no separate AWS account or IAM setup to manage.</p>',
     },
     {
       question: 'How do I add a bucket to a project?',
       answer:
-        '<p>Declare a bucket under <code>preview.buckets</code> in <code>neon.ts</code>, then run <code>neon deploy</code> to provision it and pull the S3 variables into <code>.env.local</code>. You can also create buckets from the Neon Console, CLI, Neon API, or S3 API.</p>',
+        '<p>Declare a bucket under <code>preview.buckets</code> in <code>servbit.ts</code>, then run <code>servbit deploy</code> to provision it and pull the S3 variables into <code>.env.local</code>. You can also create buckets from the Servbit Console, CLI, Servbit API, or S3 API.</p>',
     },
     {
       question: 'Is this the same credential I use for Postgres?',
       answer:
-        '<p>Object Storage uses Neon’s scoped-credential system, shared with AI Gateway, with storage read and write scopes. Your S3 client uses the credential’s Access Key ID and Secret Access Key. Postgres connections use your database role and connection string.</p>',
+        '<p>Object Storage uses Servbit’s scoped-credential system, shared with AI Gateway, with storage read and write scopes. Your S3 client uses the credential’s Access Key ID and Secret Access Key. Postgres connections use your database role and connection string.</p>',
     },
   ],
   backendServicesTitle: 'Your files branch with everything else.',

@@ -1,10 +1,7 @@
-import Image from 'next/image';
-
 import Container from 'components/shared/container/container';
-import databricksLogo from 'components/shared/footer/images/databricks-logo-dark.svg';
 import Heading from 'components/shared/heading';
 import SectionLabel from 'components/shared/section-label';
-import NeonLogo from 'icons/logo-dark.inline.svg';
+import ServbitLogo from 'icons/logo-dark.inline.svg';
 
 import RaffleForm from './raffle-form';
 
@@ -26,18 +23,16 @@ const RaffleHero = () => (
               Enter to win a $500&nbsp;LEGO gift card
             </Heading>
             <p className="mt-7 max-w-[470px] text-lg leading-normal tracking-tight text-pretty text-gray-new-70 xl:text-base lg:mt-5">
-              Register for the Databricks / Neon raffle. Leave your details for a chance to bring
+              Register for the Servbit conference raffle. Leave your details for a chance to bring
               your next big idea to life, one brick at a time.
             </p>
           </div>
           <div className="mt-8 border-t border-gray-new-20 pt-7 lg:order-3 lg:mt-0 lg:border-t-0 lg:pt-0">
             <p className="mb-4 text-sm leading-normal tracking-tight text-gray-new-60">
-              Brought to you by Databricks and Neon
+              Brought to you by Servbit
             </p>
-            <div className="flex flex-wrap items-center gap-7" aria-label="Databricks and Neon">
-              <Image src={databricksLogo} alt="Databricks" height={28} width={177} />
-              <span className="h-7 w-px bg-gray-new-20" aria-hidden="true" />
-              <NeonLogo className="h-8 w-auto" aria-label="Neon" role="img" />
+            <div className="flex flex-wrap items-center gap-7" aria-label="Servbit">
+              <ServbitLogo className="h-8 w-auto text-white" aria-label="Servbit" role="img" />
             </div>
           </div>
         </div>

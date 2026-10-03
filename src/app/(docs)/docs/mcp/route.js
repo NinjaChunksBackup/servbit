@@ -1,40 +1,40 @@
 // GET returns the MCP Foundation server.json descriptor (publicly cacheable).
 // POST proxies MCP protocol requests (initialize, tools/list, tools/call) to
-// the unauthenticated docs-scoped endpoint at mcp.neon.tech so agents can
-// connect directly to neon.com/docs/mcp without OAuth.
+// the unauthenticated docs-scoped endpoint at mcp.servbit.com so agents can
+// connect directly to servbit.com/docs/mcp without OAuth.
 //
 // NOTE: force-static is intentionally absent. The POST handler is dynamic
 // (proxies live requests). Adding force-static would break POST at build time.
 //
 // The ?category=docs parameter scopes the server to two read-only tools
 // (list_docs_resources, get_doc_resource) and bypasses OAuth — both behaviors
-// are server-side features of mcp.neon.tech, not enforced here.
-const UPSTREAM_URL = 'https://mcp.neon.tech/mcp?category=docs';
+// are server-side features of mcp.servbit.com, not enforced here.
+const UPSTREAM_URL = 'https://mcp.servbit.com/mcp?category=docs';
 
 export async function GET() {
   return Response.json(
     {
       $schema: 'https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json',
-      name: 'com.neon/docs-mcp',
-      title: 'Neon Docs',
+      name: 'com.servbit/docs-mcp',
+      title: 'Servbit Docs',
       description:
-        'Read Neon documentation pages. Provides list_docs_resources and get_doc_resource tools.',
+        'Read Servbit documentation pages. Provides list_docs_resources and get_doc_resource tools.',
       repository: {
-        url: 'https://github.com/neondatabase/mcp-server-neon',
+        url: 'https://github.com/servbit',
         source: 'github',
         subfolder: 'landing',
       },
       version: '1.0.0',
-      websiteUrl: 'https://neon.com/docs/ai/neon-mcp-server',
+      websiteUrl: 'https://servbit.com/docs/ai/servbit-mcp-server',
       icons: [
         {
-          src: 'https://neon.com/brand/neon-logo-light-color.svg',
+          src: 'https://servbit.com/brand/servbit-logo-light-color.svg',
           mimeType: 'image/svg+xml',
           sizes: ['any'],
           theme: 'light',
         },
         {
-          src: 'https://neon.com/brand/neon-logo-dark-color.svg',
+          src: 'https://servbit.com/brand/servbit-logo-dark-color.svg',
           mimeType: 'image/svg+xml',
           sizes: ['any'],
           theme: 'dark',

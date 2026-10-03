@@ -17,8 +17,8 @@ export const metadata = getMetadata(SEO_DATA.variable);
 
 const titles = [
   'Fixed Compute = Manual Resizes, Extra Costs',
-  'Neon Autoscaling Fixes This Problem',
-  'Neon vs other serverless databases',
+  'Servbit Autoscaling Fixes This Problem',
+  'Servbit vs other serverless platforms',
 ];
 
 const VariableLoadPage = async () => {
@@ -63,7 +63,7 @@ const VariableLoadPage = async () => {
         <CTANew
           label="ASK AI"
           title="Still have questions? Ask our AI. <br class='xs:hidden' />"
-          description="It knows Neon inside and out."
+          description="It knows Servbit inside and out."
           buttonText="Get Answers"
           buttonType="aiHelper"
         />

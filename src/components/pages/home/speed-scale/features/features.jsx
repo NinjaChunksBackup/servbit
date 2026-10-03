@@ -23,7 +23,7 @@ const DATA = [
     className: 'flex-row-reverse items-center',
     title: 'Manage your fleet via API.',
     description:
-      'Neon databases spin up in milliseconds, with APIs for quota controls and fleet scaling.',
+      'Servbit clusters spin up in milliseconds, with APIs for quota controls and fleet scaling.',
     link: LINKS.api,
     animation: <ManageFleet />,
     animationClassName: 'flex-1 2xl:min-w-0 2xl:max-w-full sm:w-full',

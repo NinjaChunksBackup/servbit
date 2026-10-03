@@ -14,8 +14,8 @@ import CheckIcon from './images/check.inline.svg';
 import CopyIcon from './images/copy.inline.svg';
 
 const TABS = [
-  { id: 'npm', label: 'npm', command: 'npx neon@latest init' },
-  { id: 'brew', label: 'brew', command: 'neon init' },
+  { id: 'npm', label: 'npm', command: 'npx servbit@latest init' },
+  { id: 'brew', label: 'brew', command: 'servbit init' },
 ];
 
 const NeonInitModal = ({ isOpen, onClose }) => {
@@ -45,8 +45,8 @@ const NeonInitModal = ({ isOpen, onClose }) => {
   const handleCopyClick = () => {
     handleCopy(activeCommand);
     sendGtagEvent('Action Clicked', {
-      text: `Copy neon init command (${activeTab})`,
-      tag_name: 'NeonInitModal',
+      text: `Copy servbit init command (${activeTab})`,
+      tag_name: 'ServbitInitModal',
     });
   };
 
@@ -77,7 +77,7 @@ const NeonInitModal = ({ isOpen, onClose }) => {
               transition={{ duration: 0.15 }}
               role="dialog"
               aria-modal="true"
-              aria-labelledby="neon-init-modal-title"
+              aria-labelledby="servbit-init-modal-title"
             >
               {/* Close button */}
               <button
@@ -93,12 +93,12 @@ const NeonInitModal = ({ isOpen, onClose }) => {
               <div className="p-6">
                 <h2
                   className="text-lg leading-tight font-medium tracking-extra-tight text-black-pure dark:text-white"
-                  id="neon-init-modal-title"
+                  id="servbit-init-modal-title"
                 >
-                  Get started with Neon + AI
+                  Get started with Servbit + AI
                 </h2>
                 <p className="mt-2 text-sm leading-snug tracking-extra-tight text-gray-new-40 dark:text-gray-new-70">
-                  Connect your app to Neon with a single command
+                  Connect your app to Servbit with a single command
                 </p>
 
                 {/* Tabs and code block */}

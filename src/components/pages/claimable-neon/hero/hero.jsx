@@ -11,8 +11,8 @@ const logos = [
   'outfront',
   'doordash',
   'bcg',
-  'pepsi',
-  'retool',
+  'cloudflare',
+  'cursor',
   'meta',
   'bitso',
   'framer',
@@ -23,13 +23,14 @@ const Hero = () => (
     <Container size="1344">
       <div className="grid grid-cols-[minmax(0,7fr)_minmax(0,6fr)] grid-rows-[1fr_auto] items-start gap-x-24 xl:grid-cols-2 xl:gap-x-12 lg:grid-cols-1 lg:grid-rows-none lg:gap-y-12">
         <div className="flex min-w-0 flex-col items-start lg:order-1">
-          <SectionLabel theme="white">Claimable Neon</SectionLabel>
+          <SectionLabel theme="white">Claimable Servbit</SectionLabel>
           <h1 className="mt-5 text-6xl leading-dense tracking-tighter text-pretty xl:text-5xl lg:max-w-2xl md:mt-4 md:text-4xl sm:text-3xl">
             A project when your agent needs one.
           </h1>
           <p className="mt-6 max-w-142 text-lg leading-normal tracking-extra-tight text-pretty text-gray-new-70 xl:text-base lg:max-w-xl md:mt-5">
-            Agents can provision a Neon project before a human creates an account. Start building,
-            then claim the project into a Neon organization before it expires. Powered by{' '}
+            Agents can provision a Servbit project before a human creates an account. Start
+            building, then claim the project into a Servbit organization before it expires. Powered
+            by{' '}
             <Link
               to="https://workos.com/auth-md"
               theme="white"
@@ -44,8 +45,8 @@ const Hero = () => (
             className="mt-8"
             size="new"
             theme="white-filled"
-            to="/docs/reference/claimable-neon"
-            tagName="Claimable Neon Hero"
+            to="/docs"
+            tagName="Claimable Servbit Hero"
           >
             Read the docs
           </Button>

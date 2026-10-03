@@ -30,11 +30,11 @@ const Hero = () => (
       </div>
       <h1 className="max-w-[646px] font-title text-[64px] leading-none font-medium tracking-extra-tight xl:text-[56px] lg:max-w-xl lg:text-5xl md:max-w-full md:text-4xl">
         Tools to migrate <br className="xs:hidden" />
-        your database to Neon
+        your database to Servbit
       </h1>
       <p className="mt-4 max-w-[570px] text-lg leading-snug font-light tracking-extra-tight text-gray-new-80 lg:mt-3 lg:text-base">
-        Transfer data from AWS RDS, Azure Database for PostgreSQL, Supabase, and Heroku to Neon with
-        minimal downtime.
+        Transfer data from AWS RDS, Azure Database for PostgreSQL, Supabase, and Heroku to Servbit
+        with minimal downtime.
       </p>
       <Button
         className="mt-9 h-12 min-w-40 px-[38px] font-semibold tracking-tighter lg:mt-7 lg:h-11 lg:px-8 lg:text-sm md:mt-6"

@@ -11,7 +11,7 @@ import { buildAgent404Response } from './ai-agent-detection';
 // `source` sets X-Content-Source so logs distinguish which branch produced it.
 export function markdownNotFoundResponse(
   pathname,
-  { source, extraLinks = [], context = 'Neon documentation', llmsTxt = '/docs/llms.txt' } = {}
+  { source, extraLinks = [], context = 'Servbit documentation', llmsTxt = '/docs/llms.txt' } = {}
 ) {
   const response = new NextResponse(buildAgent404Response(pathname, { extraLinks, context }), {
     status: 404,

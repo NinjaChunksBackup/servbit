@@ -11,10 +11,10 @@ import { cn } from 'utils/cn';
 import ctaBackground from './images/cta-bg.jpg';
 
 const CONTACT_SALES_AI_SETTINGS = {
-  aiAssistantName: 'Neon Sales AI',
+  aiAssistantName: 'Servbit Sales AI',
   placeholder: 'How do I get started?',
   introMessage:
-    "Hi!\nI'm an AI assistant here to help you learn about Neon and answer any questions you have.\n\nFeel free to ask about pricing, features, enterprise solutions, or anything else!",
+    "Hi!\nI'm an AI assistant here to help you learn about Servbit and answer any questions you have.\n\nFeel free to ask about pricing, features, enterprise solutions, or anything else!",
   exampleQuestions: [
     'How to get a Demo request?',
     'What are the Enterprise Pricing?',
@@ -94,7 +94,7 @@ CTANew.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   label: PropTypes.string,
-  labelIcon: PropTypes.oneOf(['arrow', 'databricks']),
+  labelIcon: PropTypes.oneOf(['arrow', 'servbit']),
   buttonText: PropTypes.string,
   buttonUrl: PropTypes.string,
   isExternal: PropTypes.bool,

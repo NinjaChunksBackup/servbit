@@ -14,7 +14,7 @@ const ITEMS = [
   {
     title: 'Perform a production migration without causing any downtime',
     description:
-      'Large, production-scale migrations can be daunting, but Neon’s approach minimizes risk and downtime.',
+      'Large, production-scale migrations can be daunting, but Servbit’s approach minimizes risk and downtime.',
     list: [
       {
         icon: logicalReplication,

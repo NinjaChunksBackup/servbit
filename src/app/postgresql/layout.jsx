@@ -6,7 +6,7 @@ import Layout from 'components/shared/layout';
 import { POSTGRESQL_BASE_PATH } from 'constants/docs';
 import { getNavigation } from 'utils/api-postgresql';
 
-const NeonPostgresLayout = async ({ children }) => {
+const ServbitPostgresLayout = async ({ children }) => {
   const navigation = await getNavigation();
 
   const customType = {
@@ -48,4 +48,4 @@ const NeonPostgresLayout = async ({ children }) => {
   );
 };
 
-export default NeonPostgresLayout;
+export default ServbitPostgresLayout;

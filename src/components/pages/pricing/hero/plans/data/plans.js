@@ -12,7 +12,7 @@ export default [
     price: 0,
     features: {
       database: {
-        title: 'Lakebase Postgres',
+        title: 'Servbit Database',
         features: [
           {
             title: '100 projects',
@@ -38,7 +38,7 @@ export default [
       other: {
         title: 'Backend',
         features: [
-          { title: 'Managed Better Auth', info: 'Up to 60k MAUs' },
+          { title: 'Managed Auth', info: 'Up to 60k MAUs' },
           {
             title: `${objectStorage.freeAllowanceGb} GB of Object Storage`,
             info: '<p>5 GB per project included</p>',
@@ -52,7 +52,7 @@ export default [
     },
     button: {
       url: LINKS.signup,
-      text: 'Try Neon',
+      text: 'Try Servbit',
       event: 'Hero Free Tier Panel',
     },
   },
@@ -66,7 +66,7 @@ export default [
     storageRate: 0.35,
     features: {
       database: {
-        title: 'Lakebase Postgres',
+        title: 'Servbit Database',
         features: [
           {
             title: '100 projects',
@@ -88,7 +88,7 @@ export default [
       other: {
         title: 'Backend',
         features: [
-          { title: 'Managed Better Auth', info: 'Up to 1M MAUs' },
+          { title: 'Managed Auth', info: 'Up to 1M MAUs' },
           {
             title: 'Object Storage',
             info: `<p>$${objectStorage.storageRatePerGbMonth} per GB-month</p>`,
@@ -124,7 +124,7 @@ export default [
     storageRate: 0.35,
     features: {
       database: {
-        title: 'Lakebase Postgres',
+        title: 'Servbit Database',
         features: [
           {
             title: '1,000+ projects',
@@ -146,7 +146,7 @@ export default [
       other: {
         title: 'Backend',
         features: [
-          { title: 'Managed Better Auth', info: 'Up to 1M MAUs' },
+          { title: 'Managed Auth', info: 'Up to 1M MAUs' },
           {
             title: 'Object Storage',
             info: `<p>$${objectStorage.storageRatePerGbMonth} per GB-month</p>`,

@@ -14,7 +14,7 @@ import oneCredentialImage from 'images/pages/object-storage/one-credential.jpg';
 import s3CompatibleImage from 'images/pages/object-storage/s3-compatible.jpg';
 import getMetadata from 'utils/get-metadata';
 
-const LOGOS = ['replit', 'outfront', 'doordash', 'bcg', 'pepsi', 'retool', 'meta'];
+const LOGOS = ['replit', 'outfront', 'doordash', 'bcg', 'cloudflare', 'cursor', 'meta'];
 
 const ITEM_IMAGES = {
   's3-compatible': s3CompatibleImage,

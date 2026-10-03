@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 import Container from 'components/shared/container';
 import { cn } from 'utils/cn';
-import { getNeonStatus, NEON_STATUS } from 'utils/get-neon-status';
+import { getServbitStatus, SERVBIT_STATUS } from 'utils/get-neon-status';
 
 const LinesPattern = ({ size, className }) => (
   <span
@@ -24,16 +24,16 @@ LinesPattern.propTypes = {
 };
 
 const statusData = {
-  [NEON_STATUS.UP]: 'ONLINE',
-  [NEON_STATUS.HASISSUES]: 'ISSUES',
-  [NEON_STATUS.UNDERMAINTENANCE]: 'MAINTENANCE',
+  [SERVBIT_STATUS.UP]: 'ONLINE',
+  [SERVBIT_STATUS.HASISSUES]: 'ISSUES',
+  [SERVBIT_STATUS.UNDERMAINTENANCE]: 'MAINTENANCE',
 };
 
 const StatusLine = ({ className }) => {
   const [currentStatus, setCurrentStatus] = useState('UP');
 
   useEffect(() => {
-    getNeonStatus()
+    getServbitStatus()
       .then(({ status }) => {
         setCurrentStatus(status);
       })
@@ -60,7 +60,7 @@ const StatusLine = ({ className }) => {
           aria-hidden
         />
         <span className="mr-7 shrink-0 tracking-extra-tight xl:mr-4">
-          SYSTEM: NEON DATABASE PLATFORM
+          SYSTEM: SERVBIT PRODUCTION PLATFORM
         </span>
         <LinesPattern size={4} className="-mr-0.5 basis-11 xl:mr-0 xl:basis-14 lg:basis-[42px]" />
         <LinesPattern size={8} className="basis-[175px] xl:basis-[240px] lg:flex-1" />

@@ -58,8 +58,8 @@ const DISABLED_MODALS = [
   {
     id: 'serverless-video',
     embedId: 'llSTZMVrbx8',
-    title: 'Watch: Neon Database',
-    description: 'See Neon in action and learn how it simplifies working with Postgres.',
+    title: 'Watch: Servbit Platform',
+    description: 'See Servbit in action and learn how it simplifies modern cloud architecture.',
     targeting: {
       pages: ['/docs/introduction/serverless'],
     },
@@ -72,7 +72,7 @@ const DISABLED_MODALS = [
     id: 'autoscaling-video',
     embedId: 'ZnxLCOkb_R0',
     title: 'Watch: Autoscaling in action',
-    description: 'See how Neon adjusts compute resources to match your workload.',
+    description: 'See how Servbit adjusts compute resources to match your workload.',
     targeting: {
       pages: ['/docs/introduction/autoscaling'],
     },

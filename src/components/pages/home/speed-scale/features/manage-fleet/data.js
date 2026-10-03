@@ -33,12 +33,12 @@ export const ANIMATION_CONFIG = {
 export const ANIMATION_DURATION = 30;
 
 export const API_CALL_CODE =
-  'curl -X <span>POST</span> https://api.neon.tech/v2/projects/:id/database';
-export const CONNECTION_STRING = 'postgresql://example@ep-812.eu-west-1.aws.neon.tech/primary';
+  'curl -X <span>POST</span> https://api.servbit.com/v1/clusters/:id/provision';
+export const CONNECTION_STRING = 'postgresql://admin@db-prod.us-east-1.cloud.servbit.com/primary';
 
-export const SQL_CODE = `CREATE TABLE IF NOT EXISTS playing_with_neon(
+export const SQL_CODE = `CREATE TABLE IF NOT EXISTS servbit_workloads(
   id SERIAL PRIMARY KEY, name TEXT NOT NULL, value REAL
 );
-INSERT INTO playing_with_neon(name, value)
+INSERT INTO servbit_workloads(name, value)
 SELECT LEFT(md5(i::TEXT),10),random() FROM generate_series(1,10)s(i);
-SELECT * FROM playing_with_neon;`;
+SELECT * FROM servbit_workloads;`;

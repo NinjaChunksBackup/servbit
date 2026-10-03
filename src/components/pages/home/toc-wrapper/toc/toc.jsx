@@ -7,9 +7,9 @@ import Link from 'components/shared/link';
 import { cn } from 'utils/cn';
 
 const SECTIONS = [
-  { id: 'architecture', title: 'Lakebase Architecture', theme: 'light' },
+  { id: 'architecture', title: 'Servbit Architecture', theme: 'light' },
   { id: 'autoscaling', title: 'Advanced Autoscaling', theme: 'dark' },
-  { id: 'built-by', title: 'Built by Databricks', theme: 'dark' },
+  { id: 'built-by', title: 'Engineered for Scale', theme: 'dark' },
 ];
 
 const THROTTLE_DELAY = 100;

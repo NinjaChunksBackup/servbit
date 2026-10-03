@@ -22,7 +22,7 @@ const ITEMS = [
     date: 'DEC, 2022',
     dateTime: '2022-12',
     title: 'Open access',
-    link: `${LINKS.blog}/neon-serverless-postgres-is-live`,
+    link: `${LINKS.blog}/serverless-postgres-is-live`,
   },
   {
     date: 'AUG, 2023',
@@ -33,15 +33,14 @@ const ITEMS = [
   {
     date: 'APR 15, 2024',
     dateTime: '2024-04-15',
-    title: 'Neon is GA',
-    link: `${LINKS.blog}/neon-ga`,
+    title: 'Servbit is GA',
+    link: `${LINKS.blog}/servbit-ga`,
   },
   {
     date: 'MAY 14, 2025',
     dateTime: '2025-05-14',
-    title: 'Databricks acquires Neon',
-    link: `https://www.databricks.com/company/newsroom/press-releases/databricks-agrees-acquire-neon-help-developers-deliver-ai-systems`,
-    isExternal: true,
+    title: 'Servbit Global Platform',
+    link: `${LINKS.blog}/platform-launch`,
   },
 ];
 

@@ -31,7 +31,7 @@ const ITEMS = [
   },
   {
     title: 'Fully managed',
-    description: 'Neon handles all database tasks — backups, updates, failovers.  ',
+    description: 'Servbit handles all database tasks — backups, updates, failovers.  ',
     icon: fullyManaged,
   },
   {
@@ -47,8 +47,8 @@ const ITEMS = [
 ];
 
 const GridFeatures = ({
-  title = 'Why teams migrate to Neon',
-  description = 'Neon provides a serverless, fully managed Postgres built for modern development — fast, reliable, and cost-effective.',
+  title = 'Why teams migrate to Servbit',
+  description = 'Servbit provides a serverless, fully managed Postgres built for modern development — fast, reliable, and cost-effective.',
   link,
   linkText,
   items = ITEMS,
@@ -59,7 +59,7 @@ const GridFeatures = ({
   descriptionClassName,
   ulClassName,
   headerClassName,
-  logosTitle = 'Powered by Neon.',
+  logosTitle = 'Powered by Servbit.',
   logos,
 }) => (
   <section className={cn('grid-features safe-paddings', className)}>

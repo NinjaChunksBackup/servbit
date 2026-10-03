@@ -9,7 +9,7 @@ const Usage = () => (
     <Container size="medium">
       <h2 className="sr-only">18k+</h2>
       <p className="relative z-20 mx-auto mt-9 bg-[linear-gradient(90deg,#8080B0_0%,#8FABAB_100%)] bg-clip-text text-center text-xl tracking-tight text-transparent [text-shadow:_0_4px_30px_rgba(0,0,0,0.80)] xl:text-base lg:text-[15px] md:text-[11px]">
-        New Neon databases are created daily
+        New Servbit databases are created daily
       </p>
     </Container>
     <Image

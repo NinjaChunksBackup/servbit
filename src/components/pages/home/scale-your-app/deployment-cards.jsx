@@ -9,7 +9,7 @@ import { useInView } from 'react-intersection-observer';
 import { cn } from 'utils/cn';
 import cubicBezierEasing from 'utils/cubic-bezier-easing';
 
-const IMAGE_ROOT = '/images/pages/home/scale-your-app';
+const IMAGE_ROOT = '/images/pages/home/scale-your-app/servbit';
 const SCENE_WIDTH = 2154;
 const SCENE_HEIGHT = 916;
 const REVEAL_DURATION = 2800;
@@ -64,6 +64,31 @@ const CARD_NAMES = [
   'v0-app',
   'strapi-io',
 ];
+
+const CARD_SERVICE_TITLES = {
+  'same-new': 'sync.servbit.com',
+  'zite-com': 'analytics.servbit.com',
+  vapi: 'voice.servbit.com',
+  vercel: 'cloud.servbit.com',
+  'qwikbuild-com': 'pipeline.servbit.com',
+  'specific-dev': 'custom.servbit.com',
+  'riff-ai': 'ai.servbit.com',
+  'xpander-ai': 'agents.servbit.com',
+  'atoms-dev': 'components.servbit.com',
+  'layers-com': 'architecture.servbit.com',
+  'encore-dev': 'microservices.servbit.com',
+  'cognee-ai': 'rag.servbit.com',
+  'konghq-com': 'gateway.servbit.com',
+  'reflex-dev': 'fullstack.servbit.com',
+  'glideapps-com': 'mobile.servbit.com',
+  'retool-com': 'automation.servbit.com',
+  'anything-com': 'scale.servbit.com',
+  'laravel-com': 'api.servbit.com',
+  'replit-com': 'app.servbit.com',
+  'netlify-com': 'web.servbit.com',
+  'v0-app': 'ui.servbit.com',
+  'strapi-io': 'cms.servbit.com',
+};
 
 const CARD_HOVER_LIFTS = [44, 38, 30, 24, 20];
 const DEFAULT_CARD_HOVER_LIFT = 20;
@@ -132,7 +157,7 @@ const DeploymentCard = ({
         addDragEcho(true);
         onDragEnd(index);
       }}
-      aria-label={`Show ${cardName.replaceAll('-', ' ')} logo`}
+      aria-label={`View ${CARD_SERVICE_TITLES[cardName] || cardName} service architecture`}
     >
       <Image
         className={cn(

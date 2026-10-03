@@ -12,7 +12,7 @@ const rsdCostParams = {
   minStoragePerInstanceGB: 20, // B20
 };
 
-const neonCostParams = {
+const servbitCostParams = {
   computeCostPerCUHour: 0.144, // B22
   storageCostPerGB: 1.35, // B23
   cuConfigurationFree: 0.25, // B24
@@ -49,8 +49,8 @@ const totalsBlock = [
     valueClassName: 'bg-variable-value-3',
   },
   {
-    name: 'inNeon',
-    title: 'Neon',
+    name: 'inServbit',
+    title: 'Servbit',
     valueClassName: 'bg-variable-value-2',
   },
   {
@@ -116,45 +116,46 @@ const Calculator = () => {
     };
   }, [derivedValues]);
 
-  const neonCost = useMemo(() => {
-    const freeUsersStorageCost = 0.5 * derivedValues.freeUsers * neonCostParams.storageCostPerGB; // B35
-    const proUsersStorageCost = 20 * derivedValues.proUsers * neonCostParams.storageCostPerGB; // B36
-    const totalNeonStorageCost = freeUsersStorageCost + proUsersStorageCost; // B37
+  const servbitCost = useMemo(() => {
+    const freeUsersStorageCost = 0.5 * derivedValues.freeUsers * servbitCostParams.storageCostPerGB; // B35
+    const proUsersStorageCost = 20 * derivedValues.proUsers * servbitCostParams.storageCostPerGB; // B36
+    const totalServbitStorageCost = freeUsersStorageCost + proUsersStorageCost; // B37
     const freeUsersComputeCost =
       4 *
       inputParams.freeUsersDbHours *
-      neonCostParams.computeCostPerCUHour *
+      servbitCostParams.computeCostPerCUHour *
       derivedValues.freeUsers *
-      neonCostParams.cuConfigurationFree; // B38
+      servbitCostParams.cuConfigurationFree; // B38
     const proUsersComputeCost =
       4 *
       inputParams.proUsersDbHours *
-      neonCostParams.computeCostPerCUHour *
+      servbitCostParams.computeCostPerCUHour *
       derivedValues.proUsers *
-      neonCostParams.cuConfigurationPro; // B39
-    const totalNeonComputeCost = freeUsersComputeCost + proUsersComputeCost; // B40
-    const totalNeonMonthlyCost = totalNeonComputeCost + totalNeonStorageCost; // B41
+      servbitCostParams.cuConfigurationPro; // B39
+    const totalServbitComputeCost = freeUsersComputeCost + proUsersComputeCost; // B40
+    const totalServbitMonthlyCost = totalServbitComputeCost + totalServbitStorageCost; // B41
 
     return {
       freeUsersStorageCost,
       proUsersStorageCost,
-      totalNeonStorageCost,
+      totalServbitStorageCost,
       freeUsersComputeCost,
       proUsersComputeCost,
-      totalNeonComputeCost,
-      totalNeonMonthlyCost,
+      totalServbitComputeCost,
+      totalServbitMonthlyCost,
     };
   }, [derivedValues, inputParams]);
 
   const totals = useMemo(() => {
     const costSavings =
-      ((rsdCost.totalRdsMonthly - neonCost.totalNeonMonthlyCost) / rsdCost.totalRdsMonthly) * 100;
+      ((rsdCost.totalRdsMonthly - servbitCost.totalServbitMonthlyCost) / rsdCost.totalRdsMonthly) *
+      100;
     return {
       inRds: prettifiedTotal(rsdCost.totalRdsMonthly, '$'), // B10
-      inNeon: prettifiedTotal(neonCost.totalNeonMonthlyCost, '$'), // B11
+      inServbit: prettifiedTotal(servbitCost.totalServbitMonthlyCost, '$'), // B11
       costSavings: prettifiedTotal(costSavings, '%', false), // F11
     };
-  }, [rsdCost, neonCost]);
+  }, [rsdCost, servbitCost]);
 
   const longestTotal = Object.keys(totals).reduce(
     (widest, key) => (totals[key].length > widest.length ? totals[key] : widest),
@@ -204,7 +205,7 @@ const Calculator = () => {
       <DashedBorder />
       <div className="relative z-10 pt-6">
         <h3 className="mb-5 text-2xl leading-snug font-medium tracking-tighter xl:text-xl sm:text-lg">
-          Monthly cost: AWS RDS vs Neon
+          Monthly cost: AWS RDS vs Servbit
         </h3>
         <div className="flex justify-between sm:flex-col sm:gap-6">
           {totalsBlock.map(({ name, title, valueClassName }) => (

@@ -20,14 +20,14 @@ const content = {
     },
     {
       id: 3,
-      href: '/blog/databutton-neon-integration',
+      href: '/blog',
       label: 'Databutton Just Made Their Agent Smarter, with Postgres and Auth Built In',
       type: 'Case Study',
     },
     {
       id: 4,
       href: '/docs/reference/api',
-      label: 'Explore the Neon API',
+      label: 'Explore the Servbit API',
       type: 'Docs',
     },
     {

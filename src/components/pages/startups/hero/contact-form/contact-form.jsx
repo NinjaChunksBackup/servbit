@@ -32,9 +32,9 @@ const ErrorMessage = ({ onClose }) => (
         <Link
           className="border-b border-green-45/40 hover:border-green-45"
           theme="green"
-          to="mailto:atli@neon.tech"
+          to="mailto:startups@servbit.com"
         >
-          atli@neon.tech
+          startups@servbit.com
         </Link>
       </p>
     </div>
@@ -143,7 +143,7 @@ const ContactForm = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <h2 className="text-xl leading-snug font-medium tracking-tighter text-white">
-        Apply to the Databricks Startup Program
+        Apply to the Servbit Startup Program
       </h2>
       <div className="grid grid-cols-2 gap-6 lg:gap-5 md:contents md:flex-col md:gap-6">
         <Field

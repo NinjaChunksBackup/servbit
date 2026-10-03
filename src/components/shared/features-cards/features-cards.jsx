@@ -12,16 +12,16 @@ const ITEMS = [
   {
     title: 'Integrate with Cursor and other AI-first IDEs',
     description:
-      'Spin up a Neon database, create branches, inspect query plans, and reset data all from inside the editor.',
+      'Spin up a Servbit database, create branches, inspect query plans, and reset data all from inside the editor.',
     link: '/docs/ai/ai-agents-tools#integrate-neon-in-your-ide',
-    linkText: 'Add Neon to your editor',
+    linkText: 'Add Servbit to your editor',
     icon: iconCursor,
   },
   {
     title: 'MCP Server',
     description:
-      'Purpose-built for AI devtools, Neon MCP lets agents manage data workflows from provisioning to tuning.',
-    link: 'https://mcp.neon.tech/',
+      'Purpose-built for AI devtools, Servbit MCP lets agents manage data workflows from provisioning to tuning.',
+    link: 'https://mcp.servbit.com/',
     linkText: 'Get started',
     icon: iconMCPServer,
   },

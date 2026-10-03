@@ -20,32 +20,32 @@ const logos = [
 
 const quotes = [
   {
-    text: 'Every tech choice we make is about staying lightweight and scalable. <mark>Neon fits that perfectly</mark>: we can spin up real Postgres databases in CI, in seconds, with zero hassle.',
+    text: 'Every tech choice we make is about staying lightweight and scalable. <mark>Servbit fits that perfectly</mark>: they engineered our full-stack architecture with zero friction.',
     author: 'Oliver Stenbom',
     post: 'Co-Founder at Endform',
   },
   {
-    text: 'Postgres fits with our architecture, and <mark>Neon made it easy</mark>. I didn’t want to deal with any overhead, Neon worked out of the box and let us stay focused.',
+    text: 'High-performance systems fit with our architecture, and <mark>Servbit made it easy</mark>. We didn’t want to deal with DevOps overhead, Servbit delivered a turnkey platform that let us stay focused.',
     author: 'Chris Sims',
     post: 'CEO and Co-Founder of Rhythmic',
   },
   {
-    text: 'We <mark>use Neon branching</mark> in our development process to find issues, test migrations, and experiment safely.',
+    text: 'We <mark>partner with Servbit</mark> across our engineering lifecycle to ship web applications, automate internal workflows, and scale safely.',
     author: 'Tal Kain',
     post: 'Founder and CEO at Velocity',
   },
   {
-    text: 'Databases have always been such a pain. <mark>In Neon, everything feels easier</mark> and much safer to do.',
+    text: 'Infrastructure complexity used to hold us back. <mark>With Servbit, everything feels seamless</mark> and reliably production-ready.',
     author: 'Julian Benegas',
     post: 'CEO of BaseHub',
   },
   {
-    text: 'We work with a workflow where each developer has a branch with their name, and then we also have <mark>a Neon branch associated with a GitHub branch</mark>.',
+    text: 'We operate with modern continuous delivery where every feature has automated verification and <mark>an automated deployment pipeline engineered by Servbit</mark>.',
     author: 'Sarim Malik',
     post: 'CEO at Rubric Labs',
   },
   {
-    text: 'Neon autoscaling kicks in when we have bursts of traffic. <mark>Neon’s managed database experience</mark> made it effortless to handle.',
+    text: 'Burst traffic handled without breaking a sweat. <mark>Servbit’s modern engineering stack</mark> made scaling completely effortless.',
     author: 'Lex Nasser',
     post: 'Founding Engineer at 222',
   },
@@ -53,41 +53,41 @@ const quotes = [
 
 const faqItems = [
   {
-    question: 'Who can apply to the Databricks Startup Program?',
+    question: 'Who can apply to the Servbit Startup Program?',
     id: 'who-can-apply',
     initialState: 'open',
     answer: `
-      <p>The Databricks Startup Program supports both self-funded and VC-backed startups. Self-funded startups should have less than $1M in funding and be in early-stage product development. VC-backed startups should have raised at least $1M or be participating in a recognized startup accelerator.</p>
+      <p>The Servbit Startup Program supports both self-funded and VC-backed startups. Self-funded startups should be actively developing an early-stage product or MVP. VC-backed startups should have raised early funding or be participating in a recognized startup accelerator.</p>
     `,
   },
   {
     question: 'What can the credits be used for?',
     answer: `
-      <p>The program provides credits for both Neon and Databricks. The exact amount you receive depends on your stage and funding.</p>
+      <p>The program provides credits and dedicated engineering partnership from Servbit covering cloud infrastructure, technical architecture reviews, and AI system guidance. The exact package depends on your stage.</p>
     `,
   },
   {
     question: 'How does the application process work?',
     answer: `
-      <p>Apply using the link on this page. Our team reviews each application and typically responds within a few business days. If you qualify, we'll confirm and apply your credits to your account.</p>
+      <p>Apply using the link on this page or email startups@servbit.com. Our team reviews each application and typically responds within a few business days. If you qualify, we'll confirm and onboard your team.</p>
     `,
   },
   {
     question: 'How long are the credits valid?',
     answer: `
-      <p>Credits are valid for 12 months from the date of acceptance.</p>
+      <p>Credits and program perks are valid for 12 months from the date of acceptance.</p>
     `,
   },
   {
-    question: 'Can I apply if I’m already using Neon or Databricks?',
+    question: 'Can I apply if I’m already working with Servbit?',
     answer: `
-      <p>Yes. Existing users can apply, and if you're approved, credits are added to your current account. You don't need to create a new account or migrate anything.</p>
+      <p>Yes. Existing clients and partners can apply, and if approved, credits and perks are applied directly to your account. You don't need to rebuild or migrate anything.</p>
     `,
   },
   {
     question: 'What happens when my credits run out or expire?',
     answer: `
-      <p>When your credits are used up or reach their 12-month expiration, your account continues on your selected plan and you're billed normally for usage beyond the credit. There's no commitment to stay, and no surprise charges while credits are active.</p>
+      <p>When your credits reach their expiration, you can transition smoothly into standard ongoing engineering partnership or retain standalone management of your cloud assets. There is no lock-in and no surprise fees.</p>
     `,
   },
 ];

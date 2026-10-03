@@ -38,9 +38,7 @@ import OctolisLogo from './images/octolis.inline.svg';
 import OpenAILogo from './images/openai.inline.svg';
 import OpusLogo from './images/opus.inline.svg';
 import OutfrontLogo from './images/outfront7.inline.svg';
-import PepsiLogo from './images/pepsi.inline.svg';
 import ReplitLogo from './images/replit.inline.svg';
-import RetoolLogo from './images/retool.inline.svg';
 import RubricLogo from './images/rubric.inline.svg';
 import SameLogo from './images/same.inline.svg';
 import SequoiaLogo from './images/sequoia.inline.svg';
@@ -94,7 +92,6 @@ const allLogos = {
   opus: OpusLogo,
   outfront: OutfrontLogo,
   replit: ReplitLogo,
-  retool: RetoolLogo,
   rubric: RubricLogo,
   same: SameLogo,
   sequoia: SequoiaLogo,
@@ -110,7 +107,6 @@ const allLogos = {
   y: YLogo,
   zed: ZedLogo,
   meta: MetaLogo,
-  pepsi: PepsiLogo,
 };
 
 const sizes = {

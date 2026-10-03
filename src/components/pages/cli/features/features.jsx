@@ -9,24 +9,24 @@ import workflowIcon from 'icons/cli/workflow.svg';
 const items = [
   {
     icon: workflowIcon.src,
-    title: 'Your full Neon workflow',
+    title: 'Your full Servbit workflow',
     description: 'Manage projects, databases, branches, roles, and&nbsp;more.',
-    linkText: 'View all Neon CLI commands',
+    linkText: 'View all Servbit CLI commands',
     url: LINKS.cliReference,
   },
   {
     icon: scriptIcon.src,
     title: 'Script and automate',
-    description: 'Use the Neon CLI to script almost any&nbsp;action in&nbsp;Neon.',
+    description: 'Use the Servbit CLI to script almost any&nbsp;action in&nbsp;Servbit.',
     linkText: 'Learn about branching with the CLI',
     url: '/docs/guides/branching-neon-cli',
   },
   {
     icon: contributeIcon.src,
     title: 'Contribute',
-    description: 'Neon CLI is open source. Contribute&nbsp;to our GitHub&nbsp;repo.',
-    linkText: 'Contribute to Neon CLI',
-    url: 'https://github.com/neondatabase/neon-pkgs/tree/main/packages/cli',
+    description: 'Servbit CLI is open source. Contribute&nbsp;to our GitHub&nbsp;repo.',
+    linkText: 'Contribute to Servbit CLI',
+    url: 'https://github.com/servbit',
   },
 ];
 
@@ -37,7 +37,7 @@ const Features = () => (
         className="mx-auto max-w-3xl text-center text-[52px] leading-none font-medium tracking-extra-tight xl:max-w-[640px] xl:text-[44px] lg:max-w-xl lg:text-4xl md:max-w-md md:text-[32px]"
         tag="h2"
       >
-        Cut out the clicks. Command Neon Postgres from the terminal
+        Cut out the clicks. Command Servbit from the terminal
       </Heading>
       <CardItemsList
         className="mt-14 gap-x-[18px] xl:mt-10 xl:gap-x-6 lg:gap-x-4 md:mt-8 md:gap-y-4"

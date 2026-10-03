@@ -11,7 +11,7 @@ import LINKS from 'constants/links';
 const METHODS = [
   {
     title: 'Import Data Assistant',
-    action: 'Open Neon Console',
+    action: 'Open Servbit Console',
     href: `${LINKS.console}/app/projects`,
     docs: '/docs/import/import-data-assistant',
   },
@@ -25,7 +25,7 @@ const METHODS = [
     title: 'Logical replication',
     action: 'Start',
     href: LINKS.toolsMigration,
-    docs: '/docs/guides/logical-replication-neon-to-neon',
+    docs: '/docs/guides/logical-replication',
   },
 ];
 
@@ -57,7 +57,7 @@ const GROUPS = [
       {
         label: 'Data movement',
         values: [
-          'Runs on Neon infrastructure',
+          'Runs on Servbit infrastructure',
           'Full pg_dump fidelity',
           'Old and new run in parallel',
         ],
@@ -136,10 +136,10 @@ const MigrationMethods = () => {
                           className="mt-3.5 flex gap-2 text-sm/none font-medium text-white"
                           to={docs}
                           arrowClassName="h-3 w-4 text-gray-new-70"
-                          aria-label={`View Neon docs: ${title}`}
+                          aria-label={`View Servbit docs: ${title}`}
                           withArrow
                         >
-                          View Neon docs
+                          View Servbit docs
                         </Link>
                       </div>
                     </th>

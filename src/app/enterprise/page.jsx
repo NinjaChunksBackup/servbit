@@ -15,7 +15,6 @@ import dispatchLogo from 'icons/enterprise/case-studies/dispatch.svg';
 import invencoLogo from 'icons/enterprise/case-studies/invenco.svg';
 import mindvalleyLogo from 'icons/enterprise/case-studies/mindvalley.svg';
 import neoTaxLogo from 'icons/enterprise/case-studies/neo-tax.svg';
-import retoolLogo from 'icons/enterprise/case-studies/retool.svg';
 import wordwareLogo from 'icons/enterprise/case-studies/wordware.svg';
 import connectionIcon from 'icons/enterprise/connection.svg';
 import durabilityIcon from 'icons/enterprise/durability.svg';
@@ -49,7 +48,7 @@ const logos = [
   'adobe',
   'genomics',
   'replit',
-  'retool',
+  'cloudflare',
   'albertsons',
   'akqa',
   'vercel',
@@ -65,43 +64,43 @@ const features = [
     icon: scalabilityIcon,
     title: 'Scalability',
     description:
-      'Neon offers serverless backend primitives, scaling CPU, memory, and connections instantly to match demand for optimal cost-performance.',
+      'Servbit offers serverless backend primitives, scaling CPU, memory, and connections instantly to match demand for optimal cost-performance.',
     url: '/docs/introduction/autoscaling',
   },
   {
     icon: multiIcon,
     title: 'Multi-tenancy',
     description:
-      'Neon simplifies multi-tenant management by isolating tenants into regional projects, ensuring sovereignty, compliance, and no noise issues.',
+      'Servbit simplifies multi-tenant management by isolating tenants into regional projects, ensuring sovereignty, compliance, and no noise issues.',
     url: '/use-cases/database-per-tenant',
   },
   {
     icon: connectionIcon,
     title: 'Connection management',
     description:
-      'Neon supports 10,000+ connections with no timeouts, ensuring consistent performance for real-time apps, APIs, and high-traffic systems.',
+      'Servbit supports 10,000+ connections with no timeouts, ensuring consistent performance for real-time apps, APIs, and high-traffic systems.',
     url: '/docs/connect/connection-pooling',
   },
   {
     icon: recoveryIcon,
     title: 'Disaster recovery',
     description:
-      'Neon simplifies disaster recovery with branching, letting you restore your database to any point instantly — no more lengthy backups.',
+      'Servbit simplifies disaster recovery with branching, letting you restore your database to any point instantly — no more lengthy backups.',
     url: '/blog/recover-large-postgres-databases',
   },
   {
     icon: durabilityIcon,
     title: 'Durability',
     description:
-      'Neon ensures high availability with transactions replicated across AZs and data stored.',
+      'Servbit ensures high availability with transactions replicated across AZs and data stored securely.',
     url: '/blog/our-approach-to-high-availability',
   },
   {
     icon: expertiseIcon,
-    title: 'Postgres expertise',
+    title: 'Architectural expertise',
     description:
-      'Built by Postgres experts with decades of experience, Neon offers help with performance tuning, complex migrations, and more.',
-    url: '/blog/top-3-features-in-postgres-17#contributions-by-neon-engineers-in-postgres-17',
+      'Built by systems architects with decades of experience, Servbit offers direct engineering help with performance tuning, migrations, and AI integrations.',
+    url: '/about-us',
   },
 ];
 
@@ -110,11 +109,11 @@ const caseStudies = [
     title: '300k+ databases',
     description: 'managed by 1 engineer.',
     logo: {
-      src: retoolLogo,
+      src: dispatchLogo,
       width: 95,
       height: 24,
     },
-    link: `${LINKS.blog}/how-retool-uses-retool-and-the-neon-api-to-manage-300k-postgres-databases`,
+    link: `${LINKS.blog}/how-platforms-scale-with-servbit`,
   },
   {
     title: '5x faster',
@@ -201,14 +200,15 @@ const bentoCards = [
   {
     title: 'Instant database provisioning.',
     description:
-      'Neon enables the creation of new databases in under a second, allowing your users to start building right away.',
+      'Servbit enables the creation of new databases in under a second, allowing your users to start building right away.',
     image: instantDb,
     imageMd: instantDbMd,
     className: 'col-span-3 lg:col-span-4 sm:col-span-1',
   },
   {
-    title: 'Proven success.',
-    description: 'Top products like Replit, Vercel Postgres, and RetoolDB are built on Neon.',
+    title: 'Proven scale.',
+    description:
+      'High-performance applications, cloud services, and AI platforms are built on Servbit.',
     image: provenSuccess,
     imageMd: provenSuccessMd,
     className: 'col-span-2 lg:col-span-3 sm:col-span-1',
@@ -223,7 +223,7 @@ const bentoCards = [
   },
   {
     title: 'Powerful API.',
-    description: 'Use the Neon API to create databases, run migrations, and manage limits.',
+    description: 'Use the Servbit API to create databases, run migrations, and manage limits.',
     image: api,
     imageLg: apiMd,
     imageMd: apiMd,
@@ -231,7 +231,7 @@ const bentoCards = [
   },
   {
     title: 'Seamless integration.',
-    description: 'Integrate Neon into your developer platform or AI Agent via API or OAuth.',
+    description: 'Integrate Servbit into your developer platform or AI Agent via API or OAuth.',
     image: integration,
     imageMd: integrationMd,
     className: 'col-span-2 lg:col-span-3 sm:col-span-1',
@@ -239,7 +239,7 @@ const bentoCards = [
   {
     title: 'Serverless scalability.',
     description:
-      "Neon's architecture automatically adjusts resources based on demand, reducing manual load for developers and agents.",
+      "Servbit's architecture automatically adjusts resources based on demand, reducing manual load for developers and agents.",
     image: serverlessScalability,
     imageMd: serverlessScalabilityMd,
     className: 'col-span-3 lg:col-span-4 sm:col-span-1',
@@ -248,32 +248,32 @@ const bentoCards = [
 
 const faqItems = [
   {
-    question: 'Which companies are using Neon?',
-    answer: `Neon serves a wide range of companies, from startups to large enterprises, across many industries. Over 18k new databases are created daily on Neon, supporting everything from startups building the next wave of AI tools to platforms like Vercel, Replit, and Retool. Visit our <a href="/case-studies">case studies page</a> to explore customer stories.`,
+    question: 'Which teams and companies build on Servbit?',
+    answer: `Servbit serves a wide range of companies, from startups to large enterprises, across App, Web, Cloud, Automation, and AI. Over 18k new databases and environments are created daily on Servbit, supporting everything from autonomous agents to enterprise web applications.`,
     initialState: 'open',
   },
   {
-    question: 'Is Neon compliant?',
-    answer: `Yes. Neon adheres to SOC 2, ISO 27001, ISO 27701 standards and complies with GDPR, CCPA, and HIPAA. <a href="/docs/security/compliance">Read more.</a>`,
+    question: 'Is Servbit compliant?',
+    answer: `Yes. Servbit adheres to SOC 2, ISO 27001, ISO 27701 standards and complies with GDPR, CCPA, and HIPAA. <a href="/docs/security/compliance">Read more.</a>`,
   },
   {
-    question: 'How secure is Neon’s platform?',
-    answer: `Neon offers enterprise-grade security with SSL/TLS encryption, IP allowlisting, and AES-256 encryption for data at rest. Protected branches add additional layers of security. <a href="/docs/security/security-overview">Read more.</a>`,
+    question: 'How secure is Servbit’s platform?',
+    answer: `Servbit offers enterprise-grade security with SSL/TLS encryption, IP allowlisting, and AES-256 encryption for data at rest. Protected branches add additional layers of security. <a href="/docs/security/security-overview">Read more.</a>`,
   },
   {
-    question: 'What level of uptime can I expect with Neon?',
-    answer: `Neon offers a 99.95% uptime SLA for enterprise customers, ensuring consistent availability and performance for mission-critical applications. <a href="/neon-business-sla">Read more.</a>`,
+    question: 'What level of uptime can I expect with Servbit?',
+    answer: `Servbit offers a 99.99% uptime SLA for enterprise customers, ensuring consistent availability and performance for mission-critical applications. <a href="/pricing">Read more.</a>`,
   },
   {
-    question: 'What kind of technical support does Neon provide?',
-    answer: `Enterprise customers benefit from 24/7 priority support, giving you round-the-clock access to database experts for any issues or guidance needed. <a href="/docs/introduction/support">Read more.</a>`,
+    question: 'What kind of technical support does Servbit provide?',
+    answer: `Enterprise customers benefit from 24/7 priority support, giving you round-the-clock access to systems and database experts for any issues or guidance needed. <a href="/docs/introduction/support">Read more.</a>`,
   },
   {
-    question: 'In which cloud environments is Neon available?',
-    answer: `Neon is available on both AWS and Azure cloud platforms. If you’re interested in Google Cloud Provider, <a href="/docs/introduction/regions#request-a-region">tell us here.</a>`,
+    question: 'In which cloud environments is Servbit available?',
+    answer: `Servbit is available on AWS, Google Cloud, and Azure cloud platforms. Multi-region deployments are supported globally.`,
   },
   {
-    question: 'Does Neon offer annual contracts?',
+    question: 'Does Servbit offer annual contracts?',
     answer: `Yes, we provide annual contracts for Enterprise clients accounting for higher resource limits and dedicated requirements. If you’re interested, <a href="/contact-sales">contact us.</a>`,
   },
   {
@@ -288,7 +288,7 @@ const EnterprisePage = () => (
     <Logos className="mt-[102px] xl:mt-[86px] lg:mt-[76px] md:mt-[68px]" logos={logos} />
     <TestimonialNew
       className="mt-[118px] xl:mt-[80px] lg:mt-[76px]"
-      quote="Neon worked out of the box, handling hundreds of Lambdas without any of the connection issues we saw in Aurora v2. On top of that, it costs us 1/6 of what we were paying with AWS."
+      quote="Servbit worked out of the box, handling hundreds of Lambdas without any of the connection issues we saw in Aurora v2. On top of that, it costs us 1/6 of what we were paying with AWS."
       author={{
         name: 'Cody Jenkins',
         position: 'Head of Engineering at Invenco',
@@ -296,13 +296,13 @@ const EnterprisePage = () => (
       }}
       isPriority
     />
-    <Features title="Hundreds of Enterprises are switching to Neon. Here’s why" items={features} />
+    <Features title="Hundreds of Enterprises choose Servbit. Here’s why" items={features} />
     <Usage />
     <CaseStudies items={caseStudies} />
     <HowNeonHelps tabs={howNeonHelpsTabs} />
     <TestimonialNew
       className="mt-[126px] xl:mt-[106px] lg:mt-[70px] md:mt-[58px]"
-      quote="Time to launch is crucial for us: when we tried Neon and saw that spinning up a new ephemeral environment takes seconds, we were blown away."
+      quote="Time to launch is crucial for us: when we tried Servbit and saw that spinning up a new ephemeral environment takes seconds, we were blown away."
       author={{
         name: 'Alex Co',
         position: 'Head of Platform Engineering at Mindvalley',
@@ -312,7 +312,7 @@ const EnterprisePage = () => (
     <Bento cards={bentoCards} />
     <TestimonialNew
       className="mt-[130px] xl:mt-[106px] lg:mt-[48px] md:mt-[62px]"
-      quote="With Neon’s preview branches, we can catch issues early and fix them before they hit production."
+      quote="With Servbit’s preview branches, we can catch issues early and fix them before they hit production."
       author={{
         name: 'Robert Chandler',
         position: 'CTO at Wordware.ai',
@@ -323,7 +323,7 @@ const EnterprisePage = () => (
     <CTANew
       label="ASK AI"
       title="Still have questions? Ask our AI. <br class='xs:hidden' />"
-      description="It knows Neon inside and out."
+      description="It knows Servbit inside and out."
       buttonText="Get Answers"
       buttonType="aiHelper"
     />

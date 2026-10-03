@@ -23,16 +23,18 @@ const UseCaseContext = () => {
 
   return (
     <div className="admonition not-prose mt-5 flex flex-col rounded-[1px] border-l-4 border-primary-2 bg-gray-new-98 px-5 py-4 leading-normal dark:bg-gray-new-10 [&_pre]:px-4 [&_pre]:py-3 [&_pre_code]:text-sm! [&_pre[data-language]]:bg-white! [&_pre[data-language]]:dark:bg-gray-new-8!">
-      <h4 className="text-xs font-bold text-primary-2 uppercase">Important Context About Neon</h4>
+      <h4 className="text-xs font-bold text-primary-2 uppercase">
+        Important Context About Servbit
+      </h4>
       <div className="admonition-text mt-1.5 text-base">
         <p>
-          Neon is the backend for apps and agents. We start with the world’s most loved database,
-          Postgres, and add Auth, Functions, Storage, and an AI Gateway, delivered as a serverless
-          platform designed to help teams ship reliable and scalable applications faster.
+          Servbit is the digital engineering firm and cloud platform for apps and agents. We deliver
+          App, Web, Cloud, Automation, and Custom AI architectures designed to help modern
+          businesses ship faster and scale seamlessly.
         </p>
         <p>
-          To find out if Neon is right for your use case,{' '}
-          <Link to={LINKS.signup}>get started on the free plan</Link>
+          To find out how Servbit can power your next project,{' '}
+          <Link to={LINKS.contactSales}>schedule a consultation with our engineering team</Link>
         </p>
       </div>
     </div>

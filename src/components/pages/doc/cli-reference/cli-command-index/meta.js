@@ -14,7 +14,7 @@
 const META = {
   login: { desc: 'Browser OAuth; stores credentials locally.', examples: ['neon login'] },
   init: {
-    desc: 'Set up this directory for Neon: agent tooling, a linked project, and optionally neon.ts.',
+    desc: 'Set up this directory for Servbit: agent tooling, a linked project, and optionally servbit.ts.',
     examples: ['npx neon@latest init'],
   },
   link: {
@@ -26,11 +26,11 @@ const META = {
     examples: ['neon checkout feat/auth'],
   },
   git: {
-    desc: 'Sync the checked-out Neon branch to your git branch on checkout (Preview).',
+    desc: 'Sync the checked-out Servbit branch to your git branch on checkout (Preview).',
     examples: ['neon git install', 'neon git status'],
   },
   env: {
-    desc: "Write the branch's DATABASE_URL + Neon vars to .env.",
+    desc: "Write the branch's DATABASE_URL + Servbit vars to .env.",
     examples: ['neon env pull'],
   },
   'set-context': {
@@ -38,24 +38,24 @@ const META = {
     examples: ['neon set-context --project-id polished-snowflake-1234'],
   },
   open: {
-    desc: 'Open the linked project in the Neon Console in your browser.',
+    desc: 'Open the linked project in the Servbit Console in your browser.',
     examples: ['neon open'],
   },
   me: { desc: 'Show the authenticated user.', examples: ['neon me'] },
   ask: {
-    desc: 'Ask the Neon assistant a question from the terminal.',
+    desc: 'Ask the Servbit assistant a question from the terminal.',
     examples: ['neon ask --prompt "How do schema-only branches work?"'],
   },
   mcp: {
-    desc: 'Install the Neon MCP server into your coding agents.',
+    desc: 'Install the Servbit MCP server into your coding agents.',
     examples: ['neon mcp', 'neon mcp -y'],
   },
   skills: {
-    desc: 'Install and update Neon agent skills in your coding agents.',
+    desc: 'Install and update Servbit agent skills in your coding agents.',
     examples: ['neon skills', 'neon skills -y', 'neon skills update -y'],
   },
   plugins: {
-    desc: 'Install the Neon plugin (skills plus MCP) into your coding agents.',
+    desc: 'Install the Servbit plugin (skills plus MCP) into your coding agents.',
     examples: ['neon plugins', 'neon plugins -y', 'neon plugins --global'],
   },
   claim: {
@@ -87,7 +87,7 @@ const META = {
     examples: ['neon psql main -- -c "SELECT 1"'],
   },
   config: {
-    desc: 'Drive a branch from a neon.ts policy.',
+    desc: 'Drive a branch from a servbit.ts policy.',
     examples: ['neon config apply'],
   },
   deploy: {
@@ -95,19 +95,19 @@ const META = {
     examples: ['neon deploy'],
   },
   status: {
-    desc: "Show the branch's live Neon state (alias of config status).",
+    desc: "Show the branch's live Servbit state (alias of config status).",
     examples: ['neon status'],
   },
   dev: {
-    desc: 'Run Neon Functions locally with hot reload + branch env.',
+    desc: 'Run Servbit Functions locally with hot reload + branch env.',
     examples: ['neon dev'],
   },
   functions: {
-    desc: 'Deploy and manage Neon Functions on a branch.',
+    desc: 'Deploy and manage Servbit Functions on a branch.',
     examples: ['neon functions deploy api --src ./api.ts'],
   },
   triggers: {
-    desc: 'Invoke a Neon Function on a cron schedule or when an object is created.',
+    desc: 'Invoke a Servbit Function on a cron schedule or when an object is created.',
     examples: ["neon triggers create --function-slug api --name nightly --cron '0 6 * * *'"],
   },
   credentials: {
@@ -119,11 +119,11 @@ const META = {
     examples: ['neon buckets create my-assets'],
   },
   'data-api': {
-    desc: 'Manage the Neon Data API for a database.',
+    desc: 'Manage the Servbit Data API for a database.',
     examples: ['neon data-api create'],
   },
   'neon-auth': {
-    desc: 'Manage Neon Auth on a branch.',
+    desc: 'Manage Servbit Auth on a branch.',
     examples: ['neon neon-auth enable'],
   },
   orgs: { desc: 'List organizations you belong to.', examples: ['neon orgs list'] },

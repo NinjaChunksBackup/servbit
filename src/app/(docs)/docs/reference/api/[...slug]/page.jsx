@@ -85,8 +85,8 @@ export async function generateMetadata(props) {
 
   if (tag === 'reference' && !id) {
     return getMetadata({
-      title: 'Endpoint index - Neon API Reference',
-      description: 'All Neon API endpoints grouped by resource',
+      title: 'Endpoint index - Servbit API Reference',
+      description: 'All Servbit API endpoints grouped by resource',
       pathname: `${LINKS.docs}/${API_SLUG_PREFIX}/reference`,
       type: 'article',
       markdownPath: `/docs/${API_SLUG_PREFIX}.md`,
@@ -98,7 +98,7 @@ export async function generateMetadata(props) {
     const post = getPostBySlug(currentSlug, DOCS_DIR_PATH);
     if (!post) return { title: 'Not Found' };
     return getMetadata({
-      title: `${post.data.title} - Neon Docs`,
+      title: `${post.data.title} - Servbit Docs`,
       description: post.data.summary ?? post.excerpt,
       pathname: `${LINKS.docs}/${currentSlug}`,
       type: 'article',
@@ -119,7 +119,7 @@ export async function generateMetadata(props) {
     const encodedTitle = Buffer.from(tagDisplay).toString('base64');
     const encodedCategory = Buffer.from(category).toString('base64');
     return getMetadata({
-      title: `${tagDisplay} - Neon API Reference`,
+      title: `${tagDisplay} - Servbit API Reference`,
       description: `All ${tagDisplay} API endpoints`,
       imagePath: `${VERCEL_URL}/docs/og?title=${encodedTitle}&category=${encodedCategory}`,
       pathname: `${LINKS.docs}/${currentSlug}`,
@@ -138,7 +138,7 @@ export async function generateMetadata(props) {
   const encodedCategory = Buffer.from(category).toString('base64');
 
   return getMetadata({
-    title: `${operation.summary} - Neon Docs`,
+    title: `${operation.summary} - Servbit Docs`,
     description: operation.description?.split('\n')[0] || operation.summary,
     imagePath: `${VERCEL_URL}/docs/og?title=${encodedTitle}&category=${encodedCategory}`,
     pathname: `${LINKS.docs}/${currentSlug}`,

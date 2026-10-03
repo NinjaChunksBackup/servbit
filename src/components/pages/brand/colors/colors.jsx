@@ -11,8 +11,8 @@ import Section from '../section';
 
 const colors = [
   {
-    name: 'Neon Green',
-    hex: '#34D59A',
+    name: 'Servbit Green',
+    hex: '#00E599',
     className: 'bg-green-52 text-black-pure',
   },
   {
@@ -70,7 +70,7 @@ Color.propTypes = {
 const Colors = () => (
   <Section
     title="Colors"
-    description="The Neon colors keep Neon Green as a primary color and pair it with a neutral black-and-white duo for a clean, high-contrast style."
+    description="The Servbit colors keep emerald green as a primary accent and pair it with a neutral black-and-white duo for a clean, high-contrast style."
     className="mb-40 xl:mb-32 lg:mb-28 md:mb-[88px]"
   >
     <ul className="grid grid-cols-3 gap-4 sm:grid-cols-1">

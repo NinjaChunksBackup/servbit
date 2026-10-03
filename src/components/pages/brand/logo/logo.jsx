@@ -58,7 +58,7 @@ const logos = [
 const Logo = () => (
   <Section
     title="Logo"
-    description="Default to using the complete full-color logo below. Use the monochrome version when the context requires it. Do not edit, change, distort, recolor, or reconfigure the Neon logo."
+    description="Default to using the complete full-color logo below. Use the monochrome version when the context requires it. Do not edit, change, distort, recolor, or reconfigure the Servbit logo."
   >
     <ul className="grid grid-cols-2 gap-4 md:grid-cols-1">
       {logos.map((logo, index) => (
@@ -69,7 +69,14 @@ const Logo = () => (
               logo.className
             )}
           >
-            <Image src={logo.svgSrc} alt="Neon logo" width={157} height={45} priority unoptimized />
+            <Image
+              src={logo.svgSrc}
+              alt="Servbit logo"
+              width={157}
+              height={45}
+              priority
+              unoptimized
+            />
             <div
               className={cn(
                 'absolute top-2.5 right-2.5 flex gap-2',

@@ -6,7 +6,7 @@ import { CHANGELOG_BASE_PATH } from 'constants/docs';
 import { cn } from 'utils/cn';
 
 const TITLE = 'Changelog';
-const DESCRIPTION = 'The latest product updates from Neon';
+const DESCRIPTION = 'The latest product updates from Servbit';
 
 const Hero = ({ className = null, withContainer = false }) => {
   const Tag = withContainer ? Container : 'div';

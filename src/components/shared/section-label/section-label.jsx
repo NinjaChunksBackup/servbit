@@ -2,7 +2,7 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 import LabelArrow from 'icons/arrow-label.inline.svg';
-import databricksIcon from 'icons/home/databricks.svg';
+import servbitMarkIcon from 'icons/home/servbit-mark.svg';
 import { cn } from 'utils/cn';
 
 const themeClassName = {
@@ -18,13 +18,13 @@ const iconMap = {
       focusable="false"
     />
   ),
-  databricks: () => (
+  servbit: () => (
     <Image
       className="size-4 sm:size-2.5"
-      src={databricksIcon}
+      src={servbitMarkIcon}
       width={20}
       height={20}
-      alt="Databricks logo"
+      alt="Servbit logo"
     />
   ),
 };
@@ -36,7 +36,7 @@ const SectionLabel = ({ className, theme = 'black', icon = 'arrow', children }) 
     <div
       className={cn(
         'flex h-3.5 gap-2 md:h-2.5 md:gap-1.5',
-        icon === 'databricks' ? 'items-center' : 'items-end',
+        icon === 'servbit' ? 'items-center' : 'items-end',
         themeClassName[theme],
         className
       )}

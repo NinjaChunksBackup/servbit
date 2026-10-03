@@ -31,7 +31,7 @@ const getActiveMenu = (navigation, slug) => {
   });
 
   // First, try to find a menu where the slug is a direct match on the menu itself
-  // This prioritizes dedicated sections (e.g., Neon Auth) over cross-references
+  // This prioritizes dedicated sections (e.g., Servbit Auth) over cross-references
   const directMatch = flatMenus?.find((item) => item.slug === slug);
   if (directMatch) return directMatch;
 

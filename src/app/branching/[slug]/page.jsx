@@ -40,7 +40,7 @@ export async function generateMetadata(props) {
   const encodedTitle = Buffer.from(title).toString('base64');
 
   return getMetadata({
-    title: `${title} - Neon Branching`,
+    title: `${title} - Servbit Branching`,
     description: subtitle || SEO_DATA.branching.description,
     imagePath: `${VERCEL_URL}/api/og?title=${encodedTitle}`,
     pathname: `${LINKS.branching}/${slug}`,

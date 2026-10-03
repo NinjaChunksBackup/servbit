@@ -11,36 +11,26 @@ import bgNoise from 'images/pages/home/backed-by/bg-noise.jpg';
 import mobileBgIllustration from 'images/pages/home/hero/bg-illustration.jpg';
 import { cn } from 'utils/cn';
 
-const logos = [
-  'replit',
-  'outfront',
-  'doordash',
-  'bcg',
-  'pepsi',
-  'retool',
-  'meta',
-  'bitso',
-  'framer',
-];
+const logos = ['openai', 'claude', 'cursor', 'cloudflare', 'vercel', 'vscode', 'framer'];
 
 const HeroMts = () => (
   <section className="hero relative mt-16 safe-paddings lg:mt-14">
     <Container className="relative z-30 pt-96 pb-2 xl:pt-54 lg:pt-52 md:px-5! md:pt-53" size="1600">
-      <Link href="#backed-by-giants">
-        <SectionLabel theme="white" icon="databricks">
-          NEON IS PART OF THE DATABRICKS PLATFORM
+      <Link href="#services">
+        <SectionLabel theme="white" icon="arrow">
+          APP &middot; WEB &middot; CLOUD &middot; AUTOMATION &middot; AI
         </SectionLabel>
       </Link>
 
       <h1 className="mt-5 max-w-280 text-[4.5rem] leading-dense tracking-tighter xl:max-w-215 xl:text-6xl lg:max-w-180 lg:text-[3.25rem] md:mt-4 md:text-[2.625rem] sm:text-[2rem]">
-        Neon is the Postgres backend
+        Every requirement in digital engineering &mdash;
         <br />
-        designed for apps and agents.
+        we serve it with precision.
       </h1>
 
       <Link
         className="group relative mt-8 inline-flex max-w-full items-center gap-x-3 overflow-hidden bg-[#E4F1EB] py-3 pr-5 pl-3 text-black-pure lg:mt-7"
-        to={LINKS.startups}
+        to="#contact"
       >
         <Image
           className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-right"
@@ -51,11 +41,11 @@ const HeroMts = () => (
           alt=""
         />
         <span className="relative z-10 inline-flex shrink-0 items-center bg-[linear-gradient(90deg,rgba(57,165,125,0.6)_50%,transparent_50%)] bg-[size:200%_100%] bg-left bg-no-repeat px-2.5 py-1 font-mono text-[0.8125rem] leading-none font-medium tracking-extra-tight text-black-pure uppercase">
-          Startups
+          Production
         </span>
         <span className="relative z-10 text-base leading-snug font-medium tracking-extra-tight text-black-pure">
-          Qualifying startups get up to <span className="font-semibold">$100K in credits</span> to
-          scale on Neon
+          Full-cycle software engineering from concept to{' '}
+          <span className="font-semibold">high-scale deployment</span>
           <span className="ml-1 inline-block transition-transform duration-200 group-hover:translate-x-0.5">
             &rarr;
           </span>

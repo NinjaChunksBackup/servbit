@@ -58,7 +58,7 @@ export default {
     },
     {
       rows: '1',
-      feature: 'Lakebase Postgres',
+      feature: 'Servbit Database',
     },
     {
       rows: '2',
@@ -154,7 +154,7 @@ export default {
     {
       rows: '3',
       feature: {
-        title: 'Managed Better Auth',
+        title: 'Managed Auth',
       },
       free: 'Up to 60k MAUs',
       launch:

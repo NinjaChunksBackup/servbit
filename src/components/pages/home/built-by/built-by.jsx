@@ -1,27 +1,27 @@
 import Image from 'next/image';
 
 import Container from 'components/shared/container';
-import databricksIcon from 'icons/home/databricks.svg';
+import servbitMarkIcon from 'icons/home/servbit-mark.svg';
 import { cn } from 'utils/cn';
 
 const STATS = [
   {
-    title: 'Databricks',
-    description: 'Neon has been part of the Databricks Platform since May 2025.',
-    icon: databricksIcon,
+    title: 'Servbit',
+    description: 'Engineering coverage across App, Web, Cloud, Automation, and AI.',
+    icon: servbitMarkIcon,
     className: 'col-span-1',
     descriptionClassName: 'max-w-69.5',
     hasIcon: true,
   },
   {
-    title: '20M+',
-    description: 'Databases started daily - built for scale and reliability.',
+    title: '99.99%',
+    description: 'Production uptime SLA and fault-tolerant architecture built for scale.',
     className: 'col-span-1',
     descriptionClassName: 'max-w-54',
   },
   {
-    title: '3M+',
-    description: 'Developers building on Neon worldwide.',
+    title: '250+',
+    description: 'High-performance digital products and systems deployed worldwide.',
     className: 'col-span-1',
     descriptionClassName: 'max-w-64',
   },
@@ -43,8 +43,9 @@ const BuiltBy = () => (
             '2xl:max-w-240 2xl:text-[2.25rem] xl:text-[2rem] lg:indent-16 lg:text-[1.75rem] md:indent-0 md:text-2xl'
           )}
         >
-          <strong className="font-normal text-white">Backed by giants.</strong> First founded by
-          Postgres hackers with decades of expertise, Neon is now part of the Databricks Platform.
+          <strong className="font-normal text-white">Engineered for mission-critical scale.</strong>{' '}
+          Founded by veteran systems engineers and full-stack architects, Servbit builds resilient,
+          high-conversion digital platforms tailored for ambitious companies.
         </h2>
 
         <ul className="mt-24.5 grid max-w-296 min-w-0 grid-cols-[2fr_1fr_.9fr] xl:mt-20 lg:mt-16 md:mt-12 md:grid-cols-1 md:gap-y-10">

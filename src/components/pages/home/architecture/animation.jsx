@@ -22,7 +22,7 @@ const ARTBOARD_STYLE = {
 
 const Animation = () => {
   const { isReady, wrapperRef, animationRef, isIntersecting, RiveComponent } = useRiveAnimation({
-    src: '/animations/pages/home/lakebase-postgres.riv?20260910-3',
+    src: '/animations/pages/home/lakebase-postgres.riv?20261002-servbit',
     artboard: 'main',
     stateMachines: 'SM',
     fit: Fit.Contain,

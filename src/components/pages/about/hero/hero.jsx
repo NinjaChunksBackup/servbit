@@ -16,21 +16,21 @@ const Hero = () => (
         theme="white"
         size="md-new"
       >
-        Neon is building the agent-native backend stack.
+        Servbit engineers high-velocity digital products and intelligent systems.
       </Heading>
       <div className="flex w-full items-center justify-between xl:items-end lg:flex-col lg:items-start lg:gap-y-6">
         <p className="max-w-[704px] font-sans text-xl leading-snug font-normal tracking-extra-tight text-gray-new-80 xl:max-w-md lg:max-w-[640px] lg:text-lg md:max-w-80 md:text-[15px]">
-          Database, Authentication, Storage, Compute and AI Gateway, designed from the ground up to
-          be operated by agents: familiar, instant, serverless, and branchable.
+          App, Web, Cloud, Automation, and Custom AI engineered from concept to production with
+          architectural rigor, serverless scale, and measurable business performance.
         </p>
         <div className="flex items-center justify-center gap-x-5 xl:gap-4 xl:pb-2 lg:pb-0 md:w-full md:flex-col">
           <Button
             size="lg-new"
             theme="white-filled"
             className="shrink-0 font-medium md:w-full"
-            to={LINKS.signup}
+            to={LINKS.contactSales}
           >
-            Create an account
+            Work with us
           </Button>
           <Button
             size="lg-new"
@@ -38,7 +38,7 @@ const Hero = () => (
             className="shrink-0 font-normal md:w-full"
             to={LINKS.careers}
           >
-            View open roles at Databricks
+            View open roles at Servbit
           </Button>
         </div>
       </div>

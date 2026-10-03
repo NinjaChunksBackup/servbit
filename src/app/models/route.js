@@ -14,7 +14,7 @@ import {
 // ignored. The Cache-Control header below still lets the CDN cache each query string.
 export const dynamic = 'force-dynamic';
 
-const SCHEMA = 'https://neon.com/schemas/ai-gateway-models.json';
+const SCHEMA = 'https://servbit.com/schemas/ai-gateway-models.json';
 
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), {
@@ -27,7 +27,7 @@ const json = (body, status = 200) =>
     },
   });
 
-// Neon AI Gateway models as a REST resource, served at /models.
+// Servbit AI Gateway models as a REST resource, served at /models.
 //
 // Sibling of /models.json, and deliberately a different thing. /models.json mirrors the
 // models.dev schema so anything that reads models.dev can read it unchanged. /models answers the

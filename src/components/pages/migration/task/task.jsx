@@ -18,7 +18,7 @@ const Task = () => (
           <div className="mt-3 text-lg leading-snug tracking-extra-tight text-pretty text-gray-new-70 xl:mt-[14px] lg:text-[15px] md:mt-3 md:text-base md:font-light">
             <p>
               Our Import Data Assistant can help you automatically copy your existing database to
-              Neon. You only need to provide a connection string to get started.
+              Servbit. You only need to provide a connection string to get started.
             </p>
           </div>
         </div>

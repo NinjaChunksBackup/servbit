@@ -32,13 +32,13 @@ const AGENT_FEATURES = [
   {
     title: 'One-second database provisioning',
     description:
-      'Agents move fast, and so does Neon. Provision fresh databases in seconds for a smooth developer experience.',
+      'Agents move fast, and so does Servbit. Provision fresh databases in seconds for a smooth developer experience.',
     icon: lightning,
   },
   {
     title: 'Scale to zero and pay-as-you-go',
     description:
-      'Neon only charges for true usage, so you can run fleets of short-lived databases without blowing your budget.',
+      'Servbit only charges for true usage, so you can run fleets of short-lived databases without blowing your budget.',
     icon: scale,
   },
   {
@@ -50,7 +50,7 @@ const AGENT_FEATURES = [
   {
     title: 'Embed directly, no signup required',
     description:
-      'Agents can create and manage databases without a user ever logging into Neon. No UI, no OAuth, no friction.',
+      'Agents can create and manage databases without a user ever logging into Servbit. No UI, no OAuth, no friction.',
     icon: jsConsole,
   },
   {
@@ -62,7 +62,7 @@ const AGENT_FEATURES = [
   {
     title: 'Built-in auth',
     description:
-      'With Neon Auth, agents can build apps with secure authentication baked in - no extra setup, just more power to vibe coders.',
+      'With Servbit Auth, agents can build apps with secure authentication baked in - no extra setup, just more power to vibe coders.',
     icon: auth,
   },
 ];
@@ -71,7 +71,7 @@ const STARTER_KIT_FEATURES = [
   {
     title: 'Postgres with pgvector',
     description:
-      'Store and retrieve vector embeddings efficiently with Neon Postgres and pgvector.',
+      'Store and retrieve vector embeddings efficiently with Servbit Postgres and pgvector.',
     icon: pgvector,
   },
   {
@@ -82,24 +82,24 @@ const STARTER_KIT_FEATURES = [
   {
     title: 'Vector Search Optimization',
     description:
-      'Enhance the performance of your AI by using Neon’s vector search optimization guide.',
+      'Enhance the performance of your AI by using Servbit’s vector search optimization guide.',
     icon: vectorSearchOptimization,
   },
   {
     title: 'Autoscaling & Scaling Guide',
-    description: 'Scale your AI apps seamlessly with Neon’s Autoscaling and Read Replicas.',
+    description: 'Scale your AI apps seamlessly with Servbit’s Autoscaling and Read Replicas.',
     icon: autoscaling,
   },
   {
-    title: 'Built with Neon',
+    title: 'Built with Servbit',
     description:
-      'Explore AI apps using Neon to gain valuable inspiration and learn best practices.',
+      'Explore AI apps using Servbit to gain valuable inspiration and learn best practices.',
     icon: builtWithNeon,
   },
   {
     title: 'Performance & Storage',
     description:
-      'Optimize and manage your AI workloads with Neon’s storage and autoscaling solutions.',
+      'Optimize and manage your AI workloads with Servbit’s storage and autoscaling solutions.',
     icon: performanceStorage,
   },
 ];
@@ -112,7 +112,7 @@ const AiPage = () => (
       className="mt-[200px] xl:mt-[192px] lg:mt-[158px] md:mt-[104px]"
       figureClassName="lg:max-w-[704px]"
       quoteClassName="text-pretty md:text-wrap"
-      quote="The combination of flexible resource limits and nearly instant database provisioning made Neon a no&#8209;brainer."
+      quote="The combination of flexible resource limits and nearly instant database provisioning made Servbit a no&#8209;brainer."
       author={{
         name: 'Lincoln Bergeson',
         position: 'Infrastructure Engineer at Replit',
@@ -126,7 +126,7 @@ const AiPage = () => (
       className="mt-[199px] xl:mt-[191px] lg:mt-[153px] md:mt-[107px]"
       title="Add a backend to your agent"
       titleClassName="md:text-pretty"
-      description="Neon is purpose-built to support AI agents at the infrastructure level, with a native, API-first backend that doesn’t require end-user signups or manual provisioning."
+      description="Servbit is purpose-built to support AI agents at the infrastructure level, with a native, API-first backend that doesn’t require end-user signups or manual provisioning."
       items={AGENT_FEATURES}
       link={LINKS.useCasesAI}
       linkText="Read more"
@@ -136,7 +136,7 @@ const AiPage = () => (
       className="mt-[200px] xl:mt-[192px] lg:mt-[158px] md:mt-[104px]"
       figureClassName="lg:max-w-[704px]"
       quoteClassName="text-pretty lg:text-wrap"
-      quote="Neon’s speed of provisioning and serverless scale-to-zero is critical for us. We can serve users iterating on quick ideas efficiently while also supporting them as they scale, without making them think about database setup."
+      quote="Servbit’s speed of provisioning and serverless scale-to-zero is critical for us. We can serve users iterating on quick ideas efficiently while also supporting them as they scale, without making them think about database setup."
       author={{
         name: 'Dhruv Amin',
         position: 'Co-founder at Anything',
@@ -162,9 +162,9 @@ const AiPage = () => (
     />
     <GridFeatures
       className="mt-[200px] xl:mt-[194px] lg:mt-[160px] md:mt-[104px]"
-      title="Neon's AI App Starter Kit"
+      title="Servbit's AI App Starter Kit"
       titleClassName="md:text-pretty"
-      description="Neon's AI App Starter Kit offers resources, apps, and examples to kickstart Neon as your vector database."
+      description="Servbit's AI App Starter Kit offers resources, apps, and examples to kickstart Servbit as your vector database."
       descriptionClassName="max-w-[490px]"
       items={STARTER_KIT_FEATURES}
       link={LINKS.docsAi}

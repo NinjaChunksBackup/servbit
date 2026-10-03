@@ -62,7 +62,7 @@ const resolveRequest = (body, { ok = true, status = 200 } = {}) => {
 const selectService = (name) => fireEvent.click(screen.getByRole('button', { name }));
 const submit = () => fireEvent.click(screen.getByRole('button', { name: 'Create a project' }));
 
-describe('Claimable Neon provisioning form', () => {
+describe('Claimable Servbit provisioning form', () => {
   beforeEach(() => {
     vi.stubGlobal('fetch', vi.fn());
     vi.clearAllMocks();
@@ -93,7 +93,7 @@ describe('Claimable Neon provisioning form', () => {
       'aria-pressed',
       'false'
     );
-    expect(screen.getByRole('button', { name: /Managed Better Auth/ })).toHaveAttribute(
+    expect(screen.getByRole('button', { name: /Managed Auth/ })).toHaveAttribute(
       'aria-pressed',
       'false'
     );
@@ -101,13 +101,13 @@ describe('Claimable Neon provisioning form', () => {
   });
 
   it.each([
-    [[], [], 'This project includes Lakebase Postgres.'],
-    [['Data API'], ['data-api'], 'This project includes Lakebase Postgres and Data API.'],
-    [['Managed Better Auth'], ['auth'], 'This project includes Lakebase Postgres and Auth.'],
+    [[], [], 'This project includes Servbit Database.'],
+    [['Data API'], ['data-api'], 'This project includes Servbit Database and Data API.'],
+    [['Managed Auth'], ['auth'], 'This project includes Servbit Database and Auth.'],
     [
-      ['Data API', 'Managed Better Auth'],
+      ['Data API', 'Managed Auth'],
       ['data-api', 'auth'],
-      'This project includes Lakebase Postgres, Data API, and Auth.',
+      'This project includes Servbit Database, Data API, and Auth.',
     ],
   ])('submits the existing API contract for %j', async (labels, services, resultSummary) => {
     resolveRequest(createResult(services));
@@ -127,7 +127,7 @@ describe('Claimable Neon provisioning form', () => {
     resolveRequest(createResult(['auth']));
     render(<Provisioner />);
     selectService(/Data API/);
-    selectService(/Managed Better Auth/);
+    selectService(/Managed Auth/);
     selectService(/Data API/);
     submit();
     await screen.findByText('Project ready');
@@ -158,7 +158,7 @@ describe('Claimable Neon provisioning form', () => {
     submit();
 
     const heading = await screen.findByRole('heading', {
-      name: 'This project includes Lakebase Postgres, Data API, and Auth.',
+      name: 'This project includes Servbit Database, Data API, and Auth.',
     });
     expect(heading).toHaveFocus();
     expect(screen.getByText(result.project.id)).toBeVisible();
@@ -184,11 +184,13 @@ describe('Claimable Neon provisioning form', () => {
       'If the claim link expires, create another project from this page.'
     );
     expect(warning).toHaveTextContent('Opening the claim link does not freeze access.');
-    expect(warning).toHaveTextContent('Continuing to Neon on the claim page rotates DATABASE_URL.');
     expect(warning).toHaveTextContent(
-      'After the transfer finishes, pull a new one from the Neon console.'
+      'Continuing to Servbit on the claim page rotates DATABASE_URL.'
     );
-    expect(warning).toHaveTextContent('Managed Better Auth and the Data API stay enabled.');
+    expect(warning).toHaveTextContent(
+      'After the transfer finishes, pull a new one from the Servbit console.'
+    );
+    expect(warning).toHaveTextContent('Managed Auth and the Data API stay enabled.');
     expect(screen.getByRole('link', { name: 'Open the claim link' })).toHaveAttribute(
       'href',
       result.claim.verification_uri_complete
@@ -202,11 +204,11 @@ describe('Claimable Neon provisioning form', () => {
     await screen.findByText('Project ready');
     expect(
       screen.getByRole('heading', {
-        name: 'This project includes Lakebase Postgres and Data API.',
+        name: 'This project includes Servbit Database and Data API.',
       })
     ).toBeVisible();
-    expect(screen.getByText('NEON_DATA_API_URL')).toBeVisible();
-    expect(screen.queryByText('NEON_AUTH_BASE_URL')).not.toBeInTheDocument();
+    expect(screen.getByText('SERVBIT_DATA_API_URL')).toBeVisible();
+    expect(screen.queryByText('SERVBIT_AUTH_BASE_URL')).not.toBeInTheDocument();
     await waitFor(() => {
       fireEvent.click(screen.getByRole('button', { name: 'More info.' }));
       expect(screen.getByRole('tooltip')).toBeInTheDocument();
@@ -222,12 +224,12 @@ describe('Claimable Neon provisioning form', () => {
     submit();
     await screen.findByText('Project ready');
     expect(
-      screen.getByRole('heading', { name: 'This project includes Lakebase Postgres.' })
+      screen.getByRole('heading', { name: 'This project includes Servbit Database.' })
     ).toBeVisible();
-    expect(screen.getByText(/Managed Better Auth was not granted/)).toHaveTextContent(
-      'Managed Better Auth was not granted. Claim the project to enable it.'
+    expect(screen.getByText(/Managed Auth was not granted/)).toHaveTextContent(
+      'Managed Auth was not granted. Claim the project to enable it.'
     );
-    expect(screen.queryByText('NEON_AUTH_BASE_URL')).not.toBeInTheDocument();
+    expect(screen.queryByText('SERVBIT_AUTH_BASE_URL')).not.toBeInTheDocument();
     await waitFor(() => {
       fireEvent.focus(screen.getByRole('button', { name: 'More info.' }));
       expect(screen.getByRole('tooltip')).toBeInTheDocument();
@@ -249,12 +251,12 @@ describe('Claimable Neon provisioning form', () => {
   it('returns to the form while retaining the existing service selection', async () => {
     resolveRequest(createResult(['auth']));
     render(<Provisioner />);
-    selectService(/Managed Better Auth/);
+    selectService(/Managed Auth/);
     submit();
     await screen.findByText('Project ready');
     fireEvent.click(screen.getByRole('button', { name: 'Create another project' }));
     expect(screen.getByRole('heading', { name: 'Configure your backend' })).toBeVisible();
-    expect(screen.getByRole('button', { name: /Managed Better Auth/ })).toHaveAttribute(
+    expect(screen.getByRole('button', { name: /Managed Auth/ })).toHaveAttribute(
       'aria-pressed',
       'true'
     );

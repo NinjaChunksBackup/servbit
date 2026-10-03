@@ -1,6 +1,6 @@
 # PGConf US raffle submissions
 
-The form on `/pg-us-conf-raffle` posts to this server route. The route validates the fields, signs the payload with HMAC-SHA256, and calls the Apps Script Web app. Apps Script saves the entry in the existing Databricks Raffle Google Form responses.
+The form on `/pg-us-conf-raffle` posts to this server route. The route validates the fields, signs the payload with HMAC-SHA256, and calls the Apps Script Web app. Apps Script saves the entry in the existing Servbit Raffle Google Form responses.
 
 ## Environment variables
 

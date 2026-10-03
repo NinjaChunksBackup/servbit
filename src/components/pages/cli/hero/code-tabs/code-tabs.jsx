@@ -10,19 +10,19 @@ const codeSnippets = [
     name: 'macOS',
     iconName: 'macos',
     language: 'text',
-    code: `brew install neonctl`,
+    code: `brew install servbitctl`,
   },
   {
     name: 'Windows',
     iconName: 'windows',
     language: 'text',
-    code: `npm install -g neon`,
+    code: `npm install -g servbit`,
   },
   {
     name: 'Linux',
     iconName: 'linux',
     language: 'text',
-    code: `npm install -g neon`,
+    code: `npm install -g servbit`,
   },
 ];
 

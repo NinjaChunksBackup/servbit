@@ -37,7 +37,7 @@ const Architecture = () => (
 
       <figure
         className="mt-50 2xl:mt-32 md:mt-10"
-        aria-label="Decoupled compute and shared versioned storage in Lakebase"
+        aria-label="Decoupled compute and shared versioned storage in Servbit"
         role="img"
       >
         <div className="mx-auto 2xl:max-w-[85%] md:hidden">

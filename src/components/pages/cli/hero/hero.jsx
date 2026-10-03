@@ -9,12 +9,12 @@ const Hero = () => (
   <section className="hero relative mb-20 overflow-hidden pt-[152px] safe-paddings xl:pt-[120px] lg:pt-11 md:mb-16 md:pt-8 sm:mb-10">
     <Container className="relative z-10 flex flex-col items-center" size="medium">
       <h1 className="mx-auto text-center font-title text-[72px] leading-none font-medium tracking-tighter xl:text-[56px] lg:text-5xl md:text-4xl sm:text-[36px] xs:flat-breaks">
-        Your Neon workflow lives
+        Your Servbit workflow lives
         <br />
         <span className="text-green-45">in the terminal</span>
       </h1>
       <p className="mt-4 text-center text-xl leading-snug font-light tracking-extra-tight xl:text-lg lg:mt-4 md:mt-2.5 md:text-base">
-        The Neon CLI brings the Neon backend platform to the command line.
+        The Servbit CLI brings the Servbit backend platform to the command line.
       </p>
       <AnimatedButton
         className="relative mt-9 px-8 py-[17px] text-lg font-semibold tracking-extra-tight lg:mt-7 md:mt-6"
@@ -34,7 +34,7 @@ const Hero = () => (
         theme="green"
         withArrow
       >
-        Neon CLI setup instructions
+        Servbit CLI setup instructions
       </Link>
     </Container>
   </section>

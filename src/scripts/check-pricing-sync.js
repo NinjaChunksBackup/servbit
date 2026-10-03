@@ -617,7 +617,7 @@ const CROSS_SOURCE_CHECKS = [
   {
     id: 'auth-free',
     label: 'Auth MAU (Free)',
-    comp: 'Managed Better Auth',
+    comp: 'Managed Auth',
     docs: 'Auth',
     plan: 'free',
     norm: extractCore(/(60k|60,?000)/i, '60k'),
@@ -626,7 +626,7 @@ const CROSS_SOURCE_CHECKS = [
   {
     id: 'auth-launch',
     label: 'Auth MAU (Launch)',
-    comp: 'Managed Better Auth',
+    comp: 'Managed Auth',
     docs: 'Auth',
     plan: 'launch',
     norm: extractCore(/(1M|1,?000,?000)/i, '1M'),
@@ -635,7 +635,7 @@ const CROSS_SOURCE_CHECKS = [
   {
     id: 'auth-scale',
     label: 'Auth MAU (Scale)',
-    comp: 'Managed Better Auth',
+    comp: 'Managed Auth',
     docs: 'Auth',
     plan: 'scale',
     norm: extractCore(/(1M|1,?000,?000)/i, '1M'),

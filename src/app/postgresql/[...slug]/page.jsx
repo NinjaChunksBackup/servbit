@@ -77,7 +77,7 @@ const PostgresTutorial = async (props) => {
     headline: data.title,
     author: {
       '@type': 'Organization',
-      name: 'Neon',
+      name: 'Servbit',
     },
   };
 

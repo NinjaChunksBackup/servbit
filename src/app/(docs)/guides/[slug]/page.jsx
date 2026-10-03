@@ -41,7 +41,7 @@ export async function generateMetadata(props) {
   const encodedTitle = Buffer.from(title).toString('base64');
 
   return getMetadata({
-    title: `${title} - Neon Guides`,
+    title: `${title} - Servbit Guides`,
     description: subtitle,
     imagePath: `${VERCEL_URL}/api/og?title=${encodedTitle}`,
     pathname: `${LINKS.guides}/${slug}`,
@@ -71,7 +71,7 @@ const GuidePost = async (props) => {
     headline: data.title,
     author: {
       '@type': 'Organization',
-      name: 'Neon',
+      name: 'Servbit',
     },
   };
 

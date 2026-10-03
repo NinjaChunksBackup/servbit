@@ -11,7 +11,7 @@ describe('getMetadata', () => {
   const originalVercelEnv = process.env.VERCEL_ENV;
 
   beforeEach(() => {
-    process.env.NEXT_PUBLIC_DEFAULT_SITE_URL = 'https://neon.com';
+    process.env.NEXT_PUBLIC_DEFAULT_SITE_URL = 'https://servbit.com';
     delete process.env.VERCEL_ENV;
   });
 
@@ -32,16 +32,16 @@ describe('getMetadata', () => {
   it('defaults canonical to the Neon page URL', () => {
     const metadata = getMetadata({ pathname: '/guides/sentry-neon-mcp' });
 
-    expect(metadata.alternates.canonical).toBe('https://neon.com/guides/sentry-neon-mcp');
-    expect(metadata.openGraph.url).toBe('https://neon.com/guides/sentry-neon-mcp');
+    expect(metadata.alternates.canonical).toBe('https://servbit.com/guides/sentry-neon-mcp');
+    expect(metadata.openGraph.url).toBe('https://servbit.com/guides/sentry-neon-mcp');
   });
 
   it.each([
-    [SEO_DATA.functions, 'https://neon.com/functions.md'],
-    [SEO_DATA.aiGateway, 'https://neon.com/ai-gateway.md'],
-    [SEO_DATA.objectStorage, 'https://neon.com/object-storage.md'],
-    [SEO_DATA.auth, 'https://neon.com/md/auth-page.md'],
-    [SEO_DATA.lakebase, 'https://neon.com/lakebase.md'],
+    [SEO_DATA.functions, 'https://servbit.com/functions.md'],
+    [SEO_DATA.aiGateway, 'https://servbit.com/ai-gateway.md'],
+    [SEO_DATA.objectStorage, 'https://servbit.com/object-storage.md'],
+    [SEO_DATA.auth, 'https://servbit.com/md/auth-page.md'],
+    [SEO_DATA.lakebase, 'https://servbit.com/lakebase.md'],
   ])('advertises the generated Markdown alternate', (pageSeo, markdownUrl) => {
     const metadata = getMetadata(pageSeo);
 
@@ -57,7 +57,7 @@ describe('getMetadata', () => {
     expect(metadata.alternates.canonical).toBe(
       'https://sentry.io/cookbook/monitor-neon-functions-sentry/'
     );
-    expect(metadata.openGraph.url).toBe('https://neon.com/guides/sentry-neon-functions');
+    expect(metadata.openGraph.url).toBe('https://servbit.com/guides/sentry-neon-functions');
   });
 
   it('rejects a relative canonical', () => {
@@ -89,7 +89,7 @@ describe('getMetadata', () => {
     });
 
     expect(metadata.alternates.canonical).toBe('https://www.postgresql.org/docs/16/tutorial.html');
-    expect(metadata.openGraph.url).toBe('https://neon.com/postgresql/tutorial');
+    expect(metadata.openGraph.url).toBe('https://servbit.com/postgresql/tutorial');
   });
 });
 
@@ -98,7 +98,7 @@ describe('guide canonical frontmatter', () => {
   const originalVercelEnv = process.env.VERCEL_ENV;
 
   beforeEach(() => {
-    process.env.NEXT_PUBLIC_DEFAULT_SITE_URL = 'https://neon.com';
+    process.env.NEXT_PUBLIC_DEFAULT_SITE_URL = 'https://servbit.com';
     delete process.env.VERCEL_ENV;
   });
 
@@ -127,7 +127,7 @@ describe('guide canonical frontmatter', () => {
     });
 
     expect(metadata.alternates.canonical).toBe(post.data.canonical);
-    expect(metadata.openGraph.url).toBe('https://neon.com/guides/sentry-neon-functions');
+    expect(metadata.openGraph.url).toBe('https://servbit.com/guides/sentry-neon-functions');
   });
 
   it('leaves a guide without canonical on the Neon URL', () => {
@@ -140,6 +140,6 @@ describe('guide canonical frontmatter', () => {
       canonical: post.data.canonical,
     });
 
-    expect(metadata.alternates.canonical).toBe('https://neon.com/guides/sentry-neon-mcp');
+    expect(metadata.alternates.canonical).toBe('https://servbit.com/guides/sentry-neon-mcp');
   });
 });

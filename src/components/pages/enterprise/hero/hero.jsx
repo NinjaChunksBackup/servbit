@@ -9,7 +9,7 @@ const Hero = () => (
         Let your backend work <br className="xs:hidden" /> smarter, not harder
       </h1>
       <p className="mt-4 text-lg leading-snug tracking-extra-tight text-gray-new-80 xl:mt-3 lg:mx-auto lg:max-w-[380px] lg:text-base">
-        Learn how Enterprises are maximizing engineering efficiency with Neon.
+        Learn how Enterprises are maximizing engineering efficiency with Servbit.
       </p>
       <Button
         className="relative mt-8 h-12 w-[156px] text-base font-semibold! tracking-tight lg:mt-7 lg:h-11 md:mt-6"

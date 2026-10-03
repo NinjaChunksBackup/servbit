@@ -25,7 +25,7 @@ const SERVICES = [
   },
   {
     id: 'auth',
-    title: 'Managed Better Auth',
+    title: 'Managed Auth',
     description: 'Add authentication. Stays enabled after claim.',
     icon: authIcon,
     iconClassName: 'size-7',
@@ -33,9 +33,9 @@ const SERVICES = [
 ];
 
 const CAPABILITY_LABELS = {
-  postgres: 'Lakebase Postgres',
+  postgres: 'Servbit Database',
   data_api: 'Data API',
-  auth: 'Managed Better Auth',
+  auth: 'Managed Auth',
 };
 
 const INCLUDED_CAPABILITY_LABELS = {
@@ -158,7 +158,7 @@ const ProvisionResult = ({ result, onReset }) => {
       .map(({ capability }) => includedCapabilityLabel(capability))
   );
   const stayEnabled = [
-    granted.has('auth') ? 'Managed Better Auth' : null,
+    granted.has('auth') ? 'Managed Auth' : null,
     granted.has('data_api') ? 'the Data API' : null,
   ].filter(Boolean);
   const stayEnabledSentence =
@@ -202,10 +202,10 @@ const ProvisionResult = ({ result, onReset }) => {
       <div className="mt-6 mb-7 flex flex-col gap-6">
         <Credential label="DATABASE_URL" value={credentials.database_url} />
         {credentials.services.data_api?.url && (
-          <Credential label="NEON_DATA_API_URL" value={credentials.services.data_api.url} />
+          <Credential label="SERVBIT_DATA_API_URL" value={credentials.services.data_api.url} />
         )}
         {credentials.services.auth?.base_url && (
-          <Credential label="NEON_AUTH_BASE_URL" value={credentials.services.auth.base_url} />
+          <Credential label="SERVBIT_AUTH_BASE_URL" value={credentials.services.auth.base_url} />
         )}
       </div>
 
@@ -252,8 +252,8 @@ const ProvisionResult = ({ result, onReset }) => {
           globalCloseEvents={{ escape: true, clickOutsideAnchor: true }}
         >
           If the claim link expires, create another project from this page. Opening the claim link
-          does not freeze access. Continuing to Neon on the claim page rotates{' '}
-          <code>DATABASE_URL</code>. After the transfer finishes, pull a new one from the Neon
+          does not freeze access. Continuing to Servbit on the claim page rotates{' '}
+          <code>DATABASE_URL</code>. After the transfer finishes, pull a new one from the Servbit
           console.
           {stayEnabledSentence}
         </Tooltip>
@@ -355,7 +355,7 @@ const Provisioner = () => {
           </span>
           <div className="min-w-0 flex-1">
             <p className="text-lg leading-none tracking-extra-tight text-gray-new-90 md:text-base/tight">
-              Lakebase Postgres
+              Servbit Database
             </p>
             <p className="mt-2 text-base leading-none tracking-extra-tight text-gray-new-60 md:text-sm/tight">
               A temporary database is always included.

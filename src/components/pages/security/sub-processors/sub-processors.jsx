@@ -15,8 +15,8 @@ const SubProcessors = () => (
           </h2>
           <div className="mt-4 flex flex-col gap-2 text-with-links leading-snug tracking-extra-tight text-pretty text-gray-new-70 lg:text-[15px] sm:text-sm sm:font-light">
             <p>
-              Neon engages with carefully selected third-party sub-processors that assist in service
-              delivery.
+              Servbit engages with carefully selected third-party sub-processors that assist in
+              service delivery.
             </p>
             <p>
               All sub-processors are reviewed annually and must comply with contractual security and

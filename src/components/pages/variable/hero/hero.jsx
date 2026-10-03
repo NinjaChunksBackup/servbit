@@ -8,15 +8,17 @@ const Hero = () => (
       Scale With Traffic
     </h1>
     <p className="my-4 text-2xl leading-snug tracking-extra-tight text-gray-new-80 xl:text-xl md:my-3 md:text-lg">
-      Neon scales CPU and memory automatically to match your app
+      Servbit scales compute and capacity automatically to match your app
     </p>
     <div className="prose-doc">
       <Admonition type="note" title="TL;DR">
-        <p>If your app has variable traffic, here&apos;s how Neon can save you time and money:</p>
+        <p>
+          If your app has variable traffic, here&apos;s how Servbit can save you time and money:
+        </p>
         <ul>
           <li>
-            Databases autoscale. CPU and memory scale up and down automatically. When you see
-            traffic spikes, your database provisions more compute automatically; when traffic dies,
+            Databases and compute autoscale. Resources scale up and down automatically. When you see
+            traffic spikes, your platform provisions more compute automatically; when traffic dies,
             it scales down.
           </li>
           <li>You pay only for the compute you use. No downtime, no manual work.</li>
@@ -27,12 +29,12 @@ const Hero = () => (
       </Admonition>
     </div>
     <Testimonial
-      text="Our database traffic peaks at nights and on weekends. Building on a database that preemptively autoscales allows us to regularly handle these traffic spikes."
+      text="Our database traffic peaks at nights and on weekends. Building on an architecture that preemptively autoscales allows us to regularly handle these traffic spikes."
       author={{
         name: 'Lex Nasser',
         company: 'Founding Engineer at 222',
       }}
-      url="/blog/how-222-uses-neon-to-handle-their-frequent-spikes-in-demand"
+      url={LINKS.blog}
     />
   </section>
 );

@@ -154,7 +154,7 @@ const AutoscalingViz = ({
     >
       <div className="mb-6">
         <span className="indent-24 text-3xl leading-dense font-normal tracking-tighter text-pretty text-gray-new-50 [&>strong]:font-normal [&>strong]:text-white">
-          The average {label} on Neon uses <strong>{multiplier}x less compute</strong> than
+          The average {label} on Servbit uses <strong>{multiplier}x less compute</strong> than
           provisioned equivalent.
         </span>
       </div>

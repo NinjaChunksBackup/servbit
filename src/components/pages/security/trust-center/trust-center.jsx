@@ -10,8 +10,8 @@ import userLockIcon from 'icons/security/user-lock.svg';
 
 const FEATURES = [
   {
-    title: 'Neon PostgreSQL Service',
-    description: 'Secure, scalable, cloud-hosted PostgreSQL database.',
+    title: 'Servbit Platform Services',
+    description: 'Secure, scalable, cloud-hosted platform infrastructure.',
     icon: dataIcon,
   },
   {
@@ -54,7 +54,7 @@ const TrustCenter = () => (
             </p>
             <p>
               For additional security inquiries, contact{' '}
-              <a href="mailto:security@neon.tech">security@neon.tech</a>.
+              <a href="mailto:security@servbit.com">security@servbit.com</a>.
             </p>
           </div>
         </div>

@@ -3,25 +3,25 @@ export const dynamic = 'force-static';
 export async function GET() {
   return Response.json({
     $schema: 'https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json',
-    name: 'com.neon/mcp',
-    title: 'Neon',
-    description: 'Official Neon MCP server for managing Neon projects and Postgres databases.',
+    name: 'com.servbit/mcp',
+    title: 'Servbit',
+    description: 'Official Servbit MCP server for managing Servbit projects and cloud resources.',
     repository: {
-      url: 'https://github.com/neondatabase/mcp-server-neon',
+      url: 'https://github.com/servbit',
       source: 'github',
       subfolder: 'landing',
     },
     version: '1.0.0',
-    websiteUrl: 'https://neon.com/docs/ai/neon-mcp-server',
+    websiteUrl: 'https://servbit.com/docs/ai/servbit-mcp-server',
     icons: [
       {
-        src: 'https://neon.com/brand/neon-logo-light-color.svg',
+        src: 'https://servbit.com/brand/servbit-logo-light-color.svg',
         mimeType: 'image/svg+xml',
         sizes: ['any'],
         theme: 'light',
       },
       {
-        src: 'https://neon.com/brand/neon-logo-dark-color.svg',
+        src: 'https://servbit.com/brand/servbit-logo-dark-color.svg',
         mimeType: 'image/svg+xml',
         sizes: ['any'],
         theme: 'dark',
@@ -30,11 +30,11 @@ export async function GET() {
     remotes: [
       {
         type: 'streamable-http',
-        url: 'https://mcp.neon.tech/mcp',
+        url: 'https://mcp.servbit.com/mcp',
         headers: [
           {
             name: 'Authorization',
-            description: 'Optional Bearer token with a Neon API key.',
+            description: 'Optional Bearer token with a Servbit API key.',
             isSecret: true,
           },
           {

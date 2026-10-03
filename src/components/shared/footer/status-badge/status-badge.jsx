@@ -5,18 +5,18 @@ import { useInView } from 'react-intersection-observer';
 
 import Link from 'components/shared/link';
 import { cn } from 'utils/cn';
-import { getNeonStatus, NEON_STATUS } from 'utils/get-neon-status';
+import { getServbitStatus, SERVBIT_STATUS } from 'utils/get-neon-status';
 
 const statusData = {
-  [NEON_STATUS.UP]: {
+  [SERVBIT_STATUS.UP]: {
     color: 'bg-green-45',
     text: 'All systems operational',
   },
-  [NEON_STATUS.HASISSUES]: {
+  [SERVBIT_STATUS.HASISSUES]: {
     color: 'bg-yellow-70',
     text: 'Experiencing issues',
   },
-  [NEON_STATUS.UNDERMAINTENANCE]: {
+  [SERVBIT_STATUS.UNDERMAINTENANCE]: {
     color: 'bg-[red]',
     text: 'Active maintenance',
   },
@@ -28,7 +28,7 @@ const StatusBadge = () => {
 
   useEffect(() => {
     if (inView) {
-      getNeonStatus()
+      getServbitStatus()
         .then(({ status }) => {
           setCurrentStatus(status);
         })

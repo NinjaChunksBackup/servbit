@@ -11,12 +11,13 @@ const Interfaces = () => (
     aria-labelledby="claimable-interfaces-title"
   >
     <Container size="1344">
-      <SectionLabel theme="white">Lakebase Architecture</SectionLabel>
+      <SectionLabel theme="white">Servbit Architecture</SectionLabel>
       <h2
         className="mt-5 max-w-272 text-[3.25rem] leading-none font-normal tracking-tighter text-white xl:text-5xl lg:text-4xl md:mt-4 md:text-[2rem]"
         id="claimable-interfaces-title"
       >
-        The same scoped agent credential works through auth.md, the Neon CLI, and&nbsp;neon.ts.
+        The same scoped agent credential works through auth.md, the Servbit CLI,
+        and&nbsp;servbit.ts.
       </h2>
       <div className="mt-20 grid grid-cols-2 items-start gap-x-32 xl:gap-x-12 lg:mt-14 lg:grid-cols-1 lg:gap-y-12 md:mt-10 md:gap-y-10">
         <ul className="flex flex-col gap-y-14 py-6 xl:gap-y-10 lg:py-0 md:gap-y-7">

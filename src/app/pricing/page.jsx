@@ -18,7 +18,7 @@ const logos = [
   'adobe',
   'genomics',
   'replit',
-  'retool',
+  'cloudflare',
   'albertsons',
   'akqa',
   'vercel',
@@ -31,31 +31,31 @@ const logos = [
 
 const faqItems = [
   {
-    question: 'Does Neon offer a backend now?',
-    id: 'does-neon-offer-a-backend',
+    question: 'Does Servbit offer a complete backend?',
+    id: 'does-servbit-offer-a-backend',
     initialState: 'open',
     answer: `
-      <p>Yes. Alongside our serverless Postgres database, Neon now offers Managed Better Auth, Object Storage, Functions, and AI Gateway - a full backend suite that runs alongside your database and branches with it.</p>
+      <p>Yes. Alongside our serverless Postgres database, Servbit offers Managed Auth, Object Storage, Functions, and AI Gateway - a full backend suite that runs alongside your database and branches with it.</p>
     `,
   },
   {
-    question: 'What is a Neon project?',
+    question: 'What is a Servbit project?',
     id: 'what-is-a-project',
     answer: `
-      <p>A project in Neon is the top-level container for your environment. Each project includes all branches, with your Postgres databases and (if you deploy them) your Object Storage buckets, Functions, Managed Better Auth endpoints, and AI Gateway access.</p>
+      <p>A project in Servbit is the top-level container for your environment. Each project includes all branches, with your Postgres databases and (if you deploy them) your Object Storage buckets, Functions, Managed Auth endpoints, and AI Gateway access.</p>
     `,
   },
   {
     question: 'What is a CU?',
     answer: `
-      <p>A CU (short for Compute Unit) is Neon's way of representing <strong>Postgres database compute size</strong>. Neon databases <a href="${LINKS.autoscaling}">autoscale</a>, and CUs define how much CPU and memory your database is using at any moment - with each CU allocating approximately 1 vCPU and 4 GB of RAM.</p>
+      <p>A CU (short for Compute Unit) is Servbit's way of representing <strong>Postgres database compute size</strong>. Servbit databases <a href="${LINKS.autoscaling}">autoscale</a>, and CUs define how much CPU and memory your database is using at any moment - with each CU allocating approximately 1 vCPU and 4 GB of RAM.</p>
     `,
   },
   {
     question: 'What is a CU-hour?',
     id: 'compute-usage',
     answer: `
-      <p>A CU-hour is Neon's unit for measuring <strong>Postgres database compute usage</strong>. Because Neon databases scale to zero and autoscale, you're billed only for the database compute resources you actually use. In other words, your monthly database compute usage depends on:</p>
+      <p>A CU-hour is Servbit's unit for measuring <strong>Postgres database compute usage</strong>. Because Servbit databases scale to zero and autoscale, you're billed only for the database compute resources you actually use. In other words, your monthly database compute usage depends on:</p>
       <ul>
         <li>How many compute endpoints are you running</li>
         <li>How large your compute endpoints are (in CUs)</li>
@@ -69,7 +69,7 @@ const faqItems = [
         <li>Launch plan: $0.106 per CU-hour</li>
         <li>Scale plan: $0.222 per CU-hour</li>
       </ul>
-      <p>Remember that when your database is idle, compute can scale down to zero, so you don't consume CU-hours while it's not running. <a href="${LINKS.billing}">Learn more about Neon's billing.</a></p>
+      <p>Remember that when your database is idle, compute can scale down to zero, so you don't consume CU-hours while it's not running. <a href="${LINKS.billing}">Learn more about Servbit's billing.</a></p>
     `,
   },
   {
@@ -86,7 +86,7 @@ const faqItems = [
         <li>The database runs at an average of 1 CU for ~3 hours per day. It scales down to zero the rest of the time</li>
         <li>Over a month, this uses roughly 90 CU-hours, staying within the Free plan limits for that project</li>
       </ul>
-      <p>This model is designed to make it practical to have many small or intermittent databases (for development, demos, previews, or experiments) without being forced into an upgrade. <a href="${LINKS.blog}/why-so-many-projects-in-the-neon-free-plan">Learn more about our Free Plan philosophy.</a></p>
+      <p>This model is designed to make it practical to have many small or intermittent databases (for development, demos, previews, or experiments) without being forced into an upgrade. <a href="${LINKS.blog}">Learn more about our Free Plan philosophy.</a></p>
     `,
   },
   {
@@ -146,7 +146,7 @@ const faqItems = [
         <li>Your actual data size and number of branches</li>
         <li>Your configured history window for instant restore (affects History storage costs)</li>
       </ul>
-      <p>Remember that Neon bills based on actual usage, not estimates. Use these workload examples as reference points, then monitor your usage in the <a href="${LINKS.console}">Neon Console</a> to understand your real costs. <a href="${LINKS.billing}">Learn more about how Neon billing works.</a></p>
+      <p>Remember that Servbit bills based on actual usage, not estimates. Use these workload examples as reference points, then monitor your usage in the <a href="${LINKS.console}">Servbit Console</a> to understand your real costs. <a href="${LINKS.billing}">Learn more about how Servbit billing works.</a></p>
     `,
   },
   {
@@ -162,8 +162,8 @@ const faqItems = [
   {
     question: 'What does "no monthly minimum" mean on paid plans?',
     answer: `
-      <p>Neon's paid plans don't require a minimum monthly spend or base fee. You're billed purely based on usage. If one month you barely use Neon, your bill might be just a few dollars.</p>
-      <p>For example, if your databases are mostly idle that month, or you only run them briefly for development or testing, you'll only pay for the compute and storage actually consumed during that time. Remember that Neon databases scale to zero by default.</p>
+      <p>Servbit's paid plans don't require a minimum monthly spend or base fee. You're billed purely based on usage. If one month you barely use Servbit, your bill might be just a few dollars.</p>
+      <p>For example, if your databases are mostly idle that month, or you only run them briefly for development or testing, you'll only pay for the compute and storage actually consumed during that time. Remember that Servbit databases scale to zero by default.</p>
     `,
   },
   {
@@ -175,21 +175,21 @@ const faqItems = [
         <li>You expect higher or more sustained usage than what's included per project on the Free plan</li>
         <li>You care about production guarantees, such as consistent availability, predictable performance, and never having your database paused due to usage limits</li>
       </ul>
-      <p>If your usage fits comfortably within the Free plan and you're not running a production workload, there's no reason to upgrade. The Free plan is designed to be genuinely useful for development and prototyping. <a href="${LINKS.blog}/why-so-many-projects-in-the-neon-free-plan">Learn more about our Free Plan philosophy.</a></p>
+      <p>If your usage fits comfortably within the Free plan and you're not running a production workload, there's no reason to upgrade. The Free plan is designed to be genuinely useful for development and prototyping. <a href="${LINKS.blog}/servbit-free-plan">Learn more about our Free Plan philosophy.</a></p>
     `,
   },
   {
-    question: 'How is Postgres database storage billed in Neon?',
+    question: 'How is Postgres database storage billed in Servbit?',
     id: 'branches-and-storage',
     answer: `
-      <p>In Neon, you don't provision or manage database storage in advance. It scales automatically and invisibly as your data grows. At the end of each month, you're billed for the database storage actually consumed per project, measured in GB-months.</p>
-      <p>Neon bills storage usage using two separate metrics:</p>
+      <p>In Servbit, you don't provision or manage database storage in advance. It scales automatically and invisibly as your data grows. At the end of each month, you're billed for the database storage actually consumed per project, measured in GB-months.</p>
+      <p>Servbit bills storage usage using two separate metrics:</p>
       <p><strong>History storage (or instant restore storage)</strong></p>
-      <p><strong>Instant restore</strong> relies on Neon retaining a history of database changes so you can restore a branch to a previous point in time, create branches from past states, run Time Travel queries, and more. How long that history is kept is controlled by the <strong>history window</strong> on <strong>Settings → Instant restore</strong>—see <a href="${LINKS.docs}/introduction/history-window">History window</a> (1 day by default on paid plans).</p>
+      <p><strong>Instant restore</strong> relies on Servbit retaining a history of database changes so you can restore a branch to a previous point in time, create branches from past states, run Time Travel queries, and more. How long that history is kept is controlled by the <strong>history window</strong> on <strong>Settings → Instant restore</strong>—see <a href="${LINKS.docs}/introduction/history-window">History window</a> (1 day by default on paid plans).</p>
       <p><strong>History</strong> storage is billed based on the amount of Write-Ahead Log (WAL) retained within that history window, at $0.20 per GB-month on paid plans. This is billed separately from your regular database storage.</p>
       <p>If you don't need deep recovery or long Time Travel, shorten the history window to reduce costs.</p>
       <p><strong>Database storage (root and child branches)</strong></p>
-      <p>This is the storage used by your database data itself. Since Neon databases can branch, this is how branches contribute to database storage:</p>
+      <p>This is the storage used by your database data itself. Since Servbit databases can branch, this is how branches contribute to database storage:</p>
       <ul>
         <li>Root branches are billed based on their actual data size (for example, 5 GB)</li>
         <li>Child branches <em>might</em> be billed based on the minimum of: the accumulated data changes since the branch was created, or the underlying storage footprint, which is zero if the branch is still within the history window used for instant restore (in this case, the child branch effectively shares storage with its parent).</li>
@@ -208,7 +208,7 @@ const faqItems = [
     question: 'How are extra branches billed?',
     id: 'additional-branches-billing',
     answer: `
-      <p>Each Neon plan includes a set number of branches per project at no additional cost (10 branches per project in Launch, 25 branches per project in Scale) but you can create and delete branches freely within your plan's included allowance:</p>
+      <p>Each Servbit plan includes a set number of branches per project at no additional cost (10 branches per project in Launch, 25 branches per project in Scale) but you can create and delete branches freely within your plan's included allowance:</p>
       <ul>
         <li>If the total number of concurrent branches in a project exceeds your plan's allowance, the extra branches are billed as branch-months, prorated hourly.</li>
         <li>The price is $1.50 per extra branch-month (≈ $0.002 per hour)</li>
@@ -218,21 +218,21 @@ const faqItems = [
       <p><strong>How to avoid extra branch charges</strong></p>
       <ul>
         <li><a href="${LINKS.docs}/guides/branch-expiration">Use branch expiration.</a> Set automatic deletion times on temporary branches so they're cleaned up when no longer needed.</li>
-        <li>Automate cleanup. Use the <a href="${LINKS.docs}/manage/branches#branching-with-the-neon-api">Neon API</a> or <a href="${LINKS.docs}/guides/branching-neon-cli">Neon CLI</a> to periodically delete unused branches and stay within your included allowance.</li>
+        <li>Automate cleanup. Use the <a href="${LINKS.api}">Servbit API</a> or <a href="${LINKS.cliReference}">Servbit CLI</a> to periodically delete unused branches and stay within your included allowance.</li>
       </ul>
     `,
   },
   {
-    question: 'How is Managed Better Auth billed?',
+    question: 'How is Managed Auth billed?',
     answer: `
-      <p>Neon Managed Better Auth is included at no additional cost for all Neon databases until you reach 1 million monthly active users (MAU). If you surpass that threshold, a member of our team will reach out to discuss pricing.</p>
-      <p>On the Free plan, Managed Better Auth is included for up to 60,000 MAU.</p>
+      <p>Servbit Managed Auth is included at no additional cost for all databases until you reach 1 million monthly active users (MAU). If you surpass that threshold, a member of our team will reach out to discuss pricing.</p>
+      <p>On the Free plan, Managed Auth is included for up to 60,000 MAU.</p>
     `,
   },
   {
     question: 'How can I control my Postgres database costs (compute and storage consumption)?',
     answer: `
-      <p>Database compute is often the most variable part of a monthly bill. For Neon databases, the most effective way to control compute costs is to configure maximum autoscaling limits and scale-to-zero.</p>
+      <p>Database compute is often the most variable part of a monthly bill. For Servbit databases, the most effective way to control compute costs is to configure maximum autoscaling limits and scale-to-zero.</p>
       <p>Autoscaling limits act as a built-in cost ceiling: your database will never scale beyond the limit you set, even during traffic spikes. If you want to prioritize performance over costs in a particular compute endpoint (e.g. production), choose a higher limit. If you want to optimize for cost predictability, set a lower one. <a href="${LINKS.docs}/guides/autoscaling-guide#configure-autoscaling-defaults-for-your-project">Learn how to configure autoscaling limits.</a></p>
       <p>Another effective way to control database compute costs is to ensure scale to zero is enabled for all non-production branches. When a branch is idle, compute scales down automatically, so you're not charged for unused databases. <a href="${LINKS.docs}/introduction/scale-to-zero">Learn about scale to zero.</a></p>
       <p>To manage database storage costs, regularly clean up unused branches, snapshots, and projects, and avoid retaining a large history window for instant restore if your use case does not require it. <a href="${LINKS.docs}/introduction/cost-optimization#storage-root-and-child-branches">Learn more about optimizing storage usage.</a></p>
@@ -256,7 +256,7 @@ const PricingPage = () => (
     <CTANew
       label="ASK AI"
       title="Still have questions? Ask our AI. <br class='xs:hidden' />"
-      description="It knows Neon inside and out."
+      description="It knows Servbit inside and out."
       buttonText="Get Answers"
       buttonType="aiHelper"
     />

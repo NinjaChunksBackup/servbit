@@ -47,14 +47,14 @@ const Architecture = () => (
               src={schemaMobileImage}
               quality={100}
               width={280}
-              htight={256}
+              height={256}
               alt=""
             />
 
             <p className="mt-9 max-w-248 text-4xl leading-dense tracking-tighter text-gray-new-40 2xl:max-w-4/5 2xl:text-[2.25rem] xl:text-[2rem] lg:text-[1.75rem] md:mt-8 md:max-w-none md:text-[1.375rem] sm:text-xl">
-              The <Highlight className="text-black-new">lakebase architecture</Highlight> decouples
-              storage and compute to deliver instant operations and scale without compromise on
-              performance or reliability.
+              The <Highlight className="text-black-new">Servbit modular architecture</Highlight>{' '}
+              decouples storage, compute, and services to deliver instant operations and scale
+              without compromise on performance or reliability.
             </p>
           </div>
         </div>

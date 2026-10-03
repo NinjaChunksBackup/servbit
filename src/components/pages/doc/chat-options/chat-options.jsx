@@ -49,7 +49,7 @@ const ChatOptions = ({ isSidebar = false }) => {
 
   return (
     <div className={classNames.block}>
-      <TitleTag className={classNames.title}>Neon AI chat assistants</TitleTag>
+      <TitleTag className={classNames.title}>Servbit AI chat assistants</TitleTag>
       <ul className={classNames.list}>
         {ITEMS.map(({ title, icon, link, isExternal, className }) => {
           const Icon = icon;

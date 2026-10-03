@@ -33,7 +33,7 @@ const STATS = [
 const LEGEND = [
   {
     icon: autoscalingLegendIcon,
-    text: 'Neon autoscaling',
+    text: 'Dynamic autoscaling',
   },
   {
     icon: dbLoadLegendIcon,
@@ -182,8 +182,8 @@ const Autoscaling = () => {
               ))}
             </ul>
             <p className="max-w-120 shrink-0 text-lg leading-normal tracking-extra-tight md:text-[0.9375rem]/snug">
-              Neon monitors your database load ten times a second and autoscales CPU and memory to
-              exactly fit your workload.
+              Servbit monitors system load continuously and autoscales compute resources to exactly
+              fit your workload.
             </p>
           </div>
         </div>

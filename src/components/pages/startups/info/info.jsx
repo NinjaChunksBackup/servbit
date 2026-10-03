@@ -17,9 +17,9 @@ const CARDS = [
       'Building an early-stage product or MVP.',
     ],
     perks: [
-      'Up to $1,000 in Neon credits.',
-      'Onboarding support from the Neon product team.',
-      'Early access to new Neon features.',
+      'Up to $5,000 in Servbit engineering and cloud credits.',
+      'Direct onboarding support from the Servbit engineering team.',
+      'Early access to new Servbit AI and automation capabilities.',
     ],
   },
   {
@@ -33,11 +33,11 @@ const CARDS = [
       'Building an early-stage product or MVP.',
     ],
     perks: [
-      'Up to $200K in Neon and Databricks credits.',
-      'Onboarding support from the Neon product team.',
-      'Early access to new Neon features.',
-      'Speaking opportunities at Neon developer events.',
-      'Co-marketing opportunities and visibility with Neon.',
+      'Up to $200K in Servbit infrastructure & engineering credits.',
+      'Dedicated technical leadership and architecture reviews.',
+      'Early access to new Servbit AI agents and enterprise features.',
+      'Featured showcase spotlight across Servbit platforms.',
+      'Co-marketing opportunities and high-visibility partnerships.',
     ],
   },
 ];
@@ -67,7 +67,7 @@ const Info = () => (
   <section className="info mt-53 xl:mt-[184px] lg:mt-36 md:mt-24">
     <Container className="flex flex-col gap-12 lg:gap-10 md:gap-8" size="1280">
       <h2 className="text-5xl leading-dense tracking-tighter text-white xl:text-[44px] lg:text-[40px] md:text-[32px]">
-        Who’s the Databricks Startup Program for?
+        Who’s the Servbit Startup Program for?
       </h2>
       <div className="grid grid-cols-2 grid-rows-[auto_1fr] border border-gray-new-20 sm:flex sm:flex-col">
         {CARDS.map(({ icon: Icon, title, description, apply, perks }, index) => (

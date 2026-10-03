@@ -40,7 +40,7 @@ const SCOPE_CATEGORIES = [
   { id: 'snapshots', label: 'Snapshots', description: 'Create, restore, and schedule snapshots' },
   { id: 'schema', label: 'Schema', description: 'Tables, columns, and schema compare' },
   { id: 'querying', label: 'Querying', description: 'SQL, explain plans, and migrations' },
-  { id: 'neon_auth', label: 'Neon Auth', description: 'Provision and configure Auth' },
+  { id: 'neon_auth', label: 'Servbit Auth', description: 'Provision and configure Auth' },
   { id: 'data_api', label: 'Data API', description: 'Enable, update, and disable the Data API' },
   { id: 'observability', label: 'Observability', description: 'Logs and AI Gateway availability' },
   { id: 'docs', label: 'Docs', description: 'Search and fetch docs' },
@@ -328,22 +328,22 @@ const McpSetupConfigurator = () => {
   const generatedHeaders = useMemo(() => {
     const headers = {};
     if (authMode === 'apiKey') {
-      headers.Authorization = `Bearer ${apiKey.trim() || '<NEON_API_KEY>'}`;
+      headers.Authorization = `Bearer ${apiKey.trim() || '<SERVBIT_API_KEY>'}`;
     }
     return headers;
   }, [apiKey, authMode]);
 
   const generatedConfig = useMemo(() => {
-    const neonEntry = {
+    const servbitEntry = {
       type: 'http',
       url: generatedServerUrl,
     };
     if (Object.keys(generatedHeaders).length > 0) {
-      neonEntry.headers = generatedHeaders;
+      servbitEntry.headers = generatedHeaders;
     }
     const config = {
       mcpServers: {
-        Neon: neonEntry,
+        Servbit: servbitEntry,
       },
     };
     return JSON.stringify(config, null, 2);
@@ -351,10 +351,10 @@ const McpSetupConfigurator = () => {
 
   const addMcpCommand = useMemo(() => {
     const urlArg = queryString ? `"${generatedServerUrl}"` : generatedServerUrl;
-    const commandParts = [`npx add-mcp@latest ${urlArg}`, '--name Neon'];
+    const commandParts = [`npx add-mcp@latest ${urlArg}`, '--name Servbit'];
     if (authMode === 'apiKey') {
       commandParts.push(
-        `--header "Authorization: ${generatedHeaders.Authorization || 'Bearer <NEON_API_KEY>'}"`
+        `--header "Authorization: ${generatedHeaders.Authorization || 'Bearer <SERVBIT_API_KEY>'}"`
       );
       if (installGlobally) {
         commandParts.push('-g');
@@ -392,11 +392,11 @@ const McpSetupConfigurator = () => {
             />
             {authMode === 'apiKey' && (
               <label className="mt-3 block">
-                <span className={FIELD_LABEL_CLASS}>Neon API key</span>
+                <span className={FIELD_LABEL_CLASS}>Servbit API key</span>
                 <input
                   type="text"
                   value={apiKey}
-                  placeholder="<NEON_API_KEY>"
+                  placeholder="<SERVBIT_API_KEY>"
                   className="w-full rounded-lg border border-gray-new-90 bg-white px-3 py-2 font-mono text-sm text-gray-new-20 transition-colors outline-none focus:border-secondary-8 focus:ring-2 focus:ring-secondary-8/20 dark:border-gray-new-20 dark:bg-gray-new-10 dark:text-gray-new-90 dark:focus:border-primary-1 dark:focus:ring-primary-1/20"
                   onChange={(event) => setApiKey(event.target.value)}
                 />

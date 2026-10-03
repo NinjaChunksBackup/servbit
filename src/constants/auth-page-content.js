@@ -4,9 +4,9 @@ const authPageContent = {
   backendServicesTitle: 'Your auth branches with everything else.',
   faqItems: [
     {
-      question: 'What is Managed Better Auth?',
+      question: 'What is Servbit Auth?',
       answer:
-        '<p>Managed authentication built on Better Auth, as part of the Neon backend. Users, sessions, and OAuth config live in your database, in the <code>neon_auth</code> schema, so you can query them with SQL and pair them with RLS. There is no auth server to run. Configure it in the Console, then use the client or server SDK in your app.</p>',
+        '<p>Managed authentication built into the Servbit backend. Users, sessions, and OAuth config live in your database, in the <code>servbit_auth</code> schema, so you can query them with SQL and pair them with RLS. There is no auth server to run. Configure it in the Console, then use the client or server SDK in your app.</p>',
       initialState: 'open',
     },
     {
@@ -20,27 +20,27 @@ const authPageContent = {
         '<p>Session records are copied with the database, but browser cookies remain scoped to their original domain. You need to sign in again on the preview environment. Each branch has its own Auth API URL, and tokens issued in one branch are not valid in another.</p>',
     },
     {
-      question: 'Is this the same as self-hosting Better Auth?',
+      question: 'How does Servbit Auth compare to self-hosted auth?',
       answer:
-        '<p>Managed Better Auth uses the Better Auth foundation, with Neon operating the auth service and integrating it with database branching. Self-hosting gives you full control over your auth code and infrastructure, including custom plugins and hooks that the managed service may not support. See the <a href="/docs/auth/overview#when-to-use-managed-better-auth-vs-self-hosting-better-auth">comparison in the docs</a>.</p>',
+        '<p>Servbit Auth provides instant setup, zero maintenance, and full branching isolation integrated with database branching. Self-hosting requires maintaining separate auth containers, migrations, and infrastructure that cannot branch with your preview environments.</p>',
     },
     {
       question: 'Can my coding agent set this up?',
       answer:
-        '<p>Yes. Use the AI editor setup in the docs to add Managed Better Auth to your app. Your agent can enable auth, configure the SDK and environment variables, and test sign-up and login on an isolated branch using test credentials. <a href="/docs/auth/overview#set-up-with-your-ai-editor">Set up with your AI editor</a>.</p>',
+        '<p>Yes. Use the setup instructions in the docs to add Servbit Auth to your app. Your agent can enable auth, configure the SDK and environment variables, and test sign-up and login on an isolated branch using test credentials.</p>',
     },
     {
       question: 'How does pricing work?',
       answer:
-        '<p>Managed Better Auth is included in Neon plans, with usage measured in monthly active users (MAU). An MAU is a unique user who authenticates at least once during the monthly billing period. See <a href="/pricing">Neon pricing</a> for the allowances in each plan.</p>',
+        '<p>Servbit Auth is included in Servbit plans, with usage measured in monthly active users (MAU). An MAU is a unique user who authenticates at least once during the monthly billing period. See <a href="/pricing">Servbit pricing</a> for the allowances in each plan.</p>',
     },
   ],
   hero: {
-    label: 'Managed Better Auth for Lakebase Postgres',
-    title: 'Better Auth that branches, managed by Neon',
-    titleLines: ['Better Auth that branches,', 'managed by Neon'],
+    label: 'Managed Auth for Servbit Platform',
+    title: 'Authentication that branches, managed by Servbit',
+    titleLines: ['Authentication that branches,', 'managed by Servbit'],
     illustrationDescription:
-      'Sign-up and password recovery interfaces connected to user records in the Neon Postgres database.',
+      'Sign-up and password recovery interfaces connected to user records in the Servbit Database.',
     primaryAction: {
       label: 'Start building',
       linkKey: 'signup',
@@ -53,18 +53,18 @@ const authPageContent = {
   benefits: {
     title: 'Test real login flows.',
     highlightedTitle:
-      'When you deploy a Neon branch, auth branches too, so your previews fully reflect production.',
+      'When you deploy a Servbit branch, auth branches too, so your previews fully reflect production.',
     items: [
       {
         id: 'foundation',
         label: 'Foundation',
-        title: 'Built on Better Auth',
+        title: 'Modern Auth Architecture',
         description:
-          'The Better Auth foundation your team (and agent) already knows, plus branching.',
+          'A modern authentication foundation your team (and agent) already knows, plus branching.',
         badges: [
           {
-            id: 'better-auth',
-            label: 'Better Auth',
+            id: 'servbit-auth',
+            label: 'Servbit Auth',
           },
           {
             id: 'familiar-apis',
@@ -79,9 +79,9 @@ const authPageContent = {
       {
         id: 'managed',
         label: 'Managed',
-        title: 'Managed by Neon',
+        title: 'Managed by Servbit',
         description:
-          'Neon operates the auth layer for you, so you can ship authentication without provisioning, maintaining, or scaling separate infrastructure.',
+          'Servbit operates the auth layer for you, so you can ship authentication without provisioning, maintaining, or scaling separate infrastructure.',
         badges: [
           {
             id: 'no-infrastructure',
@@ -120,7 +120,7 @@ const authPageContent = {
     inspectAuth: {
       title: 'Inspect auth with SQL.',
       descriptionBeforeCode: 'The',
-      code: 'neon_auth',
+      code: 'servbit_auth',
       descriptionAfterCode:
         'schema gives teams a concrete place to inspect auth state and connect identity to RLS-based access rules.',
     },
@@ -137,7 +137,7 @@ const authPageContent = {
       "Sign up, log in, reset a password, complete OAuth. When you're done testing, delete the branch.",
     diagramAlt:
       'A production branch forks a preview branch with its own users, auth, and sessions. A preview user is verified and their session becomes active. A separate staging branch is deleted after its tests pass.',
-    caption: 'Deploy one Neon branch per preview',
+    caption: 'Deploy one Servbit branch per preview',
     capabilities: [
       {
         id: 'sign-up',
@@ -162,14 +162,14 @@ const authPageContent = {
     ],
   },
   setupSteps: {
-    title: 'Ask your coding agent to deploy and configure Managed Better Auth.',
+    title: 'Ask your coding agent to deploy and configure Servbit Auth.',
     highlightedTitle: 'Deploy a preview branch and start testing.',
     items: [
       {
         id: 'enable',
         title: 'Enable',
         description:
-          'Turn on Managed Better Auth on the Neon branch, from the prompt, the CLI, or the Console.',
+          'Turn on Servbit Auth on the Servbit branch, from the prompt, the CLI, or the Console.',
       },
       {
         id: 'configure',

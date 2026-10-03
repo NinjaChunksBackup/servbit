@@ -8,7 +8,7 @@ const AGENT = {
 
 const STARTUP = {
   title: 'Apply for the Startup Program',
-  description: 'Building your startup on Neon? Apply for credits here.',
+  description: 'Building your startup on Servbit? Apply for credits here.',
   placeholder: 'Startup URL',
   buttonText: 'Apply',
   eventName: 'Startup Program Application Submitted',
@@ -16,7 +16,7 @@ const STARTUP = {
 
 const OPENSOURCE = {
   title: 'Apply for the Open Source Program',
-  description: 'Get credits and visibility for open source that helps developers build on Neon',
+  description: 'Get credits and visibility for open source that helps developers build on Servbit',
   placeholder: 'Website URL',
   buttonText: 'Apply',
   eventName: 'Open Source Program Application Submitted',
@@ -26,7 +26,7 @@ const OPENSOURCE = {
 const CREATOR = {
   title: 'Apply for the Creator Program',
   description:
-    'Creating technical content that teaches developers how to use Neon? Apply for credits here.',
+    'Creating technical content that teaches developers how to use Servbit? Apply for credits here.',
   placeholder: 'Your URL',
   buttonText: 'Apply',
   eventName: 'Creator Program Application Submitted',

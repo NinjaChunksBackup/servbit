@@ -18,7 +18,8 @@ const Header = () => (
           'lg:mt-5 lg:text-base lg:leading-snug md:mt-[18px] sm:text-[15px]'
         )}
       >
-        Codegen and agent platforms rely on Neon to run the backend for user-generated apps.
+        Modern digital platforms and autonomous systems rely on Servbit to engineer robust, scalable
+        backends.
       </p>
       <Button
         className="mt-9 lg:mt-8 md:mt-7"

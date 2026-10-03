@@ -1,22 +1,22 @@
 export const CODE_EXAMPLES = {
-  agent: `GET https://neon.com/auth.md
+  agent: `GET https://servbit.com/auth.md
 
-POST https://claimable.neon.tech/v1/agent/identity
+POST https://claimable.servbit.com/v1/agent/identity
 Content-Type: application/json
 
 {
   "type": "anonymous",
-  "capabilities": ["postgres", "data_api", "auth"]
+  "capabilities": ["backend", "data_api", "auth"]
 }`,
-  cli: `npm i -g neon@latest
-neon claim create \\
+  cli: `npm i -g servbit@latest
+servbit claim create \\
   --service data-api \\
   --service auth \\
   --env-pull
 
-neon branches list
-neon claim accept --no-open`,
-  config: `import { defineConfig } from '@neon/config/v1';
+servbit branches list
+servbit claim accept --no-open`,
+  config: `import { defineConfig } from '@servbit/config/v1';
 
 export default defineConfig({
   auth: true,
@@ -35,7 +35,7 @@ export const INTERFACES = [
   },
   {
     id: 'cli',
-    label: 'Neon CLI',
+    label: 'Servbit CLI',
     language: 'bash',
     title: 'Use existing commands',
     description:
@@ -43,10 +43,10 @@ export const INTERFACES = [
   },
   {
     id: 'config',
-    label: 'neon.ts',
+    label: 'servbit.ts',
     language: 'typescript',
     title: 'Declare services',
     description:
-      'If neon.ts is present, Neon requests the declared services and keeps unavailable ones denied until the project is claimed.',
+      'If servbit.ts is present, Servbit requests the declared services and keeps unavailable ones denied until the project is claimed.',
   },
 ];

@@ -5,7 +5,7 @@
     "npm": "@ai-sdk/openai-compatible",
     "api": "${NEON_AI_GATEWAY_BASE_URL}/v1",
     "env": ["NEON_AI_GATEWAY_BASE_URL", "NEON_AI_GATEWAY_TOKEN"],
-    "doc": "https://neon.com/docs/ai-gateway/models",
+    "doc": "https://servbit.com/docs/ai-gateway/models",
     "models": {
       "gpt-oss-120b": {
         "id": "gpt-oss-120b",

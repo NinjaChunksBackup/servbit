@@ -20,7 +20,7 @@ const ReportPage = () => (
     <CTANew
       label="ASK AI"
       title="Still have questions? Ask our AI. <br class='xs:hidden' />"
-      description="It knows Neon inside and out."
+      description="It knows Servbit inside and out."
       buttonText="Get Answers"
       buttonType="aiHelper"
     />

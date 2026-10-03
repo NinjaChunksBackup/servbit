@@ -20,7 +20,7 @@ const ToolsPage = () => (
       label="Get started"
       title="Ready to move your database forward?"
       description="Assess your next Postgres upgrade or find the migration path that best fits your database and workload."
-      buttonText="Explore Neon tools"
+      buttonText="Explore Servbit tools"
       buttonUrl={LINKS.toolsUpgradeAssessment}
       isExternal
     />

@@ -27,7 +27,7 @@ const CaseStudiesPage = () => {
       <Cards items={caseStudies} categories={categories} />
       <CTANew
         label="Get started"
-        title="Ready to get started with Neon?"
+        title="Ready to get started with Servbit?"
         description="Get personalized guidance from our team — we’ll help you quickly find the right solution."
         buttonText="Talk to sales"
         buttonType="aiHelper"

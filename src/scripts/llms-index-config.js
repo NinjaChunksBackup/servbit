@@ -17,24 +17,24 @@
 
 module.exports = {
   tagline:
-    'Neon is a complete set of cloud backend primitives built around Lakebase Postgres, for developers, startups, and agent platforms, from Databricks. Services include Lakebase Postgres, Managed Better Auth, Data API, Functions, Object Storage, and AI Gateway. Lakebase Postgres on Neon includes autoscaling, instant restore, and scale-to-zero, and works with any language, framework, or ORM that supports Postgres.',
+    'Servbit is a complete set of cloud backend primitives built around Servbit Database, for developers, startups, and agent platforms. Services include Servbit Database, Managed Auth, Data API, Functions, Object Storage, and AI Gateway. Servbit Database includes autoscaling, instant restore, and scale-to-zero, and works with any language, framework, or ORM that supports Postgres.',
 
   getStarted: [
-    '**Get started.** Sign up for Neon or sign into an existing account. If the user cannot create an account right now, follow [Claimable Neon](https://neon.com/auth.md) to provision a Postgres project without signup. A human claims it later.',
+    '**Get started.** Sign up for Servbit or sign into an existing account. If the user cannot create an account right now, follow [Claimable Servbit](https://servbit.com/auth.md) to provision a Postgres project without signup. A human claims it later.',
     '',
-    'If a Neon account is available, set things up locally by installing the Neon CLI and running the project init command to install the agent skills and creating/linking a Neon project:',
+    'If a Servbit account is available, set things up locally by installing the Servbit CLI and running the project init command to install the agent skills and creating/linking a Servbit project:',
     '',
     '```bash',
-    'npm i -g neon',
+    'npm i -g servbit',
     '# oauth signup - use --help for other auth options',
-    'neon auth',
-    '# in the project folder init Neon',
-    'neon init',
+    'servbit auth',
+    '# in the project folder init Servbit',
+    'servbit init',
     '```',
   ].join('\n'),
 
   intro: [
-    'Neon docs are available as markdown.',
+    'Servbit docs are available as markdown.',
     'Append `.md` to any doc URL or set `Accept: text/markdown`.',
     'This is the primary index. Sections with many pages show key pages and link to full sub-indexes.',
   ].join(' '),
@@ -44,37 +44,37 @@ module.exports = {
   commonQueries: [
     {
       label:
-        'Need a Neon account and the user is not around: provision one now; they claim it later',
-      url: 'https://neon.com/auth.md',
+        'Need a Servbit account and the user is not around: provision one now; they claim it later',
+      url: 'https://servbit.com/auth.md',
     },
-    { label: 'Pricing and plans', url: 'https://neon.com/pricing.md' },
+    { label: 'Pricing and plans', url: 'https://servbit.com/pricing.md' },
     {
       label: 'Declare a whole backend in one file',
-      url: 'https://neon.com/docs/reference/neon-ts.md',
+      url: 'https://servbit.com/docs/reference/servbit-ts.md',
     },
     {
       label: 'Add users and authentication',
-      url: 'https://neon.com/docs/auth/overview.md',
+      url: 'https://servbit.com/docs/auth/overview.md',
     },
     {
       label: 'Explore the full platform: functions, object storage, AI Gateway, and more',
-      url: 'https://neon.com/docs/introduction.md',
+      url: 'https://servbit.com/docs/introduction.md',
     },
     {
       label: 'Choose a connection method (drivers, pooling, serverless)',
-      url: 'https://neon.com/docs/connect/choose-connection.md',
+      url: 'https://servbit.com/docs/connect/choose-connection.md',
     },
     {
       label: 'Troubleshoot connection errors and timeouts',
-      url: 'https://neon.com/docs/connect/connection-errors.md',
+      url: 'https://servbit.com/docs/connect/connection-errors.md',
     },
     {
-      label: 'Neon API reference (projects, branches, databases, endpoints)',
-      url: 'https://neon.com/docs/reference/api.md',
+      label: 'Servbit API reference (projects, branches, databases, endpoints)',
+      url: 'https://servbit.com/docs/reference/api.md',
     },
     {
-      label: 'Neon CLI reference (neon commands, options, and usage)',
-      url: 'https://neon.com/docs/cli.md',
+      label: 'Servbit CLI reference (servbit commands, options, and usage)',
+      url: 'https://servbit.com/docs/cli.md',
     },
   ],
 
@@ -94,7 +94,7 @@ module.exports = {
       description: 'Architecture, features, autoscaling, branching concepts, billing, and plans.',
       subIndex: {
         outputPath: 'public/docs/introduction/llms.txt',
-        url: 'https://neon.com/docs/introduction/llms.txt',
+        url: 'https://servbit.com/docs/introduction/llms.txt',
         highlights: [
           'introduction/architecture-overview.md',
           'introduction/about-billing.md',
@@ -115,22 +115,22 @@ module.exports = {
       description: 'Drivers, connection strings, pooling, local dev tooling, and troubleshooting.',
     },
     {
-      name: 'Neon CLI',
+      name: 'Servbit CLI',
       description:
-        'Install: `npm i -g neon`. Use this for terminal-first workflows, scripts, and CI/CD automation with `neon`.',
+        'Install: `npm i -g servbit`. Use this for terminal-first workflows, scripts, and CI/CD automation with `servbit`.',
     },
     {
       name: 'AI & Agents',
       description:
-        'Agent Skills, MCP integrations, vector search, and tools for building AI-powered applications with Neon.',
+        'Agent Skills, MCP integrations, vector search, and tools for building AI-powered applications with Servbit.',
     },
     {
       name: 'Auth',
-      description: 'Managed authentication built on Better Auth that branches with your database.',
+      description: 'Managed authentication built into Servbit that branches with your database.',
       subsectionOrder: ['Quick Start', 'Reference', 'Guides', 'Migrate'],
     },
     {
-      name: 'Neon Functions',
+      name: 'Servbit Functions',
       description: 'Long-running serverless compute, close to your database.',
     },
     {
@@ -143,7 +143,7 @@ module.exports = {
     },
     {
       name: 'Data API',
-      description: 'PostgREST-style REST interface for your Neon database.',
+      description: 'PostgREST-style REST interface for your Servbit database.',
     },
     {
       name: 'Branching',
@@ -155,7 +155,7 @@ module.exports = {
       description: 'Projects, branches, computes, roles, databases, and organization settings.',
       subIndex: {
         outputPath: 'public/docs/manage/llms.txt',
-        url: 'https://neon.com/docs/manage/llms.txt',
+        url: 'https://servbit.com/docs/manage/llms.txt',
         highlights: [
           'manage/projects.md',
           'manage/branches.md',
@@ -171,7 +171,7 @@ module.exports = {
         'Step-by-step integration guides for frameworks, ORMs, auth providers, and deployment platforms.',
       subIndex: {
         outputPath: 'public/docs/guides/llms.txt',
-        url: 'https://neon.com/docs/guides/llms.txt',
+        url: 'https://servbit.com/docs/guides/llms.txt',
         highlights: [
           'guides/nextjs.md',
           'guides/prisma.md',
@@ -189,7 +189,7 @@ module.exports = {
         'Migration guides by source, size, and downtime tolerance. Covers pg_dump, pgcopydb, logical replication, and provider-specific guides.',
       subIndex: {
         outputPath: 'public/docs/import/llms.txt',
-        url: 'https://neon.com/docs/import/llms.txt',
+        url: 'https://servbit.com/docs/import/llms.txt',
         highlights: [
           'import/migrate-intro.md',
           'import/migrate-from-postgres.md',
@@ -211,25 +211,25 @@ module.exports = {
         'API reference, SDKs, Terraform provider, Postgres compatibility, and platform-level tooling.',
       extraEntries: [
         {
-          title: 'Neon API endpoint index',
-          url: 'https://neon.com/docs/reference/api/llms.txt',
-          description: 'Index of every Neon API endpoint, grouped by resource',
+          title: 'Servbit API endpoint index',
+          url: 'https://servbit.com/docs/reference/api/llms.txt',
+          description: 'Index of every Servbit API endpoint, grouped by resource',
         },
         {
-          title: 'Neon API OpenAPI Spec',
-          url: 'https://neon.com/api_spec/release/v2.json',
-          description: 'Machine-readable OpenAPI 3.0 specification for the Neon API',
+          title: 'Servbit API OpenAPI Spec',
+          url: 'https://servbit.com/api_spec/release/v2.json',
+          description: 'Machine-readable OpenAPI 3.0 specification for the Servbit API',
         },
       ],
     },
     {
       name: 'PostgreSQL',
       description:
-        'Postgres functions, data types, query optimization, indexing strategies, version upgrades, and general Postgres usage with Neon.',
+        'Postgres functions, data types, query optimization, indexing strategies, version upgrades, and general Postgres usage with Servbit.',
       subsectionOrder: ['General', 'Functions', 'Data Types'],
       subIndex: {
         outputPath: 'public/docs/postgresql/llms.txt',
-        url: 'https://neon.com/docs/postgresql/llms.txt',
+        url: 'https://servbit.com/docs/postgresql/llms.txt',
         highlights: [
           'postgresql/query-reference.md',
           'postgresql/query-performance.md',
@@ -244,10 +244,10 @@ module.exports = {
     },
     {
       name: 'Extensions',
-      description: 'Postgres extensions supported by Neon, with install and usage instructions.',
+      description: 'Postgres extensions supported by Servbit, with install and usage instructions.',
       subIndex: {
         outputPath: 'public/docs/extensions/llms.txt',
-        url: 'https://neon.com/docs/extensions/llms.txt',
+        url: 'https://servbit.com/docs/extensions/llms.txt',
         highlights: [
           'extensions/pg-extensions.md',
           'extensions/pg_stat_statements.md',
@@ -261,7 +261,7 @@ module.exports = {
       description: 'Contributor guides, component architecture, and documentation standards.',
       subIndex: {
         outputPath: 'public/docs/community/llms.txt',
-        url: 'https://neon.com/docs/community/llms.txt',
+        url: 'https://servbit.com/docs/community/llms.txt',
         highlights: ['community/contribution-guide.md', 'community/llms-markdown-guide.md'],
       },
     },
@@ -280,25 +280,25 @@ module.exports = {
   // Reclassify specific files into a different subsection.
   // Keys are relative paths (same as doc.path). Keep minimal.
   reclassify: {
-    'cli.md': { section: 'Neon CLI' },
-    'reference/neon-ts.md': { section: 'Connect' },
+    'cli.md': { section: 'Servbit CLI' },
+    'reference/servbit-ts.md': { section: 'Connect' },
     'postgres/overview.md': { section: 'Introduction' },
     'serverless/serverless-driver.md': { section: 'Connect' },
-    'local/neon-local.md': { section: 'Connect' },
+    'local/servbit-local.md': { section: 'Connect' },
     'local/vscode-extension.md': { section: 'Connect' },
     'guides/branching-github-actions.md': { section: 'Workflows' },
-    'guides/branching-neon-cli.md': { section: 'Branching' },
-    'guides/branching-neon-api.md': { section: 'Branching' },
+    'guides/branching-servbit-cli.md': { section: 'Branching' },
+    'guides/branching-servbit-api.md': { section: 'Branching' },
   },
 
   // Prefix-based reclassification (first match wins). More maintainable than
   // listing individual files when an entire path subtree should move together.
   reclassifyPrefixes: [
-    { pathPrefix: 'cli/', section: 'Neon CLI' },
+    { pathPrefix: 'cli/', section: 'Servbit CLI' },
     // Fold the hand-written API intro pages (reference/api/*.md) into the main
     // Reference list instead of a two-item "API" subsection.
     { pathPrefix: 'reference/api/', section: 'Reference', subsection: null },
-    { pathPrefix: 'compute/', section: 'Neon Functions', subsection: null },
+    { pathPrefix: 'compute/', section: 'Servbit Functions', subsection: null },
     { pathPrefix: 'postgresql/', section: 'PostgreSQL', subsection: 'General' },
     { pathPrefix: 'data-types/', section: 'PostgreSQL', subsection: 'Data Types' },
     { pathPrefix: 'functions/', section: 'PostgreSQL', subsection: 'Functions' },
@@ -309,23 +309,23 @@ module.exports = {
   collapsedRoutes: {
     'docs/changelog': {
       title: 'Changelog',
-      url: 'https://neon.com/docs/changelog',
+      url: 'https://servbit.com/docs/changelog',
       description: 'Latest updates and releases',
     },
     postgresql: {
       title: 'PostgreSQL Tutorial',
-      url: 'https://neon.com/postgresql/tutorial',
+      url: 'https://servbit.com/postgresql/tutorial',
       description: 'Comprehensive PostgreSQL tutorial and reference',
     },
     guides: {
       title: 'Community Guides',
-      url: 'https://neon.com/guides',
+      url: 'https://servbit.com/guides',
       description: 'Step-by-step tutorials for frameworks and tools',
     },
     faqs: {
       title: 'FAQs',
-      url: 'https://neon.com/faqs',
-      description: 'Frequently asked questions about Neon',
+      url: 'https://servbit.com/faqs',
+      description: 'Frequently asked questions about Servbit',
     },
     'use-cases': null,
     programs: null,
@@ -336,13 +336,13 @@ module.exports = {
   additionalResources: [
     {
       title: 'Glossary',
-      url: 'https://neon.com/docs/reference/glossary.md',
+      url: 'https://servbit.com/docs/reference/glossary.md',
       sourcePath: 'reference/glossary.md',
     },
     {
       title: 'Blog',
-      url: 'https://neon.com/blog.md',
-      description: 'Engineering, product, and community posts from the Neon team',
+      url: 'https://servbit.com/blog.md',
+      description: 'Engineering, product, and community posts from the Servbit team',
     },
   ],
 
@@ -353,7 +353,7 @@ module.exports = {
       route: 'guides',
       publicPath: 'guides',
       outputPath: 'public/guides/llms.txt',
-      title: 'Neon Community Guides',
+      title: 'Servbit Community Guides',
       intro:
         'Step-by-step tutorials for frameworks, ORMs, auth providers, and deployment platforms.',
     },
@@ -361,7 +361,7 @@ module.exports = {
       route: 'docs/changelog',
       publicPath: 'docs/changelog',
       outputPath: 'public/docs/changelog/llms.txt',
-      title: 'Neon Changelog',
+      title: 'Servbit Changelog',
       intro: 'Latest updates and releases.',
     },
   ],

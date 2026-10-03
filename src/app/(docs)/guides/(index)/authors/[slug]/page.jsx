@@ -20,7 +20,7 @@ export async function generateMetadata(props) {
   const authorsData = getAuthors();
   if (!authorsData[params.slug]) return notFound();
   return getMetadata({
-    title: `Neon guides by ${authorsData[params.slug].name}`,
+    title: `Servbit guides by ${authorsData[params.slug].name}`,
     rssPathname: `${GUIDES_BASE_PATH}rss.xml`,
   });
 }

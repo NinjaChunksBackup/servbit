@@ -37,7 +37,7 @@ const DATA = [
       {
         title: 'Data Hosting',
         description:
-          'Neon’s infrastructure runs on AWS and Azure, certified for SOC 2, ISO 27001, FedRAMP, PCI-DSS, HIPAA, and other global security standards.',
+          'Servbit’s infrastructure runs on AWS and Azure, certified for SOC 2, ISO 27001, FedRAMP, PCI-DSS, HIPAA, and other global security standards.',
         icon: serverIcon,
       },
       {
@@ -49,7 +49,7 @@ const DATA = [
       {
         title: 'Physical & Environmental Security',
         description:
-          'Neon personnel have no physical access to AWS or Azure data centers, which have 24/7 surveillance, biometric controls, redundancy, and audits.',
+          'Servbit personnel have no physical access to AWS or Azure data centers, which have 24/7 surveillance, biometric controls, redundancy, and audits.',
         icon: lockIcon,
       },
       {
@@ -61,7 +61,7 @@ const DATA = [
       {
         title: 'Monitoring',
         description:
-          'Neon uses Grafana to monitor cloud operations. System failures trigger alerts, notifying key personnel for immediate response and resolution.',
+          'Servbit uses Grafana to monitor cloud operations. System failures trigger alerts, notifying key personnel for immediate response and resolution.',
         icon: chartsIcon,
       },
       {
@@ -78,13 +78,13 @@ const DATA = [
       {
         title: 'Network Vulnerability Scanning',
         description:
-          'Neon performs continuous vulnerability scans on all infrastructure components. Identified vulnerabilities are triaged and remediated based on severity.',
+          'Servbit performs continuous vulnerability scans on all infrastructure components. Identified vulnerabilities are triaged and remediated based on severity.',
         icon: warningIcon,
       },
       {
         title: 'Intrusion Detection & Prevention',
         description:
-          'Neon monitors for unauthorized access using traffic monitoring, anomaly detection, and threat intelligence.',
+          'Servbit monitors for unauthorized access using traffic monitoring, anomaly detection, and threat intelligence.',
         icon: crosshairIcon,
       },
       {
@@ -96,7 +96,7 @@ const DATA = [
       {
         title: 'Security Incident Response',
         description:
-          'Neon has a 24/7 incident response team following well-defined playbooks, including continuous training and annual tabletop exercises.',
+          'Servbit has a 24/7 incident response team following well-defined playbooks, including continuous training and annual tabletop exercises.',
         icon: userPrivacyIcon,
       },
     ],
@@ -107,7 +107,7 @@ const DATA = [
       {
         title: 'Data in Transit',
         description:
-          'Neon enforces TLS 1.2+ encryption for all data transmitted over public and private networks.',
+          'Servbit enforces TLS 1.2+ encryption for all data transmitted over public and private networks.',
         icon: dataTransitIcon,
       },
       {
@@ -119,7 +119,7 @@ const DATA = [
       {
         title: 'Key Management',
         description:
-          'Neon uses AWS KMS and Azure Key Vault for key management, with logging and access controls.',
+          'Servbit uses AWS KMS and Azure Key Vault for key management, with logging and access controls.',
         icon: keyIcon,
       },
     ],
@@ -130,19 +130,19 @@ const DATA = [
       {
         title: 'Redundancy',
         description:
-          'Neon’s infrastructure is designed for high availability, leveraging multi-region failover and automated scaling.',
+          'Servbit’s infrastructure is designed for high availability, leveraging multi-region failover and automated scaling.',
         icon: dataReplaceIcon,
       },
       {
         title: 'Backup Management',
         description:
-          'Neon performs daily encrypted backups stored across multiple availability zones, with automated integrity validation.',
+          'Servbit performs daily encrypted backups stored across multiple availability zones, with automated integrity validation.',
         icon: restoreIcon,
       },
       {
         title: 'Business Continuity and Disaster Recovery',
         description:
-          'Neon has a BCDR plan with annual disaster recovery tests and predefined restoration protocols to ensure resilience.',
+          'Servbit has a BCDR plan with annual disaster recovery tests and predefined restoration protocols to ensure resilience.',
         icon: gearIcon,
       },
     ],
@@ -153,20 +153,20 @@ const DATA = [
       {
         title: 'Bug Bounty Program',
         description:
-          'Neon runs a program via HackerOne, where verified researchers can securely report vulnerabilities and earn rewards for eligible findings.',
+          'Servbit maintains a vulnerability disclosure program where verified researchers can securely report vulnerabilities and collaborate on remediations.',
         link: LINKS.bugBounty,
         icon: bugIcon,
       },
       {
         title: 'Secure Development Lifecycle (SDLC)',
         description:
-          'Neon follows a secure development lifecycle with security testing, code reviews, dependency monitoring, and developer security training.',
+          'Servbit follows a secure development lifecycle with security testing, code reviews, dependency monitoring, and developer security training.',
         icon: privacyCycleIcon,
       },
       {
         title: 'Vulnerability Management',
         description:
-          'Neon scans for vulnerabilities with Orca and Oligo, patching per SLA: critical 7 days, high 30, medium 60, low 90.',
+          'Servbit scans for vulnerabilities continuously, patching per SLA: critical 7 days, high 30, medium 60, low 90.',
         icon: checkPrivacyIcon,
       },
       {
@@ -178,13 +178,13 @@ const DATA = [
       {
         title: 'CI/CD Security',
         description:
-          'Neon uses Step Security’s Harden Runner to secure CI/CD by restricting traffic, monitoring dependencies, and enforcing security policies.',
+          'Servbit uses hardened CI/CD runners to secure pipelines by restricting outbound network access, monitoring dependencies, and enforcing policies.',
         icon: circuitIcon,
       },
       {
-        title: 'GitHub Secret Scanning Partner Program',
+        title: 'Secret Scanning',
         description:
-          'Neon joined the GitHub Secret Scanning Partnership in to improve secret detection and remediation across repositories.',
+          'Servbit enforces automated secret scanning across all code repositories to prevent credential exposure.',
         icon: radarIcon,
       },
     ],
@@ -194,7 +194,7 @@ const DATA = [
     items: [
       {
         title: 'Background Checks',
-        description: 'Neon conducts reference checks for all employees before onboarding.',
+        description: 'Servbit conducts reference checks for all employees before onboarding.',
         icon: searchIcon,
       },
       {
@@ -206,19 +206,19 @@ const DATA = [
       {
         title: 'Policies',
         description:
-          'Neon maintains a security policy framework, reviewed annually and enforced company-wide. Employees are required to acknowledge and comply with these policies each year.',
+          'Servbit maintains a security policy framework, reviewed annually and enforced company-wide. Employees are required to acknowledge and comply with these policies each year.',
         icon: policyIcon,
       },
       {
         title: 'Training and Awareness',
         description:
-          'Neon conducts annual security awareness training, covering HIPAA compliance, anti-harassment policies, and phishing simulations to strengthen employee resilience.',
+          'Servbit conducts annual security awareness training, covering HIPAA compliance, anti-harassment policies, and phishing simulations to strengthen employee resilience.',
         icon: graduationIcon,
       },
       {
         title: 'Endpoints',
         description:
-          'Neon centrally manages employee devices via JumpCloud MDM, enforcing full-disk encryption, automatic OS updates, enforced screen locks, anti-malware protection, and continuous monitoring.',
+          'Servbit centrally manages employee devices via enterprise MDM, enforcing full-disk encryption, automatic OS updates, enforced screen locks, anti-malware protection, and continuous monitoring.',
         icon: pcIcon,
       },
     ],

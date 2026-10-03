@@ -1,4 +1,4 @@
-const SERVER_BASE = 'https://mcp.neon.tech';
+const SERVER_BASE = 'https://mcp.servbit.com';
 const PROD_LIST_TOOLS_URL = `${SERVER_BASE}/api/list-tools`;
 
 const toolsPreviewCache = new Map();

@@ -13,13 +13,13 @@ import Blob from './images/blob.inline.svg';
 const STATS_DATA = [
   {
     icon: databaseIcon,
-    value: '15,000,000',
-    description: 'Postgres databases turned on every day.',
+    value: '10,000,000+',
+    description: 'Production requests powered daily.',
   },
   {
     icon: gearIcon,
-    value: '80%',
-    description: 'Of databases are deployed by automated agents.',
+    value: '85%',
+    description: 'Of workflows orchestrated by automated AI systems.',
   },
 ];
 
@@ -57,8 +57,9 @@ const Vision = () => (
         <SectionLabel icon="arrow">Where we&apos;re headed</SectionLabel>
 
         <h3 className="mt-5 max-w-[736px] text-5xl leading-dense font-normal tracking-tighter text-gray-new-40 xl:max-w-[600px] xl:text-[36px] lg:max-w-full lg:text-2xl md:mt-4 md:text-xl">
-          <span className="text-black-pure">Neon is part of the Databricks Platform.</span> In May
-          2025, Neon joined Databricks to shape the future of AI-native application backends.
+          <span className="text-black-pure">Servbit is the premier digital engineering firm.</span>{' '}
+          We engineer high-velocity App, Web, Cloud, Automation, and Custom AI architectures for
+          modern businesses.
         </h3>
 
         <div className="mt-[194px] flex gap-x-24 xl:mt-[136px] xl:gap-x-16 lg:gap-x-8 md:mt-9 md:flex-col md:gap-y-7 md:pr-24">
@@ -73,19 +74,19 @@ const Vision = () => (
 
         <div className="grid gap-y-10 xl:gap-y-9 lg:gap-y-7 md:gap-y-4">
           <p className="text-xl leading-normal tracking-tighter text-black-pure xl:text-lg lg:text-base md:text-[15px]">
-            The mission stays the same: deliver backend primitives{' '}
+            The mission is focused: deliver world-class digital software and intelligent systems{' '}
             <mark className="rounded-sm bg-[#39A57D]/60 text-black-pure">
               {' '}
-              for developers and AI agents
+              for enterprises and startups
             </mark>{' '}
-            — now as part of the Databricks Platform.
+            engineered for market dominance.
           </p>
 
           <p className="text-xl leading-normal tracking-tighter text-black-pure xl:text-lg lg:text-base md:mr-8 md:text-[15px]">
-            The same technology behind Neon powers Lakebase: The&nbsp;first serverless Postgres
-            database{' '}
+            From rapid product concept to production cloud scale, Servbit delivers cohesive
+            engineering{' '}
             <mark className="rounded-sm bg-[#39A57D]/60 text-black-pure">
-              integrated with the lakehouse, built for the AI era.
+              across web, mobile, cloud infrastructure, and autonomous agent workflows.
             </mark>
           </p>
         </div>

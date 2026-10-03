@@ -3,7 +3,7 @@ import Link from 'components/shared/link';
 
 import LINKS from '../../../../../constants/links';
 
-const APPLY_URL = 'https://sites.google.com/databricks.com/startup-program-apply';
+const APPLY_URL = 'mailto:startups@servbit.com?subject=Servbit%20Startup%20Program%20Application';
 
 const ApplyLink = () => (
   <div className="flex scroll-mt-10 flex-col items-start gap-5 sm:w-full" id="startups-form">

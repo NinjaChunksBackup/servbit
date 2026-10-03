@@ -13,15 +13,15 @@ import Section from '../section';
 const items = [
   {
     icon: autoscaleIcon.src,
-    text: 'Neon runs on serverless Postgres. Instead of provisioning a fixed CPU/memory, you specify an autoscaling range. ',
+    text: 'Servbit runs on serverless architecture. Instead of provisioning fixed compute, you specify an autoscaling range. ',
   },
   {
     icon: performanceIcon.src,
-    text: 'Your database will autoscale up and down automatically between those limits, matching your app’s traffic.',
+    text: 'Your platform will autoscale up and down automatically between those limits, matching your app’s traffic.',
   },
   {
     icon: resizeIcon.src,
-    text: 'Autoscaling is nearly instantaneous, without downtime. Read about <a href="/docs/guides/autoscaling-algorithm">our autoscaling algorithm</a> and how it compares to other serverless databases.',
+    text: 'Autoscaling is nearly instantaneous, without downtime. Built to handle sudden enterprise demand effortlessly.',
   },
 ];
 
@@ -37,7 +37,7 @@ const Efficiency = ({ title }) => (
         company: 'Recrowd',
         avatar: pieralbertoColonboAvatar,
       }}
-      url={`${LINKS.blog}/how-recrowd-uses-neon-autoscaling-to-meet-fluctuating-demand`}
+      url={LINKS.blog}
     />
   </Section>
 );

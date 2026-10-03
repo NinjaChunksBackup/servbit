@@ -49,7 +49,7 @@ const TOOLS = [
         items: [
           'A recommended migration approach',
           'Guidance for your migration',
-          'A path from your source database to Neon',
+          'A path from your source database to Servbit',
         ],
       },
     ],
@@ -61,7 +61,7 @@ const TOOLS = [
 const Hero = () => (
   <section className="hero pt-40 safe-paddings xl:pt-36 lg:pt-16 md:pt-12">
     <Container size="1344">
-      <SectionLabel theme="white">Neon Tools</SectionLabel>
+      <SectionLabel theme="white">Servbit Tools</SectionLabel>
       <h1 className="mt-5 max-w-208 text-[4.5rem] leading-none tracking-tighter text-pretty xl:text-[4rem] lg:max-w-180 lg:text-[3.5rem] md:text-[2.5rem]">
         Upgrade and migrate Postgres with confidence
       </h1>

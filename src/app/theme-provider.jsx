@@ -36,7 +36,7 @@ const ThemeProvider = ({ children }) => {
     <PreferredProvider
       attribute="class"
       forcedTheme={hasThemesSupport ? null : 'dark'}
-      storageKey="neon-theme"
+      storageKey="servbit-theme"
       disableTransitionOnChange
     >
       <ThemeColorUpdater />

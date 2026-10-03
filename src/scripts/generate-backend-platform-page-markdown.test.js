@@ -26,12 +26,14 @@ afterEach(async () => {
 describe('backend platform page Markdown', () => {
   it('converts the FAQ HTML subset to readable Markdown', () => {
     expect(
-      htmlToMarkdown('<p>Use <strong>Lakebase Postgres</strong> with <code>neon deploy</code>.</p>')
-    ).toBe('Use **Lakebase Postgres** with `neon deploy`.');
+      htmlToMarkdown(
+        '<p>Use <strong>Servbit Database</strong> with <code>servbit deploy</code>.</p>'
+      )
+    ).toBe('Use **Servbit Database** with `servbit deploy`.');
 
     expect(
       htmlToMarkdown('<p>Options:</p><ul><li><a href="/docs/one">One</a></li><li>Two</li></ul>')
-    ).toBe('Options:\n\n- [One](https://neon.com/docs/one)\n- Two');
+    ).toBe('Options:\n\n- [One](https://servbit.com/docs/one)\n- Two');
 
     expect(htmlToMarkdown('<p>Use <code>&lt;T&gt;</code> as the type.</p>')).toBe(
       'Use `<T>` as the type.'
@@ -67,17 +69,17 @@ describe('backend platform page Markdown', () => {
 
     expect(markdown).toContain('# Long-running functions, right next to your database');
     expect(markdown).toContain('## Backend compute');
-    expect(markdown).toContain('### Declared in `neon.ts`');
+    expect(markdown).toContain('### Declared in `servbit.ts`');
     expect(markdown).toContain('## Your questions, answered');
     expect(markdown).toContain('## Built for agents and the developers behind them.');
-    expect(markdown).toContain('[Contact us](https://neon.com/contact-sales)');
+    expect(markdown).toContain('[Contact us](https://servbit.com/contact-sales)');
     expect(markdown).not.toMatch(/<\/?(?:p|strong|code)>/);
   });
 
   it('renders AI Gateway page content and the live model catalog', () => {
     const markdown = renderAiGatewayMarkdown(LINKS);
 
-    expect(markdown).toContain('# Call the latest models right from your Neon backend');
+    expect(markdown).toContain('# Call the latest models right from your Servbit backend');
     expect(markdown).toContain('## Models');
     expect(markdown).toContain('### Text models');
     expect(markdown).toContain('`gemini-3-5-flash`');
@@ -91,11 +93,11 @@ describe('backend platform page Markdown', () => {
   it('renders Object Storage config, FAQ, and matching shared content', () => {
     const markdown = renderObjectStorageMarkdown(LINKS);
 
-    expect(markdown).toContain('# Files that branch with your Neon database');
-    expect(markdown).toContain('[Read the docs](https://neon.com/docs/storage/overview)');
+    expect(markdown).toContain('# Files that branch with your Servbit backend');
+    expect(markdown).toContain('[Read the docs](https://servbit.com/docs/storage/overview)');
     expect(markdown).toContain('```typescript\nimport { defineConfig }');
     expect(markdown).toContain('uploads: {}');
-    expect(markdown).toContain('`neon deploy`');
+    expect(markdown).toContain('`servbit deploy`');
     expect(markdown).toContain('`.env.local`');
     expect(markdown).toContain('Your files branch with everything else.');
     expect(markdown).not.toContain('Your LLM branches');
@@ -103,25 +105,24 @@ describe('backend platform page Markdown', () => {
     expect(markdown).not.toMatch(/<\/?(?:p|strong|code)>/);
   });
 
-  it('renders Auth content without confusing it with Claimable Neon', () => {
+  it('renders Auth content without confusing it with Claimable Servbit', () => {
     const markdown = renderAuthMarkdown(LINKS);
 
-    expect(markdown).toContain('# Better Auth that branches, managed by Neon');
-    expect(markdown).toContain('[Read the docs](https://neon.com/docs/auth/overview)');
-    expect(markdown).toContain('Built on Better Auth');
-    expect(markdown).toContain('`neon_auth`');
+    expect(markdown).toContain('# Authentication that branches, managed by Servbit');
+    expect(markdown).toContain('[Read the docs](https://servbit.com/docs/auth/overview)');
+    expect(markdown).toContain('Servbit Auth');
     expect(markdown).toContain('Build previews you can actually log into');
     expect(markdown).toContain('### 4. Preview');
     expect(markdown).toContain('Your auth branches with everything else.');
     expect(markdown).toContain('What happens to sessions when I branch?');
-    expect(markdown).not.toContain('Claimable Neon for agents');
+    expect(markdown).not.toContain('Claimable Servbit for agents');
     expect(markdown).not.toMatch(/<\/?(?:p|strong|code|a)(?:\s|>)/);
   });
 
   it('renders Lakebase unique content and its shared platform footer', () => {
     const markdown = renderLakebaseMarkdown(LINKS);
 
-    expect(markdown).toContain('# The Neon database: Lakebase Postgres');
+    expect(markdown).toContain('# The Servbit database: Servbit Platform');
     expect(markdown).toContain('### Instant Branching');
     expect(markdown).toContain(
       '## Query Postgres directly from browsers, edge runtimes, and serverless functions.'
@@ -145,7 +146,7 @@ describe('backend platform page Markdown', () => {
   });
 
   it('writes all mirrors without deleting other generated Markdown', async () => {
-    const rootDir = await fs.mkdtemp(path.join(os.tmpdir(), 'neon-platform-markdown-'));
+    const rootDir = await fs.mkdtemp(path.join(os.tmpdir(), 'servbit-platform-markdown-'));
     tempDirs.push(rootDir);
     const outputDir = path.join(rootDir, 'public/md');
     const sentinelPath = path.join(outputDir, 'existing.md');
@@ -168,13 +169,13 @@ describe('backend platform page Markdown', () => {
       '# Call the latest models'
     );
     expect(await fs.readFile(path.join(outputDir, 'object-storage.md'), 'utf8')).toContain(
-      '# Files that branch with your Neon database'
+      '# Files that branch with your Servbit backend'
     );
     expect(await fs.readFile(path.join(outputDir, 'auth-page.md'), 'utf8')).toContain(
-      '# Better Auth that branches, managed by Neon'
+      '# Authentication that branches, managed by Servbit'
     );
     expect(await fs.readFile(path.join(outputDir, 'lakebase.md'), 'utf8')).toContain(
-      '# The Neon database: Lakebase Postgres'
+      '# The Servbit database: Servbit Platform'
     );
     expect(await fs.readFile(sentinelPath, 'utf8')).toBe('keep me');
   });

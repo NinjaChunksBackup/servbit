@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import Container from 'components/shared/container/container';
+import Link from 'components/shared/link';
 import dbIcon from 'icons/report/db-icon.svg';
 import restoreIcon from 'icons/report/restore-icon.svg';
 
@@ -8,13 +9,14 @@ const DATA = [
   {
     description:
       'Restoring large Postgres databases can take hours with snapshots and WAL. HA standbys help with infra issues but not with drops, corruption, or lagging replicas.',
-    title: 'Neon is a backend platform that supports instant PITR — even for multi-TB databases.',
+    title:
+      'Servbit is a backend platform that supports instant PITR — even for multi-TB databases.',
     icon: dbIcon,
   },
   {
     description:
-      'The magic trick? Instant branching. Neon lets you instantly branch from any past state — no WAL replay or full restore needed. It references existing storage at a specific moment, making recovery instant. Spin up a branch, recover data, and merge it back — all without downtime.',
-    title: 'Neon takes a fundamentally different approach to recovery.',
+      'The magic trick? Instant branching. Servbit lets you instantly branch from any past state — no WAL replay or full restore needed. It references existing storage at a specific moment, making recovery instant. Spin up a branch, recover data, and merge it back — all without downtime.',
+    title: 'Servbit takes a fundamentally different approach to recovery.',
     icon: restoreIcon,
   },
 ];
@@ -45,14 +47,9 @@ const RecoverySolution = () => (
 
       <p className="mt-12 text-lg leading-snug tracking-extra-tight with-link-primary text-gray-new-90 lg:mt-10 sm:mt-7 sm:text-base">
         Want to see it in action?{' '}
-        <a
-          className="ml-2 tracking-tighter"
-          href="https://fyi.neon.tech/branching"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link className="ml-2 tracking-tighter" to="/branching">
           Here&apos;s a demo →
-        </a>
+        </Link>
       </p>
     </Container>
   </section>

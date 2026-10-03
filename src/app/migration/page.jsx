@@ -36,7 +36,7 @@ const FEATURES = [
   },
   {
     title: 'Fully managed',
-    description: 'Neon handles all database tasks — backups, updates, failovers.  ',
+    description: 'Servbit handles all database tasks — backups, updates, failovers.  ',
     icon: fullyManaged,
   },
   {
@@ -59,7 +59,7 @@ const MigrationPage = () => (
     <CardsSupport />
     <TestimonialNew
       className="pt-[185px] xl:pt-[161px] lg:pt-[136px] md:pt-[97px]"
-      quote="Database migrations are always a headache, but the Neon team made it a smooth process. Their support helped us troubleshoot performance issues and get everything running fast."
+      quote="Database migrations are always a headache, but the Servbit team made it a smooth process. Their support helped us troubleshoot performance issues and get everything running fast."
       quoteClassName="max-w-[670px] lg:max-w-[620px] md:max-w-[570px] sm:max-w-[300px] sm:mx-auto"
       author={{
         name: 'Tejas Siripurapu',
@@ -69,18 +69,18 @@ const MigrationPage = () => (
     />
     <GridFeatures
       className="mt-[185px] xl:mt-[162px] lg:mt-[136px] md:mt-[96px]"
-      title="Why teams migrate to Neon"
+      title="Why teams migrate to Servbit"
       titleClassName="md:text-balance"
       headerClassName="max-w-[640px] lg:max-w-[560px] md:max-w-[500px]"
       ulClassName="xl:max-w-208 xl:grid-cols-3 lg:mx-16"
       containerSize="960"
-      description="Neon provides a serverless, fully managed Postgres built for modern development — fast, reliable, and cost-effective."
+      description="Servbit provides a serverless, fully managed Postgres built for modern development — fast, reliable, and cost-effective."
       items={FEATURES}
     />
     <CTANew
       label="ASK AI"
       title="Still have questions? Ask our AI. <br class='xs:hidden' />"
-      description="It knows Neon inside and out."
+      description="It knows Servbit inside and out."
       buttonText="Get Answers"
       buttonType="aiHelper"
     />

@@ -22,10 +22,10 @@ const AboutUsPage = () => (
       className="mt-0"
       title="Become a part of our&nbsp;team."
       description="We're looking for people who care deeply about quality to build with us."
-      label="Join Databricks"
-      buttonText="View open roles at Databricks"
+      label="Join Servbit"
+      buttonText="View open roles at Servbit"
       buttonUrl={LINKS.careers}
-      labelIcon="databricks"
+      labelIcon="servbit"
     />
   </Layout>
 );

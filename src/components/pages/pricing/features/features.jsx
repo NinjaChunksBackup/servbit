@@ -16,17 +16,17 @@ const FEATURES = [
   {
     icon: storageIcon,
     title: 'High availability.',
-    description: `Neon’s storage is <a href="${LINKS.docsHighAvailability}">multi-AZ</a> by default, without the need for HA standbys.`,
+    description: `Servbit’s storage is <a href="${LINKS.docsHighAvailability}">multi-AZ</a> by default, without the need for HA standbys.`,
   },
   {
     icon: replicasIcon,
     title: 'Read replicas.',
-    description: `Neon lets you offload <a href="${LINKS.docs}/introduction/read-replicas">read-heavy queries</a> without added storage costs.`,
+    description: `Servbit lets you offload <a href="${LINKS.docs}/introduction/read-replicas">read-heavy queries</a> without added storage costs.`,
   },
   {
     icon: autoscalingIcon,
     title: 'Autoscaling.',
-    description: `Neon automatically <a href="${LINKS.autoscaling}">adjusts compute</a> and storage based on demand, including on the Free plan.`,
+    description: `Servbit automatically <a href="${LINKS.autoscaling}">adjusts compute</a> and storage based on demand, including on the Free plan.`,
   },
   {
     icon: monitoringIcon,
@@ -36,7 +36,7 @@ const FEATURES = [
   {
     icon: connectionsIcon,
     title: 'Connection pooling.',
-    description: `All Neon databases can use pooled connections built on pgBouncer (up to <a href="${LINKS.connectionPooling}">10,000 connections</a>).`,
+    description: `All Servbit databases can use pooled connections built on pgBouncer (up to <a href="${LINKS.connectionPooling}">10,000 connections</a>).`,
   },
   {
     icon: extensionsIcon,
@@ -45,8 +45,8 @@ const FEATURES = [
   },
   {
     icon: authIcon,
-    title: 'Managed Better Auth.',
-    description: `Neon comes with <a href="${LINKS.auth}">built-in authentication</a> based on Better Auth, with a one-click install.`,
+    title: 'Managed Authentication.',
+    description: `Servbit comes with <a href="${LINKS.auth}">built-in authentication</a>, with a one-click install.`,
   },
   {
     icon: securityIcon,
@@ -65,8 +65,8 @@ const Features = () => (
           '[&>strong]:font-normal [&>strong]:text-white'
         )}
       >
-        <strong>Included with every Neon database, on every plan, by default.</strong> These are
-        core platform capabilities that come out of the box with Neon.
+        <strong>Included with every Servbit database, on every plan, by default.</strong> These are
+        core platform capabilities that come out of the box with Servbit.
       </h2>
       <ul
         className={cn(
