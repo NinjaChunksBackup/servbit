@@ -1,7 +1,14 @@
-import SEO_DATA, { DEFAULT_IMAGE_PATH } from 'constants/seo-data';
+import SEO_DATA from 'constants/seo-data';
 
 const DEFAULT_TITLE = SEO_DATA.index.title;
 const DEFAULT_DESCRIPTION = SEO_DATA.index.description;
+
+// Social cards are generated at request time by the /api/og route, which takes
+// the card title base64-encoded so it survives the query string. Pointing
+// openGraph and twitter at the generator keeps one card layout in the codebase
+// and means every page gets a card without a static image per route.
+const buildOgImagePath = (title) =>
+  `/api/og?title=${encodeURIComponent(Buffer.from(title, 'utf8').toString('base64'))}`;
 
 const assertAbsoluteHttpUrl = (value, fieldName) => {
   let parsed;
@@ -22,7 +29,7 @@ export default function getMetadata({
   keywords,
   robotsNoindex,
   pathname,
-  imagePath = DEFAULT_IMAGE_PATH,
+  imagePath,
   canonical,
 }) {
   const SITE_URL =
@@ -30,11 +37,14 @@ export default function getMetadata({
       ? `https://${process.env.VERCEL_BRANCH_URL}`
       : process.env.NEXT_PUBLIC_DEFAULT_SITE_URL;
   const canonicalUrl = SITE_URL + pathname;
-  const imageUrl = imagePath?.startsWith('http') ? imagePath : SITE_URL + imagePath;
 
-  const metaImageUrl = imagePath ? imageUrl : `${SITE_URL}${DEFAULT_IMAGE_PATH}`;
   const metaTitle = title || DEFAULT_TITLE;
   const metaDescription = description || DEFAULT_DESCRIPTION;
+
+  const resolvedImagePath = imagePath || buildOgImagePath(metaTitle);
+  const metaImageUrl = resolvedImagePath.startsWith('http')
+    ? resolvedImagePath
+    : SITE_URL + resolvedImagePath;
 
   const siteName = 'Servbit';
   const robots = robotsNoindex === 'noindex' ? { index: false } : null;

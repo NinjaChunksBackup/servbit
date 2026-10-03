@@ -1,10 +1,9 @@
-name: E2E on Chrome
+name: E2E Tests
 
+# A full production build plus the browser matrix takes a few minutes, so pull
+# requests only pay for it when they touch application code, the tests, or the
+# dependency tree. Pushes to main and the weekly cron run it unconditionally.
 on:
-  # A full production build plus 72 browser tests takes ~16 minutes, so PRs only
-  # pay for it when they touch app code, the tests, or the dependency tree.
-  # Content-only PRs (the majority in this repo) skip it. Pushes to main and the
-  # Monday cron still run the whole matrix unconditionally.
   pull_request:
     paths:
       - 'src/**'
@@ -21,52 +20,31 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: critical-user-flows-${{ github.ref }}
+  group: e2e-tests-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
   contents: read
-  id-token: write # mint the JFrog OIDC token for the Databricks npm mirror
 
 jobs:
-  install:
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
-    runs-on:
-      group: neondatabase-protected-runner-group
-      labels: linux-ubuntu-latest
+  test:
+    # Forks cannot reach this repository's Actions secrets, so they run the
+    # suite against public infrastructure only.
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
       NEXT_PUBLIC_DEFAULT_SITE_URL: http://127.0.0.1:3000
-      NEXT_PUBLIC_GITHUB_PATH: https://github.com/neondatabase/website/tree/main/
       PLAYWRIGHT_BASE_URL: http://127.0.0.1:3000
       PLAYWRIGHT_WEB_SERVER_COMMAND: npm run start -- --hostname 127.0.0.1
 
     steps:
-      - name: Harden the runner (Audit all outbound calls)
+      - name: Harden the runner (audit all outbound calls)
         uses: step-security/harden-runner@v2 # v2.21.1
         with:
           egress-policy: audit
 
       - name: Checkout
         uses: actions/checkout@v7
-
-      # The protected runner group has no egress to the public npm registry — it
-      # can only reach the Databricks JFrog mirror. Mint a short-lived token via
-      # OIDC and point npm at the mirror before anything fetches packages.
-      - name: Setup JFrog CLI with OIDC
-        id: setup-jfrog
-        uses: jfrog/setup-jfrog-cli@v4
-        env:
-          JF_URL: https://databricks.jfrog.io
-        with:
-          oidc-provider-name: github-actions
-      - name: Configure npm registry (Databricks JFrog mirror)
-        run: |
-          cat > ~/.npmrc <<EOF
-          registry=https://databricks.jfrog.io/artifactory/api/npm/db-npm/
-          //databricks.jfrog.io/artifactory/api/npm/db-npm/:_authToken=${{ steps.setup-jfrog.outputs.oidc-token }}
-          always-auth=true
-          EOF
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -83,15 +61,12 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium webkit
 
-      # Advisory, not a gate. webkit is slow enough on these pages that hydration
-      # races still surface as flakes, and a red X on every PR would be noise, so
-      # the outcome goes to the job summary and the uploaded report instead of
-      # failing the run. Setup failures (install, build, browsers) still fail.
-      #
-      # This applies to the cron too: nothing here fails on a genuine regression,
-      # so the report has to be read. Wiring the scheduled run up to something
-      # that notifies (fail loudly, open an issue, post to Slack) is a follow-up.
-      - name: Monitor critical user outcomes
+      # Advisory, not a gate. webkit is slow enough on these pages that
+      # hydration races still surface as flakes, and a red X on every PR would
+      # be noise, so the outcome goes to the job summary and the uploaded
+      # report instead of failing the run. Setup failures (install, build,
+      # browsers) still fail.
+      - name: Run critical user flows
         id: critical
         continue-on-error: true
         run: npm run test:critical

@@ -1,2 +1,12 @@
-# Code owners for the repository (includes CI / .github supply-chain surface).
-* @philip @andrelandgraf @danieltprice @ruf-io
+# Code owners for this repository.
+#
+# Intentionally empty. The previous file inherited from the upstream fork named
+# four engineers at another company, so every pull request requested review from
+# people who have no connection to this project.
+#
+# Add the owners who should be requested for review here, for example:
+#
+#   *                       @your-github-handle
+#   /src/components/        @your-github-handle
+#
+# Until then no review is requested automatically.

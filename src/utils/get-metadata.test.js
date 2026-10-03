@@ -105,4 +105,27 @@ describe('getMetadata', () => {
 
     expect(metadata.openGraph.images[0].url).toBe('https://cdn.example.com/card.jpg');
   });
+
+  it('generates the social card from the page title by default', () => {
+    const metadata = getMetadata(SEO_DATA.aboutUs);
+    const expected = encodeURIComponent(
+      Buffer.from(SEO_DATA.aboutUs.title, 'utf8').toString('base64')
+    );
+
+    expect(metadata.openGraph.images[0].url).toBe(`https://servbit.in/api/og?title=${expected}`);
+  });
+
+  it('round-trips the title through the generator encoding', () => {
+    const metadata = getMetadata({ pathname: '/', title: 'App & Web — “Servbit”' });
+    const encoded = new URL(metadata.openGraph.images[0].url).searchParams.get('title');
+
+    expect(Buffer.from(encoded, 'base64').toString('utf-8')).toBe('App & Web — “Servbit”');
+  });
+
+  it('falls back to the default card when a page has no title', () => {
+    const metadata = getMetadata({ pathname: '/nowhere' });
+    const encoded = new URL(metadata.openGraph.images[0].url).searchParams.get('title');
+
+    expect(Buffer.from(encoded, 'base64').toString('utf-8')).toBe(SEO_DATA.index.title);
+  });
 });

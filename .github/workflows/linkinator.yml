@@ -1,37 +1,66 @@
 name: Linkinator
 
 on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'next-sitemap.config.js'
+      - '.github/workflows/linkinator.yml'
+  push:
+    branches: [main]
   schedule:
     - cron: '0 0 * * 1'
+  workflow_dispatch:
 
-env:
-  GATSBY_DEFAULT_SITE_URL: https://neon.com
 permissions:
   contents: read
+
+concurrency:
+  group: linkinator-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   linkinator:
     name: 'Checks broken links'
-    runs-on:
-      group: neondatabase-protected-runner-group
-      labels: linux-ubuntu-latest
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     continue-on-error: true
     steps:
-      - name: Harden the runner (Audit all outbound calls)
+      - name: Harden the runner (audit all outbound calls)
         uses: step-security/harden-runner@v2 # v2.21.1
         with:
           egress-policy: audit
 
-      - uses: actions/checkout@v7
-      - uses: JustinBeckwith/linkinator-action@3d5ba091319fa7b0ac14703761eebb7d100e6f6d # v1.11.0
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
         with:
-          paths: ${{ env.GATSBY_DEFAULT_SITE_URL }}
-          concurrency: 100
-          recurse: true
-          retry: true
-          skip: ".*(\\.js|\\.css|\\.woff2)$"
-          linksToSkip: >-
-            linkedin.com,
-            googleapis.com
-          verbosity: 'ERROR'
-          markdown: false
+          node-version: '26'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build production application
+        run: npm run build
+
+      # Crawls the built site over HTTP rather than the deployed origin, so the
+      # check runs on pull requests before anything is published.
+      - name: Start the production server
+        run: |
+          npm run start -- --hostname 127.0.0.1 --port 3000 &
+          for i in $(seq 1 60); do
+            if curl --silent --fail --output /dev/null http://127.0.0.1:3000; then
+              echo "Server is up."
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "Server did not start within 120s."
+          exit 1
+
+      - name: Check for broken links
+        run: npm run check:broken-links -- http://127.0.0.1:3000
