@@ -3,6 +3,7 @@ import CTA from 'components/pages/home/cta';
 import Hero from 'components/pages/home/hero';
 import OperateWithAgents from 'components/pages/home/operate-with-agents';
 import ScaleYourApp from 'components/pages/home/scale-your-app';
+import WorkingTogether from 'components/pages/home/working-together';
 import JsonLd from 'components/shared/json-ld';
 import Layout from 'components/shared/layout';
 import SEO_DATA from 'constants/seo-data';
@@ -21,6 +22,7 @@ const Homepage = () => {
       <BuildYourBackend />
       <OperateWithAgents />
       <ScaleYourApp />
+      <WorkingTogether />
       <CTA />
     </Layout>
   );
