@@ -1,7 +1,7 @@
 # Critical user flow monitoring
 
 This suite monitors business-critical website journeys without blocking releases. A failing run
-should be investigated, but the GitHub check must not be configured as a required status check
+should be investigated, but the CI check must not be configured as a required status check
 until the release policy is agreed with the business owner.
 
 ## Contract model

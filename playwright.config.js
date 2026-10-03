@@ -51,9 +51,6 @@ module.exports = defineConfig({
         env: {
           ...process.env,
           NEXT_PUBLIC_DEFAULT_SITE_URL: baseURL,
-          NEXT_PUBLIC_GITHUB_PATH:
-            process.env.NEXT_PUBLIC_GITHUB_PATH ||
-            'https://github.com/neondatabase/website/tree/main/',
         },
         url: baseURL,
         reuseExistingServer: !process.env.CI,

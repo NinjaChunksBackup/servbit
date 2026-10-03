@@ -75,7 +75,6 @@ public/md
 public/docs/**/llms.txt
 public/docs/llms-full.txt
 public/guides/**/llms.txt
-src/utils/data/github-stars.generated.json
 
 # API ref generator output (never commit â€” CI regenerates on every deploy)
 src/data/api-ref/

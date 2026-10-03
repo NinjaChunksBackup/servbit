@@ -10,7 +10,6 @@
  * runs a curation service that quarantines every package version for its first
  * ~7 days ("immature package" cooldown). A lockfile that pins a version younger
  * than the cooldown therefore fails `npm ci` with a 403 — see
- * .github/workflows/docs-api-consistency.yml.
  *
  * This check turns that late, cryptic install failure into an early, explicit
  * one: it names the offending dependency and tells the contributor to pin an

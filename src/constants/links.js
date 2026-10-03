@@ -14,5 +14,4 @@ export default {
   linkedin: 'https://www.linkedin.com/company/servbit/',
   twitter: 'https://x.com/servbit',
   youtube: 'https://www.youtube.com/@servbit-in',
-  discord: 'https://discord.gg/servbit',
 };

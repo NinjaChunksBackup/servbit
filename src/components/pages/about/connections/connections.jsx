@@ -6,7 +6,6 @@ import SectionLabel from 'components/shared/section-label';
 import LINKS from 'constants/links';
 import DotsPattern from 'images/dots-pattern.inline.svg';
 
-import DiscordIcon from './images/discord-icon.inline.svg';
 import LinkedInIcon from './images/linkedin-icon.inline.svg';
 import XTwitterIcon from './images/x-twitter-icon.inline.svg';
 
@@ -24,13 +23,6 @@ const CONNECTIONS_DATA = [
     linkText: 'Follow and learn',
     href: LINKS.linkedin,
     icon: LinkedInIcon,
-  },
-  {
-    platform: 'Discord',
-    description: "Join real-time discussions, ask questions, and share what you're building.",
-    linkText: 'Talk to us',
-    href: LINKS.discord,
-    icon: DiscordIcon,
   },
 ];
 
@@ -96,7 +88,7 @@ const Connections = () => (
     </header>
 
     {/* Cards Grid */}
-    <ul className="grid grid-cols-3 gap-[31px] xl:gap-8 lg:gap-7 md:grid-cols-1 md:gap-6">
+    <ul className="grid grid-cols-2 gap-[31px] xl:gap-8 lg:gap-7 md:grid-cols-1 md:gap-6">
       {CONNECTIONS_DATA.map((card) => (
         <li key={card.platform}>
           <ConnectionCard {...card} />

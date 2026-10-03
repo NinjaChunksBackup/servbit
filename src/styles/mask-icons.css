@@ -27,16 +27,6 @@
     -webkit-mask-size: 14px 14px;
   }
 
-  .discord-icon {
-    -webkit-mask-image: url('/images/footer/discord.svg');
-    @apply mask-styles footer-icon-size;
-  }
-
-  .discourse-icon {
-    -webkit-mask-image: url('/images/footer/discourse.svg');
-    @apply mask-styles footer-icon-size;
-  }
-
   .instagram-icon {
     -webkit-mask-image: url('/images/footer/instagram.svg');
     @apply mask-styles footer-icon-size;

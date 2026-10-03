@@ -11,7 +11,7 @@ export const generateOrganizationSchema = () => ({
   url: SITE_URL,
   description: SEO_DATA.index.description,
   logo: `${SITE_URL}/images/servbit-logo.svg`,
-  sameAs: [LINKS.instagram, LINKS.linkedin, LINKS.twitter, LINKS.youtube, LINKS.discord],
+  sameAs: [LINKS.instagram, LINKS.linkedin, LINKS.twitter, LINKS.youtube],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
