@@ -31,6 +31,13 @@ global.fetch = vi.fn(() => Promise.resolve({ ok: true }));
 // Ensure SITE_URL is defined so the error-fallback redirect doesn't throw
 process.env.NEXT_PUBLIC_DEFAULT_SITE_URL = 'https://neon.com';
 
+// The LLM pageview beacon is opt-in (see utils/llm-analytics.js). These tests
+// exercise the beacon's call ordering and single-fire behaviour, so they opt in
+// explicitly. Must be set before proxy.js is imported further down, because the
+// endpoint is read once at module load.
+const BEACON_URL = 'https://neonapi.io/t.js';
+process.env.LLM_ANALYTICS_BEACON_URL = BEACON_URL;
+
 // Now import middleware after all mocks are set up
 let middleware;
 let middlewareConfig;

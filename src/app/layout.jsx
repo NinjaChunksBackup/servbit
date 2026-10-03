@@ -28,9 +28,6 @@ const RootLayout = ({ children }) => (
     suppressHydrationWarning
   >
     <head>
-      {process.env.NODE_ENV === 'production' && (
-        <Script strategy="afterInteractive" src="https://neonapi.io/cb.js" />
-      )}
       {/* Dev-only live reload for content edits */}
       {process.env.NODE_ENV === 'development' && (
         <Script id="content-live-reload" strategy="afterInteractive">
