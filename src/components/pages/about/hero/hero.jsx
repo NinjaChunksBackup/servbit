@@ -38,7 +38,7 @@ const Hero = () => (
             className="shrink-0 font-normal md:w-full"
             to={LINKS.careers}
           >
-            View open roles at Servbit
+            Send us your CV
           </Button>
         </div>
       </div>

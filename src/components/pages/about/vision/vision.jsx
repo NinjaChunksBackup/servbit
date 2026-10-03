@@ -12,9 +12,9 @@ const Vision = () => (
         <SectionLabel icon="arrow">Where we&apos;re headed</SectionLabel>
 
         <h3 className="mt-5 max-w-[736px] text-5xl leading-dense font-normal tracking-tighter text-gray-new-40 xl:max-w-[600px] xl:text-[36px] lg:max-w-full lg:text-2xl md:mt-4 md:text-xl">
-          <span className="text-black-pure">Servbit is the premier digital engineering firm.</span>{' '}
-          We engineer high-velocity App, Web, Cloud, Automation, and Custom AI architectures for
-          modern businesses.
+          <span className="text-black-pure">Servbit is a digital engineering firm.</span> We
+          engineer high-velocity App, Web, Cloud, Automation, and Custom AI architectures for modern
+          businesses.
         </h3>
       </div>
 

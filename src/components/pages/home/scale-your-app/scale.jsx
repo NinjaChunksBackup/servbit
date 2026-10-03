@@ -45,12 +45,9 @@ const ScaleStat = () => (
     <div className="flex h-[37px] items-center justify-between bg-[#303236] px-3 font-mono text-base font-semibold text-white md:text-sm">
       <span>Engineering Standard</span>
     </div>
-    <div className="px-[27px] pt-[92px] xl:pt-20 md:px-5 md:pt-15 sm:py-5">
-      <strong className="block text-[98px] leading-none font-normal tracking-extra-tight text-white md:text-[5rem] sm:text-[4rem]">
-        100%
-      </strong>
-      <p className="mt-[18px] max-w-70 text-xl leading-tight tracking-extra-tight text-pretty text-gray-new-80 md:mt-4 md:max-w-3xs md:text-lg sm:max-w-56 sm:text-base">
-        Production-grade delivery with zero shortcuts and factual results
+    <div className="flex h-[calc(100%-37px)] items-center px-[27px] xl:px-20 md:px-5">
+      <p className="max-w-140 text-[42px] leading-[1.06] font-normal tracking-extra-tight text-pretty text-white xl:text-[36px] lg:text-[30px] md:text-[26px] sm:text-[24px]">
+        Production-grade delivery with zero shortcuts and factual results.
       </p>
     </div>
   </div>

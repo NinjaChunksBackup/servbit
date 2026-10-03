@@ -1,7 +1,6 @@
 import Container from 'components/shared/container';
+import { LogosWall } from 'components/shared/logos';
 import SectionLabel from 'components/shared/section-label';
-
-import Animation from './animation';
 
 const BENEFITS = [
   {
@@ -19,6 +18,23 @@ const BENEFITS = [
     description:
       'Brutally honest conversion engineering and system optimization that directly drives commercial margins.',
   },
+];
+
+const TECHNOLOGIES = [
+  'react',
+  'next-js',
+  'typescript',
+  'tailwind-css',
+  'node-js',
+  'flutter',
+  'kotlin',
+  'java',
+  'spring-boot',
+  'rust',
+  'tauri',
+  'docker',
+  'kubernetes',
+  'jetbrains',
 ];
 
 const OperateWithAgents = () => (
@@ -65,8 +81,11 @@ const OperateWithAgents = () => (
         ))}
       </ul>
 
-      <div className="pointer-events-none w-full">
-        <Animation />
+      <div className="min-w-0 self-center">
+        <p className="mb-4 text-base leading-snug font-normal tracking-tight text-gray-new-50 lg:mb-5">
+          The stack we ship on.
+        </p>
+        <LogosWall logos={TECHNOLOGIES} size="sm" />
       </div>
     </Container>
   </section>

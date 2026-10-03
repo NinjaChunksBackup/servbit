@@ -1,9 +1,7 @@
 import 'styles/globals.css';
 import { Analytics } from '@vercel/analytics/next';
 import { GeistMono } from 'geist/font/mono';
-import Script from 'next/script';
 
-import RiveWasm from 'components/shared/rive-wasm';
 import { CodeTabsProvider } from 'contexts/code-tabs-context';
 import { TabsProvider } from 'contexts/tabs-context';
 import { TopbarProvider } from 'contexts/topbar-context';
@@ -26,15 +24,7 @@ const RootLayout = ({ children }) => (
     className={`${inter.variable} ${esbuild.variable} ${GeistMono.variable} dark`}
     suppressHydrationWarning
   >
-    <head>
-      {/* Dev-only live reload for content edits */}
-      {process.env.NODE_ENV === 'development' && (
-        <Script id="content-live-reload" strategy="afterInteractive">
-          {`(function c(){try{var s=new WebSocket('ws://localhost:3549');s.onmessage=function(e){if(e.data==='reload')location.reload()};s.onclose=function(){setTimeout(c,1000)};s.onerror=function(){s.close()}}catch(e){setTimeout(c,1000)}})()`}
-        </Script>
-      )}
-      <RiveWasm />
-    </head>
+    <head />
     <body>
       <ThemeProvider>
         <HomepageVisitProvider>

@@ -39,7 +39,7 @@ const COMMITMENTS = [
 
 const DecorativeBackground = () => (
   <Image
-    className="pointer-events-none absolute top-0 -right-[10%] h-full 2xl:-right-[20%] lg:hidden sm:-right-1/2"
+    className="pointer-events-none absolute top-0 -right-[10%] h-full w-auto 2xl:-right-[20%] lg:hidden sm:-right-1/2"
     src={backgroundNoise}
     alt=""
     width={1175}
