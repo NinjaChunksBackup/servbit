@@ -5,7 +5,11 @@ import JsonLd from './json-ld';
 
 describe('JsonLd', () => {
   it('renders a server-side <script type="application/ld+json"> with the data', () => {
-    const data = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Neon' };
+    const data = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Servbit',
+    };
     const html = renderToStaticMarkup(<JsonLd data={data} id="org-schema" />);
 
     expect(html).toContain('<script');
@@ -13,7 +17,7 @@ describe('JsonLd', () => {
     expect(html).toContain('id="org-schema"');
     // The JSON payload is present in the static (no-JS) markup
     expect(html).toContain('"@type":"Organization"');
-    expect(html).toContain('Neon');
+    expect(html).toContain('Servbit');
   });
 
   it('falls back to id="json-ld" when no id prop is given', () => {

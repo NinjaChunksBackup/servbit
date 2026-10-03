@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 
 // The generated bundle targets modern browsers and contains class static blocks.
-import { createNeonGlobe } from './neon-globe.mjs';
+import { createServbitGlobe } from './servbit-globe.mjs';
 
 const GlobeAnimation = () => {
   const containerRef = useRef(null);
@@ -12,7 +12,7 @@ const GlobeAnimation = () => {
     const container = containerRef.current;
     if (!container) return undefined;
 
-    const globe = createNeonGlobe(container);
+    const globe = createServbitGlobe(container);
 
     return () => globe.destroy();
   }, []);

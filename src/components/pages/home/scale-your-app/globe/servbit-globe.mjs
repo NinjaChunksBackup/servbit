@@ -5605,7 +5605,7 @@ function Rn(e, t, n, i, a, o, s) {
   );
 }
 var zn = {
-    appId: 'neon-globe-2',
+    appId: 'servbit-globe-2',
     canvas: {
       aspectRatio: {
         height: 9,
@@ -5874,7 +5874,7 @@ var zn = {
   Vn = /* @__PURE__ */ new WeakMap();
 function Hn(e, t = {}) {
   if (!e?.ownerDocument?.defaultView)
-    throw TypeError('createNeonGlobe requires a browser HTMLElement.');
+    throw TypeError('createServbitGlobe requires a browser HTMLElement.');
   if (Vn.has(e))
     throw Error('This container already has a globe. Destroy it before mounting again.');
   if (t.motion !== void 0 && t.motion !== 'auto' && t.motion !== 'still')
@@ -5883,4 +5883,4 @@ function Hn(e, t = {}) {
   return (Vn.set(e, n), n);
 }
 //#endregion
-export { Hn as createNeonGlobe };
+export { Hn as createServbitGlobe };

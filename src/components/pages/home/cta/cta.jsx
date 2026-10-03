@@ -1,9 +1,5 @@
-import Image from 'next/image';
-
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
-
-import mobileBackground from './images/mobile-bg.jpg';
 
 const CTA = () => (
   <section className="cta relative bg-[#151617] safe-paddings" id="contact">
@@ -33,19 +29,6 @@ const CTA = () => (
           </div>
         </div>
       </Container>
-    </div>
-
-    <div className="pointer-events-none relative overflow-hidden">
-      <div className="relative h-170 w-full bg-[#484848]">
-        <Image
-          className="absolute top-[52%] left-1/2 h-auto w-80 -translate-x-1/2 -translate-y-1/2"
-          src={mobileBackground}
-          alt=""
-          width={320}
-          height={598}
-          sizes="(max-width: 767px) 100vw, 1px"
-        />
-      </div>
     </div>
   </section>
 );

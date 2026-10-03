@@ -7,7 +7,6 @@ export default {
 
   // Mailbox (the business has a single contact address)
   careers: 'mailto:servbit.in@gmail.com',
-  signup: 'mailto:servbit.in@gmail.com',
 
   // External
   instagram: 'https://www.instagram.com/servbit.in/',
