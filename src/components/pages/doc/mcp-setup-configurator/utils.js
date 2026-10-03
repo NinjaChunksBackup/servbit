@@ -1,4 +1,4 @@
-const SERVER_BASE = 'https://mcp.servbit.com';
+const SERVER_BASE = 'https://mcp.servbit.in';
 const PROD_LIST_TOOLS_URL = `${SERVER_BASE}/api/list-tools`;
 
 const toolsPreviewCache = new Map();

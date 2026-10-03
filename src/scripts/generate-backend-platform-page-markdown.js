@@ -22,8 +22,8 @@ const {
 } = require('../constants/backend-platform-page-content');
 const { objectStoragePageContent } = require('../constants/object-storage-page-content');
 
-const BASE_URL = 'https://servbit.com';
-const FEEDBACK_URL = 'https://feedback.servbit.com/';
+const BASE_URL = 'https://servbit.in';
+const FEEDBACK_URL = 'https://feedback.servbit.in/';
 
 const absoluteUrl = (url) => (url.startsWith('/') ? `${BASE_URL}${url}` : url);
 

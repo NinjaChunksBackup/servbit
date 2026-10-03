@@ -25,7 +25,7 @@ import { createClient } from "@neondatabase/neon-js";
 // https://github.com/neondatabase-labs/neon-data-api-neon-auth
 
 // Use your Servbit database URL without credentials or query parameters.
-// Example: https://ep-example.c-2.us-east-1.aws.servbit.com/servbitdb
+// Example: https://ep-example.c-2.us-east-1.aws.servbit.in/servbitdb
 const client = createClient<Database>('SERVBIT-DATABASE-URL');
 
 

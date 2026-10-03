@@ -2,7 +2,7 @@ const path = require('path');
 
 const { EXCLUDED_DIRS } = require('../constants/content');
 
-const BASE_URL = 'https://servbit.com';
+const BASE_URL = 'https://servbit.in';
 const EXCLUDED_FILES = ['README.md', 'index.md', '_index.md', 'GUIDE_TEMPLATE.md'];
 const SITE_REINDEX_MAX_PAGES = 200;
 

@@ -20,7 +20,7 @@ module.exports = {
     'Servbit is a complete set of cloud backend primitives built around Servbit Database, for developers, startups, and agent platforms. Services include Servbit Database, Managed Auth, Data API, Functions, Object Storage, and AI Gateway. Servbit Database includes autoscaling, instant restore, and scale-to-zero, and works with any language, framework, or ORM that supports Postgres.',
 
   getStarted: [
-    '**Get started.** Sign up for Servbit or sign into an existing account. If the user cannot create an account right now, follow [Claimable Servbit](https://servbit.com/auth.md) to provision a Postgres project without signup. A human claims it later.',
+    '**Get started.** Sign up for Servbit or sign into an existing account. If the user cannot create an account right now, follow [Claimable Servbit](https://servbit.in/auth.md) to provision a Postgres project without signup. A human claims it later.',
     '',
     'If a Servbit account is available, set things up locally by installing the Servbit CLI and running the project init command to install the agent skills and creating/linking a Servbit project:',
     '',
@@ -45,36 +45,36 @@ module.exports = {
     {
       label:
         'Need a Servbit account and the user is not around: provision one now; they claim it later',
-      url: 'https://servbit.com/auth.md',
+      url: 'https://servbit.in/auth.md',
     },
-    { label: 'Pricing and plans', url: 'https://servbit.com/pricing.md' },
+    { label: 'Pricing and plans', url: 'https://servbit.in/pricing.md' },
     {
       label: 'Declare a whole backend in one file',
-      url: 'https://servbit.com/docs/reference/servbit-ts.md',
+      url: 'https://servbit.in/docs/reference/servbit-ts.md',
     },
     {
       label: 'Add users and authentication',
-      url: 'https://servbit.com/docs/auth/overview.md',
+      url: 'https://servbit.in/docs/auth/overview.md',
     },
     {
       label: 'Explore the full platform: functions, object storage, AI Gateway, and more',
-      url: 'https://servbit.com/docs/introduction.md',
+      url: 'https://servbit.in/docs/introduction.md',
     },
     {
       label: 'Choose a connection method (drivers, pooling, serverless)',
-      url: 'https://servbit.com/docs/connect/choose-connection.md',
+      url: 'https://servbit.in/docs/connect/choose-connection.md',
     },
     {
       label: 'Troubleshoot connection errors and timeouts',
-      url: 'https://servbit.com/docs/connect/connection-errors.md',
+      url: 'https://servbit.in/docs/connect/connection-errors.md',
     },
     {
       label: 'Servbit API reference (projects, branches, databases, endpoints)',
-      url: 'https://servbit.com/docs/reference/api.md',
+      url: 'https://servbit.in/docs/reference/api.md',
     },
     {
       label: 'Servbit CLI reference (servbit commands, options, and usage)',
-      url: 'https://servbit.com/docs/cli.md',
+      url: 'https://servbit.in/docs/cli.md',
     },
   ],
 
@@ -94,7 +94,7 @@ module.exports = {
       description: 'Architecture, features, autoscaling, branching concepts, billing, and plans.',
       subIndex: {
         outputPath: 'public/docs/introduction/llms.txt',
-        url: 'https://servbit.com/docs/introduction/llms.txt',
+        url: 'https://servbit.in/docs/introduction/llms.txt',
         highlights: [
           'introduction/architecture-overview.md',
           'introduction/about-billing.md',
@@ -155,7 +155,7 @@ module.exports = {
       description: 'Projects, branches, computes, roles, databases, and organization settings.',
       subIndex: {
         outputPath: 'public/docs/manage/llms.txt',
-        url: 'https://servbit.com/docs/manage/llms.txt',
+        url: 'https://servbit.in/docs/manage/llms.txt',
         highlights: [
           'manage/projects.md',
           'manage/branches.md',
@@ -171,7 +171,7 @@ module.exports = {
         'Step-by-step integration guides for frameworks, ORMs, auth providers, and deployment platforms.',
       subIndex: {
         outputPath: 'public/docs/guides/llms.txt',
-        url: 'https://servbit.com/docs/guides/llms.txt',
+        url: 'https://servbit.in/docs/guides/llms.txt',
         highlights: [
           'guides/nextjs.md',
           'guides/prisma.md',
@@ -189,7 +189,7 @@ module.exports = {
         'Migration guides by source, size, and downtime tolerance. Covers pg_dump, pgcopydb, logical replication, and provider-specific guides.',
       subIndex: {
         outputPath: 'public/docs/import/llms.txt',
-        url: 'https://servbit.com/docs/import/llms.txt',
+        url: 'https://servbit.in/docs/import/llms.txt',
         highlights: [
           'import/migrate-intro.md',
           'import/migrate-from-postgres.md',
@@ -212,12 +212,12 @@ module.exports = {
       extraEntries: [
         {
           title: 'Servbit API endpoint index',
-          url: 'https://servbit.com/docs/reference/api/llms.txt',
+          url: 'https://servbit.in/docs/reference/api/llms.txt',
           description: 'Index of every Servbit API endpoint, grouped by resource',
         },
         {
           title: 'Servbit API OpenAPI Spec',
-          url: 'https://servbit.com/api_spec/release/v2.json',
+          url: 'https://servbit.in/api_spec/release/v2.json',
           description: 'Machine-readable OpenAPI 3.0 specification for the Servbit API',
         },
       ],
@@ -229,7 +229,7 @@ module.exports = {
       subsectionOrder: ['General', 'Functions', 'Data Types'],
       subIndex: {
         outputPath: 'public/docs/postgresql/llms.txt',
-        url: 'https://servbit.com/docs/postgresql/llms.txt',
+        url: 'https://servbit.in/docs/postgresql/llms.txt',
         highlights: [
           'postgresql/query-reference.md',
           'postgresql/query-performance.md',
@@ -247,7 +247,7 @@ module.exports = {
       description: 'Postgres extensions supported by Servbit, with install and usage instructions.',
       subIndex: {
         outputPath: 'public/docs/extensions/llms.txt',
-        url: 'https://servbit.com/docs/extensions/llms.txt',
+        url: 'https://servbit.in/docs/extensions/llms.txt',
         highlights: [
           'extensions/pg-extensions.md',
           'extensions/pg_stat_statements.md',
@@ -261,7 +261,7 @@ module.exports = {
       description: 'Contributor guides, component architecture, and documentation standards.',
       subIndex: {
         outputPath: 'public/docs/community/llms.txt',
-        url: 'https://servbit.com/docs/community/llms.txt',
+        url: 'https://servbit.in/docs/community/llms.txt',
         highlights: ['community/contribution-guide.md', 'community/llms-markdown-guide.md'],
       },
     },
@@ -309,22 +309,22 @@ module.exports = {
   collapsedRoutes: {
     'docs/changelog': {
       title: 'Changelog',
-      url: 'https://servbit.com/docs/changelog',
+      url: 'https://servbit.in/docs/changelog',
       description: 'Latest updates and releases',
     },
     postgresql: {
       title: 'PostgreSQL Tutorial',
-      url: 'https://servbit.com/postgresql/tutorial',
+      url: 'https://servbit.in/postgresql/tutorial',
       description: 'Comprehensive PostgreSQL tutorial and reference',
     },
     guides: {
       title: 'Community Guides',
-      url: 'https://servbit.com/guides',
+      url: 'https://servbit.in/guides',
       description: 'Step-by-step tutorials for frameworks and tools',
     },
     faqs: {
       title: 'FAQs',
-      url: 'https://servbit.com/faqs',
+      url: 'https://servbit.in/faqs',
       description: 'Frequently asked questions about Servbit',
     },
     'use-cases': null,
@@ -336,12 +336,12 @@ module.exports = {
   additionalResources: [
     {
       title: 'Glossary',
-      url: 'https://servbit.com/docs/reference/glossary.md',
+      url: 'https://servbit.in/docs/reference/glossary.md',
       sourcePath: 'reference/glossary.md',
     },
     {
       title: 'Blog',
-      url: 'https://servbit.com/blog.md',
+      url: 'https://servbit.in/blog.md',
       description: 'Engineering, product, and community posts from the Servbit team',
     },
   ],

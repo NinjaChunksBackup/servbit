@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll } from 'vitest';
 
 beforeAll(() => {
-  process.env.NEXT_PUBLIC_DEFAULT_SITE_URL = 'https://servbit.com';
+  process.env.NEXT_PUBLIC_DEFAULT_SITE_URL = 'https://servbit.in';
 });
 
 describe('generateOrganizationSchema', () => {
@@ -14,7 +14,7 @@ describe('generateOrganizationSchema', () => {
     expect(s.name).toBe('Servbit');
     expect(s.alternateName).toBe('Servbit Digital Engineering');
     expect(s.legalName).toBe('Servbit LLC');
-    expect(s.url).toBe('https://servbit.com');
+    expect(s.url).toBe('https://servbit.in');
     expect(s.description).toBeTruthy();
     expect(s.logo).toMatch(/^https?:\/\//);
     expect(Array.isArray(s.sameAs)).toBe(true);

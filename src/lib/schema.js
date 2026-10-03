@@ -1,7 +1,7 @@
 import LINKS from 'constants/links';
 import SEO_DATA from 'constants/seo-data';
 
-const SITE_URL = process.env.NEXT_PUBLIC_DEFAULT_SITE_URL || 'https://servbit.com';
+const SITE_URL = process.env.NEXT_PUBLIC_DEFAULT_SITE_URL || 'https://servbit.in';
 
 export const generateOrganizationSchema = () => ({
   '@context': 'https://schema.org',

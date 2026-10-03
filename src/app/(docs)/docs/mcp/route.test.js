@@ -33,7 +33,7 @@ describe('/docs/mcp route', () => {
       const json = await res.json();
       expect(json.remotes).toHaveLength(1);
       expect(json.remotes[0].type).toBe('streamable-http');
-      expect(json.remotes[0].url).toBe('https://mcp.servbit.com/mcp?category=docs');
+      expect(json.remotes[0].url).toBe('https://mcp.servbit.in/mcp?category=docs');
       // No auth headers — this endpoint is intentionally unauthenticated
       expect(json.remotes[0].headers).toBeUndefined();
     });
@@ -50,7 +50,7 @@ describe('/docs/mcp route', () => {
 
   describe('POST — proxy to upstream', () => {
     const makeRequest = (body = {}, headers = {}) =>
-      new Request('https://servbit.com/docs/mcp', {
+      new Request('https://servbit.in/docs/mcp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ describe('/docs/mcp route', () => {
         body: JSON.stringify(body),
       });
 
-    it('proxies initialize to mcp.servbit.com/mcp?category=docs', async () => {
+    it('proxies initialize to mcp.servbit.in/mcp?category=docs', async () => {
       global.fetch.mockResolvedValueOnce(
         new Response('event: message\ndata: {"result":{"protocolVersion":"2025-03-26"}}\n\n', {
           status: 200,
@@ -84,7 +84,7 @@ describe('/docs/mcp route', () => {
       expect(res.headers.get('Content-Type')).toMatch(/text\/event-stream/);
 
       const [url, opts] = global.fetch.mock.calls[0];
-      expect(url).toBe('https://mcp.servbit.com/mcp?category=docs');
+      expect(url).toBe('https://mcp.servbit.in/mcp?category=docs');
       expect(opts.method).toBe('POST');
       expect(JSON.parse(opts.body).method).toBe('initialize');
     });

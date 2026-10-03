@@ -40,5 +40,5 @@ Servbit is a full-stack digital execution and technology engineering partner. We
 
 ## Contact
 
-- **Inquiries:** [mailto:contact@servbit.com](mailto:contact@servbit.com)
-- **Website:** [https://servbit.com](https://servbit.com)
+- **Inquiries:** [mailto:servbit.in@gmail.com](mailto:servbit.in@gmail.com)
+- **Website:** [https://servbit.in](https://servbit.in)

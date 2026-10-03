@@ -29,9 +29,9 @@ const ErrorMessage = ({ onClose }) => (
         <Link
           className="border-b border-green-45/40 hover:border-green-45"
           theme="green"
-          to="mailto:atli@neon.tech"
+          to="mailto:servbit.in@gmail.com"
         >
-          atli@neon.tech
+          servbit.in@gmail.com
         </Link>
       </p>
     </div>

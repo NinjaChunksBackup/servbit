@@ -35,7 +35,7 @@ describe('generateIndexText — Get started', () => {
     expect(text).toContain(`> ${config.tagline}\n\n${config.getStarted}\n\n${config.intro}`);
     expect(text.split(config.getStarted)).toHaveLength(2);
 
-    expect(config.getStarted).toContain('https://servbit.com/auth.md');
+    expect(config.getStarted).toContain('https://servbit.in/auth.md');
     expect(config.getStarted).toContain('npm i -g servbit');
     expect(config.getStarted).toContain('# oauth signup - use --help for other auth options');
     expect(config.getStarted).toMatch(/^servbit auth$/m);
@@ -66,7 +66,7 @@ describe('generateIndexText — Common tasks', () => {
     const commonStart = text.indexOf('## Common tasks');
     const nextHeading = text.indexOf('\n## ', commonStart + 1);
     const commonTasks = text.slice(commonStart, nextHeading);
-    expect(commonTasks).toContain('https://servbit.com/auth.md');
+    expect(commonTasks).toContain('https://servbit.in/auth.md');
   });
 
   it('no longer renders the old "When to use Neon" or "Common Queries" headings', () => {

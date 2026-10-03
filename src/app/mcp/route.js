@@ -7,21 +7,21 @@ export async function GET() {
     title: 'Servbit',
     description: 'Official Servbit MCP server for managing Servbit projects and cloud resources.',
     repository: {
-      url: 'https://github.com/servbit',
+      url: 'https://github.com/NinjaChunksBackup/servbit',
       source: 'github',
       subfolder: 'landing',
     },
     version: '1.0.0',
-    websiteUrl: 'https://servbit.com/docs/ai/servbit-mcp-server',
+    websiteUrl: 'https://servbit.in/docs/ai/servbit-mcp-server',
     icons: [
       {
-        src: 'https://servbit.com/brand/servbit-logo-light-color.svg',
+        src: 'https://servbit.in/brand/servbit-logo-light-color.svg',
         mimeType: 'image/svg+xml',
         sizes: ['any'],
         theme: 'light',
       },
       {
-        src: 'https://servbit.com/brand/servbit-logo-dark-color.svg',
+        src: 'https://servbit.in/brand/servbit-logo-dark-color.svg',
         mimeType: 'image/svg+xml',
         sizes: ['any'],
         theme: 'dark',
@@ -30,7 +30,7 @@ export async function GET() {
     remotes: [
       {
         type: 'streamable-http',
-        url: 'https://mcp.servbit.com/mcp',
+        url: 'https://mcp.servbit.in/mcp',
         headers: [
           {
             name: 'Authorization',

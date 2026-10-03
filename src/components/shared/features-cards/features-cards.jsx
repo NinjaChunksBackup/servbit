@@ -21,7 +21,7 @@ const ITEMS = [
     title: 'MCP Server',
     description:
       'Purpose-built for AI devtools, Servbit MCP lets agents manage data workflows from provisioning to tuning.',
-    link: 'https://mcp.servbit.com/',
+    link: 'https://mcp.servbit.in/',
     linkText: 'Get started',
     icon: iconMCPServer,
   },

@@ -18,8 +18,8 @@ describe('mapCompareFiles', () => {
       ])
     ).toEqual({
       pages: [
-        { url: 'https://servbit.com/guides/drizzle.md', deleted: false },
-        { url: 'https://servbit.com/docs/changelog/2026-08-28.md', deleted: false },
+        { url: 'https://servbit.in/guides/drizzle.md', deleted: false },
+        { url: 'https://servbit.in/docs/changelog/2026-08-28.md', deleted: false },
       ],
       skipped: {
         sharedContent: 0,
@@ -52,7 +52,7 @@ describe('mapCompareFiles', () => {
       { filename: 'content/guides/old-guide.md', status: 'removed' },
     ]);
     expect(result.pages).toEqual([
-      { url: 'https://servbit.com/guides/old-guide.md', deleted: true },
+      { url: 'https://servbit.in/guides/old-guide.md', deleted: true },
     ]);
   });
 
@@ -65,8 +65,8 @@ describe('mapCompareFiles', () => {
       },
     ]);
     expect(result.pages).toEqual([
-      { url: 'https://servbit.com/guides/old-name.md', deleted: true },
-      { url: 'https://servbit.com/guides/new-name.md', deleted: false },
+      { url: 'https://servbit.in/guides/old-name.md', deleted: true },
+      { url: 'https://servbit.in/guides/new-name.md', deleted: false },
     ]);
   });
 });
@@ -74,7 +74,7 @@ describe('mapCompareFiles', () => {
 describe('chunkReindexPages', () => {
   it('keeps a full 200-page payload as one chunk', () => {
     const pages = Array.from({ length: SITE_REINDEX_MAX_PAGES }, (_, i) => ({
-      url: `https://servbit.com/guides/${i}.md`,
+      url: `https://servbit.in/guides/${i}.md`,
       deleted: false,
     }));
     expect(chunkReindexPages(pages).map((chunk) => chunk.length)).toEqual([SITE_REINDEX_MAX_PAGES]);
@@ -82,7 +82,7 @@ describe('chunkReindexPages', () => {
 
   it('splits 201 pages into 200 and 1', () => {
     const pages = Array.from({ length: SITE_REINDEX_MAX_PAGES + 1 }, (_, i) => ({
-      url: `https://servbit.com/guides/${i}.md`,
+      url: `https://servbit.in/guides/${i}.md`,
       deleted: false,
     }));
     expect(chunkReindexPages(pages).map((chunk) => chunk.length)).toEqual([

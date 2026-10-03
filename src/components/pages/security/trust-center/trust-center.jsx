@@ -54,7 +54,7 @@ const TrustCenter = () => (
             </p>
             <p>
               For additional security inquiries, contact{' '}
-              <a href="mailto:security@servbit.com">security@servbit.com</a>.
+              <a href="mailto:servbit.in@gmail.com">servbit.in@gmail.com</a>.
             </p>
           </div>
         </div>

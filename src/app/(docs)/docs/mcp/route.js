@@ -1,15 +1,15 @@
 // GET returns the MCP Foundation server.json descriptor (publicly cacheable).
 // POST proxies MCP protocol requests (initialize, tools/list, tools/call) to
-// the unauthenticated docs-scoped endpoint at mcp.servbit.com so agents can
-// connect directly to servbit.com/docs/mcp without OAuth.
+// the unauthenticated docs-scoped endpoint at mcp.servbit.in so agents can
+// connect directly to servbit.in/docs/mcp without OAuth.
 //
 // NOTE: force-static is intentionally absent. The POST handler is dynamic
 // (proxies live requests). Adding force-static would break POST at build time.
 //
 // The ?category=docs parameter scopes the server to two read-only tools
 // (list_docs_resources, get_doc_resource) and bypasses OAuth — both behaviors
-// are server-side features of mcp.servbit.com, not enforced here.
-const UPSTREAM_URL = 'https://mcp.servbit.com/mcp?category=docs';
+// are server-side features of mcp.servbit.in, not enforced here.
+const UPSTREAM_URL = 'https://mcp.servbit.in/mcp?category=docs';
 
 export async function GET() {
   return Response.json(
@@ -20,21 +20,21 @@ export async function GET() {
       description:
         'Read Servbit documentation pages. Provides list_docs_resources and get_doc_resource tools.',
       repository: {
-        url: 'https://github.com/servbit',
+        url: 'https://github.com/NinjaChunksBackup/servbit',
         source: 'github',
         subfolder: 'landing',
       },
       version: '1.0.0',
-      websiteUrl: 'https://servbit.com/docs/ai/servbit-mcp-server',
+      websiteUrl: 'https://servbit.in/docs/ai/servbit-mcp-server',
       icons: [
         {
-          src: 'https://servbit.com/brand/servbit-logo-light-color.svg',
+          src: 'https://servbit.in/brand/servbit-logo-light-color.svg',
           mimeType: 'image/svg+xml',
           sizes: ['any'],
           theme: 'light',
         },
         {
-          src: 'https://servbit.com/brand/servbit-logo-dark-color.svg',
+          src: 'https://servbit.in/brand/servbit-logo-dark-color.svg',
           mimeType: 'image/svg+xml',
           sizes: ['any'],
           theme: 'dark',

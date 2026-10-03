@@ -4,7 +4,7 @@ const { CONTENT_ROUTES, EXCLUDED_DIRS } = require('../constants/content');
 
 const config = require('./llms-index-config');
 
-const BASE_URL = 'https://servbit.com';
+const BASE_URL = 'https://servbit.in';
 const EXCLUDED_FILES = ['README.md', 'index.md', '_index.md'];
 const COLLAPSED_ROUTES = config.collapsedRoutes || {};
 const EXCLUDE_PATHS = config.excludePaths || [];

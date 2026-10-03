@@ -1,7 +1,7 @@
 export const CODE_EXAMPLES = {
-  agent: `GET https://servbit.com/auth.md
+  agent: `GET https://servbit.in/auth.md
 
-POST https://claimable.servbit.com/v1/agent/identity
+POST https://claimable.servbit.in/v1/agent/identity
 Content-Type: application/json
 
 {

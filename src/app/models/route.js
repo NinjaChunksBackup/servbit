@@ -14,7 +14,7 @@ import {
 // ignored. The Cache-Control header below still lets the CDN cache each query string.
 export const dynamic = 'force-dynamic';
 
-const SCHEMA = 'https://servbit.com/schemas/ai-gateway-models.json';
+const SCHEMA = 'https://servbit.in/schemas/ai-gateway-models.json';
 
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), {

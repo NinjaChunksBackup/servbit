@@ -14,7 +14,7 @@ function hash(x, y) {
 const CARDS_CONFIG = [
   {
     filename: 'deploy-vercel.jpg',
-    title: 'cloud.servbit.com',
+    title: 'cloud.servbit.in',
     graphic: `
       <!-- Isometric Cloud Server Cube -->
       <g transform="translate(330, 290)">
@@ -31,7 +31,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-netlify-com.jpg',
-    title: 'web.servbit.com',
+    title: 'web.servbit.in',
     graphic: `
       <!-- Responsive Web Browser Frame with Grid -->
       <g transform="translate(330, 290)">
@@ -50,7 +50,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-replit-com.jpg',
-    title: 'app.servbit.com',
+    title: 'app.servbit.in',
     graphic: `
       <!-- Terminal Chevron Prompt in 3D frame -->
       <g transform="translate(330, 285)">
@@ -64,7 +64,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-retool-com.jpg',
-    title: 'automation.servbit.com',
+    title: 'automation.servbit.in',
     graphic: `
       <!-- Interlocking Automation Gears / Triggers -->
       <g transform="translate(330, 285)">
@@ -83,7 +83,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-riff-ai.jpg',
-    title: 'ai.servbit.com',
+    title: 'ai.servbit.in',
     graphic: `
       <!-- Deep Neural Network Lattice -->
       <g transform="translate(330, 285)">
@@ -113,7 +113,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-xpander-ai.jpg',
-    title: 'agents.servbit.com',
+    title: 'agents.servbit.in',
     graphic: `
       <!-- Autonomous Agent Infinity Loop -->
       <g transform="translate(330, 285)">
@@ -127,7 +127,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-vapi.jpg',
-    title: 'voice.servbit.com',
+    title: 'voice.servbit.in',
     graphic: `
       <!-- Concentric Acoustic Waveform Rings -->
       <g transform="translate(330, 285)">
@@ -142,7 +142,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-cognee-ai.jpg',
-    title: 'rag.servbit.com',
+    title: 'rag.servbit.in',
     graphic: `
       <!-- 4D Hypercube / Tesseract Vector Embeddings -->
       <g transform="translate(330, 285)">
@@ -166,7 +166,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-v0-app.jpg',
-    title: 'ui.servbit.com',
+    title: 'ui.servbit.in',
     graphic: `
       <!-- Design System UI Component Cards -->
       <g transform="translate(330, 285)">
@@ -183,7 +183,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-glideapps-com.jpg',
-    title: 'mobile.servbit.com',
+    title: 'mobile.servbit.in',
     graphic: `
       <!-- Mobile Smartphone Frame -->
       <g transform="translate(330, 285)">
@@ -202,7 +202,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-laravel-com.jpg',
-    title: 'api.servbit.com',
+    title: 'api.servbit.in',
     graphic: `
       <!-- REST / GraphQL API Gateway Brackets -->
       <g transform="translate(330, 285)">
@@ -218,7 +218,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-strapi-io.jpg',
-    title: 'cms.servbit.com',
+    title: 'cms.servbit.in',
     graphic: `
       <!-- Content Schema Hierarchy Stack -->
       <g transform="translate(330, 285)">
@@ -236,7 +236,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-konghq-com.jpg',
-    title: 'gateway.servbit.com',
+    title: 'gateway.servbit.in',
     graphic: `
       <!-- High-Throughput Ingress Portal Arch -->
       <g transform="translate(330, 285)">
@@ -248,7 +248,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-encore-dev.jpg',
-    title: 'microservices.servbit.com',
+    title: 'microservices.servbit.in',
     graphic: `
       <!-- Hexagonal Mesh of Distributed Microservices -->
       <g transform="translate(330, 285)">
@@ -268,7 +268,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-reflex-dev.jpg',
-    title: 'fullstack.servbit.com',
+    title: 'fullstack.servbit.in',
     graphic: `
       <!-- Dual Interconnected Pyramids (Frontend & Backend) -->
       <g transform="translate(330, 285)">
@@ -284,7 +284,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-atoms-dev.jpg',
-    title: 'components.servbit.com',
+    title: 'components.servbit.in',
     graphic: `
       <!-- Atomic Orbital Rings with Electrons -->
       <g transform="translate(330, 285)">
@@ -302,7 +302,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-layers-com.jpg',
-    title: 'architecture.servbit.com',
+    title: 'architecture.servbit.in',
     graphic: `
       <!-- 3 Stacked Isometric Architecture Planes -->
       <g transform="translate(330, 285)">
@@ -321,7 +321,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-qwikbuild-com.jpg',
-    title: 'pipeline.servbit.com',
+    title: 'pipeline.servbit.in',
     graphic: `
       <!-- CI/CD Build Conveyor Pipeline -->
       <g transform="translate(330, 285)">
@@ -337,7 +337,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-same-new.jpg',
-    title: 'sync.servbit.com',
+    title: 'sync.servbit.in',
     graphic: `
       <!-- Dual Revolving Sync Vectors -->
       <g transform="translate(330, 285)">
@@ -352,7 +352,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-specific-dev.jpg',
-    title: 'custom.servbit.com',
+    title: 'custom.servbit.in',
     graphic: `
       <!-- Precision Calibration Gauge / Solution Node -->
       <g transform="translate(330, 285)">
@@ -364,7 +364,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-anything-com.jpg',
-    title: 'scale.servbit.com',
+    title: 'scale.servbit.in',
     graphic: `
       <!-- Global Wireframe Network Sphere -->
       <g transform="translate(330, 285)">
@@ -382,7 +382,7 @@ const CARDS_CONFIG = [
   },
   {
     filename: 'deploy-zite-com.jpg',
-    title: 'analytics.servbit.com',
+    title: 'analytics.servbit.in',
     graphic: `
       <!-- Real-Time Observability 3D Bars & Metric Curve -->
       <g transform="translate(330, 285)">

@@ -33,8 +33,8 @@ export const ANIMATION_CONFIG = {
 export const ANIMATION_DURATION = 30;
 
 export const API_CALL_CODE =
-  'curl -X <span>POST</span> https://api.servbit.com/v1/clusters/:id/provision';
-export const CONNECTION_STRING = 'postgresql://admin@db-prod.us-east-1.cloud.servbit.com/primary';
+  'curl -X <span>POST</span> https://api.servbit.in/v1/clusters/:id/provision';
+export const CONNECTION_STRING = 'postgresql://admin@db-prod.us-east-1.cloud.servbit.in/primary';
 
 export const SQL_CODE = `CREATE TABLE IF NOT EXISTS servbit_workloads(
   id SERIAL PRIMARY KEY, name TEXT NOT NULL, value REAL

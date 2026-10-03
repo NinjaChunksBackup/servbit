@@ -59,7 +59,7 @@ SubItem.propTypes = {
 const Item = ({ nav: title, slug, icon, subnav, items, basePath, activeItems, setActiveItems }) => {
   const LinkTag = slug ? Link : 'button';
   const isTutorials =
-    slug === 'https://servbit.com/postgresql/tutorial' ||
+    slug === 'https://servbit.in/postgresql/tutorial' ||
     slug === 'https://neon.com/postgresql/tutorial' ||
     slug === '/postgresql/tutorial';
   const isExternalSlug = slug?.startsWith('http');

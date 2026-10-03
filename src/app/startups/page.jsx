@@ -69,7 +69,7 @@ const faqItems = [
   {
     question: 'How does the application process work?',
     answer: `
-      <p>Apply using the link on this page or email startups@servbit.com. Our team reviews each application and typically responds within a few business days. If you qualify, we'll confirm and onboard your team.</p>
+      <p>Apply using the link on this page or email servbit.in@gmail.com. Our team reviews each application and typically responds within a few business days. If you qualify, we'll confirm and onboard your team.</p>
     `,
   },
   {

@@ -33,7 +33,7 @@ describe('backend platform page Markdown', () => {
 
     expect(
       htmlToMarkdown('<p>Options:</p><ul><li><a href="/docs/one">One</a></li><li>Two</li></ul>')
-    ).toBe('Options:\n\n- [One](https://servbit.com/docs/one)\n- Two');
+    ).toBe('Options:\n\n- [One](https://servbit.in/docs/one)\n- Two');
 
     expect(htmlToMarkdown('<p>Use <code>&lt;T&gt;</code> as the type.</p>')).toBe(
       'Use `<T>` as the type.'
@@ -72,7 +72,7 @@ describe('backend platform page Markdown', () => {
     expect(markdown).toContain('### Declared in `servbit.ts`');
     expect(markdown).toContain('## Your questions, answered');
     expect(markdown).toContain('## Built for agents and the developers behind them.');
-    expect(markdown).toContain('[Contact us](https://servbit.com/contact-sales)');
+    expect(markdown).toContain('[Contact us](https://servbit.in/contact-sales)');
     expect(markdown).not.toMatch(/<\/?(?:p|strong|code)>/);
   });
 
@@ -94,7 +94,7 @@ describe('backend platform page Markdown', () => {
     const markdown = renderObjectStorageMarkdown(LINKS);
 
     expect(markdown).toContain('# Files that branch with your Servbit backend');
-    expect(markdown).toContain('[Read the docs](https://servbit.com/docs/storage/overview)');
+    expect(markdown).toContain('[Read the docs](https://servbit.in/docs/storage/overview)');
     expect(markdown).toContain('```typescript\nimport { defineConfig }');
     expect(markdown).toContain('uploads: {}');
     expect(markdown).toContain('`servbit deploy`');
@@ -109,7 +109,7 @@ describe('backend platform page Markdown', () => {
     const markdown = renderAuthMarkdown(LINKS);
 
     expect(markdown).toContain('# Authentication that branches, managed by Servbit');
-    expect(markdown).toContain('[Read the docs](https://servbit.com/docs/auth/overview)');
+    expect(markdown).toContain('[Read the docs](https://servbit.in/docs/auth/overview)');
     expect(markdown).toContain('Servbit Auth');
     expect(markdown).toContain('Build previews you can actually log into');
     expect(markdown).toContain('### 4. Preview');

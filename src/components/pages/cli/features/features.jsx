@@ -26,7 +26,7 @@ const items = [
     title: 'Contribute',
     description: 'Servbit CLI is open source. Contribute&nbsp;to our GitHub&nbsp;repo.',
     linkText: 'Contribute to Servbit CLI',
-    url: 'https://github.com/servbit',
+    url: 'https://github.com/NinjaChunksBackup/servbit',
   },
 ];
 

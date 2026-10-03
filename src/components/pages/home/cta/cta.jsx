@@ -21,7 +21,7 @@ const CTA = () => (
             profits.
           </p>
           <div className="mb-2 flex items-center gap-5 xl:gap-4 lg:mb-0 md:w-full md:flex-col md:items-stretch md:gap-y-3">
-            <Button theme="white-filled" size="new" to="mailto:contact@servbit.com">
+            <Button theme="white-filled" size="new" to="mailto:servbit.in@gmail.com">
               Start Your Project
             </Button>
             <Button

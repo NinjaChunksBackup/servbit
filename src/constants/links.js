@@ -6,7 +6,7 @@ export default {
   blog: '/blog',
   branching: '/branching',
   brand: '/brand',
-  careers: 'mailto:careers@servbit.com',
+  careers: 'mailto:servbit.in@gmail.com',
   caseStudies: '/case-studies',
   claimableNeon: '/claimable-neon',
   cli: '/cli',
@@ -93,15 +93,15 @@ export default {
   hipaaContractors: '/sub-processors',
 
   // Console
-  console: 'https://console.servbit.com',
-  login: 'mailto:contact@servbit.com',
-  signup: 'mailto:contact@servbit.com',
-  signupCredits: 'mailto:contact@servbit.com',
-  consoleSupport: 'mailto:support@servbit.com',
+  console: 'https://console.servbit.in',
+  login: 'mailto:servbit.in@gmail.com',
+  signup: 'mailto:servbit.in@gmail.com',
+  signupCredits: 'mailto:servbit.in@gmail.com',
+  consoleSupport: 'mailto:servbit.in@gmail.com',
 
   // Socials
   discord: 'https://discord.gg/servbit',
-  github: 'https://github.com/servbit',
+  github: 'https://github.com/NinjaChunksBackup/servbit',
   linkedin: 'https://www.linkedin.com/company/servbit/',
   twitter: 'https://x.com/servbit',
   youtube: 'https://www.youtube.com/@servbit',
