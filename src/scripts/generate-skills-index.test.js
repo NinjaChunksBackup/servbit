@@ -96,14 +96,14 @@ describe('buildAiCatalog', () => {
   it('includes the spec version and host block', () => {
     const catalog = buildAiCatalog(SKILLS);
     expect(catalog.specVersion).toBe('1.0');
-    expect(catalog.host.identifier).toBe('neon.com');
-    expect(catalog.host.displayName).toBe('Neon');
+    expect(catalog.host.identifier).toBe('servbit.in');
+    expect(catalog.host.displayName).toBe('Servbit');
   });
 
   it('leads with the static MCP server entry', () => {
     const catalog = buildAiCatalog(SKILLS);
     expect(catalog.entries[0]).toMatchObject({
-      identifier: 'urn:air:neon.com:mcp:neon',
+      identifier: 'urn:air:servbit.in:mcp:servbit',
       type: 'application/mcp-server-card+json',
     });
   });
@@ -117,10 +117,10 @@ describe('buildAiCatalog', () => {
     const catalog = buildAiCatalog(SKILLS);
     const skillEntries = catalog.entries.slice(1);
     skillEntries.forEach((entry, i) => {
-      expect(entry.identifier).toBe(`urn:air:neon.com:skill:${SKILLS[i].name}`);
+      expect(entry.identifier).toBe(`urn:air:servbit.in:skill:${SKILLS[i].name}`);
       expect(entry.type).toBe('application/agent-skills+md');
       expect(entry.url).toBe(
-        `https://neon.com/.well-known/agent-skills/${SKILLS[i].name}/SKILL.md`
+        `https://servbit.in/.well-known/agent-skills/${SKILLS[i].name}/SKILL.md`
       );
       expect(entry.description).toBe(SKILLS[i].description);
     });

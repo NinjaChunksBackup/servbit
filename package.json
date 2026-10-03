@@ -1,5 +1,5 @@
 {
-  "name": "neon-nextjs",
+  "name": "servbit-nextjs",
   "private": true,
   "version": "0.1.0",
   "engines": {
@@ -27,6 +27,7 @@
     "generate:static-md-manifest": "node src/scripts/generate-static-md-manifest.js",
     "update:skills": "npm run sync:skills && npm run generate:skills && npm run generate:static-md-manifest",
     "generate:api-ref": "node scripts/generate-api-ref.mjs",
+    "generate:brand-assets": "node scripts/generate-brand-assets.js && node scripts/package-brand-assets.js",
     "check:api-ref-generated": "node scripts/check-api-ref-generated.mjs",
     "check:docs-api-consistency": "node scripts/check-docs-api-consistency.mjs",
     "check:skills-sync": "node scripts/check-skills-sync.mjs",

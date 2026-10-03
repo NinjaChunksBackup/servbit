@@ -8,57 +8,62 @@ import { cn } from 'utils/cn';
 import Section from '../section';
 import { handleDownloads } from '../utils';
 
+// The Servbit lockup is single-ink artwork (mark + wordmark), so the colour and
+// mono variants differ only in ink. Regenerate with:
+//   node scripts/generate-brand-assets.js
+const V = '2026-10-03';
+
 const logos = [
   {
     className: 'bg-white',
-    svgSrc: '/brand/neon-logo-light-color.svg?updated=2026-06-03',
-    svgName: 'neon-logo-light-color.svg',
-    svgSafeSrc: '/brand/neon-logo-light-color-safe-area.svg?updated=2026-06-03',
-    svgSafeName: 'neon-logo-light-color-safe-area.svg',
-    pngSrc: '/brand/neon-logo-light-color.png?updated=2026-06-03',
-    pngName: 'neon-logo-light-color.png',
-    pngSafeSrc: '/brand/neon-logo-light-color-safe-area.png?updated=2026-06-03',
-    pngSafeName: 'neon-logo-light-color-safe-area.png',
+    svgSrc: `/brand/servbit-logo-light-color.svg?updated=${V}`,
+    svgName: 'servbit-logo-light-color.svg',
+    svgSafeSrc: `/brand/servbit-logo-light-color-safe-area.svg?updated=${V}`,
+    svgSafeName: 'servbit-logo-light-color-safe-area.svg',
+    pngSrc: `/brand/servbit-logo-light-color.png?updated=${V}`,
+    pngName: 'servbit-logo-light-color.png',
+    pngSafeSrc: `/brand/servbit-logo-light-color-safe-area.png?updated=${V}`,
+    pngSafeName: 'servbit-logo-light-color-safe-area.png',
   },
   {
     className: 'bg-black-pure border-gray-new-30 border',
-    svgSrc: '/brand/neon-logo-dark-color.svg?updated=2026-06-03',
-    svgName: 'neon-logo-dark-color.svg',
-    svgSafeSrc: '/brand/neon-logo-dark-color-safe-area.svg?updated=2026-06-03',
-    svgSafeName: 'neon-logo-dark-color-safe-area.svg',
-    pngSrc: '/brand/neon-logo-dark-color.png?updated=2026-06-03',
-    pngName: 'neon-logo-dark-color.png',
-    pngSafeSrc: '/brand/neon-logo-dark-color-safe-area.png?updated=2026-06-03',
-    pngSafeName: 'neon-logo-dark-color-safe-area.png',
+    svgSrc: `/brand/servbit-logo-dark-color.svg?updated=${V}`,
+    svgName: 'servbit-logo-dark-color.svg',
+    svgSafeSrc: `/brand/servbit-logo-dark-color-safe-area.svg?updated=${V}`,
+    svgSafeName: 'servbit-logo-dark-color-safe-area.svg',
+    pngSrc: `/brand/servbit-logo-dark-color.png?updated=${V}`,
+    pngName: 'servbit-logo-dark-color.png',
+    pngSafeSrc: `/brand/servbit-logo-dark-color-safe-area.png?updated=${V}`,
+    pngSafeName: 'servbit-logo-dark-color-safe-area.png',
   },
   {
     className: 'bg-[#5280FF]',
-    svgSrc: '/brand/neon-logo-dark-mono.svg?updated=2026-06-03',
-    svgName: 'neon-logo-dark-mono.svg',
-    svgSafeSrc: '/brand/neon-logo-dark-mono-safe-area.svg?updated=2026-06-03',
-    svgSafeName: 'neon-logo-dark-mono-safe-area.svg',
-    pngSrc: '/brand/neon-logo-dark-mono.png?updated=2026-06-03',
-    pngName: 'neon-logo-dark-mono.png',
-    pngSafeSrc: '/brand/neon-logo-dark-mono-safe-area.png?updated=2026-06-03',
-    pngSafeName: 'neon-logo-dark-mono-safe-area.png',
+    svgSrc: `/brand/servbit-logo-dark-mono.svg?updated=${V}`,
+    svgName: 'servbit-logo-dark-mono.svg',
+    svgSafeSrc: `/brand/servbit-logo-dark-mono-safe-area.svg?updated=${V}`,
+    svgSafeName: 'servbit-logo-dark-mono-safe-area.svg',
+    pngSrc: `/brand/servbit-logo-dark-mono.png?updated=${V}`,
+    pngName: 'servbit-logo-dark-mono.png',
+    pngSafeSrc: `/brand/servbit-logo-dark-mono-safe-area.png?updated=${V}`,
+    pngSafeName: 'servbit-logo-dark-mono-safe-area.png',
   },
   {
-    className: 'bg-[#4DDBA7]',
-    svgSrc: '/brand/neon-logo-light-mono.svg?updated=2026-06-03',
-    svgName: 'neon-logo-light-mono.svg',
-    svgSafeSrc: '/brand/neon-logo-light-mono-safe-area.svg?updated=2026-06-03',
-    svgSafeName: 'neon-logo-light-mono-safe-area.svg',
-    pngSrc: '/brand/neon-logo-light-mono.png?updated=2026-06-03',
-    pngName: 'neon-logo-light-mono.png',
-    pngSafeSrc: '/brand/neon-logo-light-mono-safe-area.png?updated=2026-06-03',
-    pngSafeName: 'neon-logo-light-mono-safe-area.png',
+    className: 'bg-[#00E599]',
+    svgSrc: `/brand/servbit-logo-light-mono.svg?updated=${V}`,
+    svgName: 'servbit-logo-light-mono.svg',
+    svgSafeSrc: `/brand/servbit-logo-light-mono-safe-area.svg?updated=${V}`,
+    svgSafeName: 'servbit-logo-light-mono-safe-area.svg',
+    pngSrc: `/brand/servbit-logo-light-mono.png?updated=${V}`,
+    pngName: 'servbit-logo-light-mono.png',
+    pngSafeSrc: `/brand/servbit-logo-light-mono-safe-area.png?updated=${V}`,
+    pngSafeName: 'servbit-logo-light-mono-safe-area.png',
   },
 ];
 
 const Logo = () => (
   <Section
     title="Logo"
-    description="Default to using the complete full-color logo below. Use the monochrome version when the context requires it. Do not edit, change, distort, recolor, or reconfigure the Servbit logo."
+    description="Default to the complete Servbit lockup below: the mark paired with the wordmark. Choose the light or dark ink to match the surface it sits on, and use the safe-area file when the logo needs breathing room. Do not edit, change, distort, recolor, or reconfigure the Servbit logo."
   >
     <ul className="grid grid-cols-2 gap-4 md:grid-cols-1">
       {logos.map((logo, index) => (

@@ -12,8 +12,8 @@
  *
  * The url fields in the agent-skills index differ between variants because the
  * npx skills CLI resolves urls against the base URL passed to it. Root-relative
- * urls work for "npx skills add https://neon.com"; /docs/-prefixed urls work
- * for "npx skills add https://neon.com/docs". Both are served, so both work.
+ * urls work for "npx skills add https://servbit.in"; /docs/-prefixed urls work
+ * for "npx skills add https://servbit.in/docs". Both are served, so both work.
  *
  * Also reads config/skills.json for the "primary" field to determine which
  * skill the /skill.md root alias should point to.
@@ -43,22 +43,22 @@ const SCHEMA_0_2_0 = 'https://schemas.agentskills.io/discovery/0.2.0/schema.json
 // non-skill MCP server entry are stable; the skill entries are generated from the
 // same SKILL.md frontmatter as the agent-skills index, so descriptions match.
 const AI_CATALOG_HOST = {
-  displayName: 'Neon',
-  identifier: 'neon.com',
-  documentationUrl: 'https://neon.com/docs',
-  logoUrl: 'https://neon.com/brand/neon-logomark-dark-color.svg',
+  displayName: 'Servbit',
+  identifier: 'servbit.in',
+  documentationUrl: 'https://servbit.in/docs',
+  logoUrl: 'https://servbit.in/brand/servbit-logomark-dark-color.svg',
 };
 
 const AI_CATALOG_MCP_ENTRY = {
-  identifier: 'urn:air:neon.com:mcp:neon',
+  identifier: 'urn:air:servbit.in:mcp:servbit',
   type: 'application/mcp-server-card+json',
-  url: 'https://neon.com/.well-known/mcp/server-card.json',
+  url: 'https://servbit.in/.well-known/mcp/server-card.json',
   description:
-    'Neon MCP server for managing Neon Postgres projects, branches, databases, and running SQL from AI agents and MCP clients.',
-  tags: ['postgres', 'database', 'mcp', 'neon'],
+    'Servbit MCP server for managing Servbit Postgres projects, branches, databases, and running SQL from AI agents and MCP clients.',
+  tags: ['postgres', 'database', 'mcp', 'servbit'],
 };
 
-const AI_CATALOG_SKILL_BASE_URL = 'https://neon.com/.well-known/agent-skills/';
+const AI_CATALOG_SKILL_BASE_URL = 'https://servbit.in/.well-known/agent-skills/';
 
 async function loadConfig() {
   try {
@@ -153,7 +153,7 @@ function buildAiCatalog(skills) {
     entries: [
       AI_CATALOG_MCP_ENTRY,
       ...skills.map(({ name, description }) => ({
-        identifier: `urn:air:neon.com:skill:${name}`,
+        identifier: `urn:air:servbit.in:skill:${name}`,
         type: 'application/agent-skills+md',
         url: `${AI_CATALOG_SKILL_BASE_URL}${name}/SKILL.md`,
         description,
